@@ -122,54 +122,77 @@ export default function Home() {
             </div>
         </section>
         
-        {/* Premium Upgrade Section */}
+        {/* Super Bonus Section */}
         <section className="py-12 md:py-24 bg-white">
           <div className="container px-4 md:px-6">
             <div className="text-center">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                Preparada para acelerar a transformação da sua barriga e conquistar bônus exclusivos?
+              <h2 className="font-headline text-3xl md:text-4xl font-bold flex items-center justify-center gap-3">
+                <Gift className="h-10 w-10 text-accent" /> Super Bônus do Premium
               </h2>
+              <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">
+                Além de todo o conteúdo dos módulos, você também recebe acesso a bônus exclusivos para acelerar seus resultados.
+              </p>
             </div>
-            <Card className="mt-10 bg-primary text-primary-foreground border-2 border-accent shadow-xl">
-              <CardContent className="p-6 md:p-10">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
-                      OFERTA ÚNICA
-                    </div>
-                    <h3 className="font-headline text-3xl font-bold mt-4">Acesso Completo ao Desafio Premium</h3>
-                    <p className="mt-2 text-primary-foreground/90">
-                      Aproveite esta oferta única e desbloqueie acesso imediato ao Desafio Premium com todos os módulos avançados e bônus exclusivos para um resultado definitivo.
-                    </p>
-                    <div className="mt-8 text-center bg-background/20 p-6 rounded-lg">
-                       <p className="font-headline text-2xl font-bold text-accent" style={{ textShadow: '0 0 5px black' }}>🔥 OFERTA ESPECIAL</p>
-                       <p className="text-5xl font-bold mt-2">R$ 12,90</p>
-                       <p className="text-lg line-through opacity-80">de R$ 79,90</p>
-                       <p className="text-sm font-bold bg-accent text-accent-foreground rounded-full px-3 py-1 inline-block mt-2">85% OFF</p>
-                       <Button size="lg" className="mt-6 w-full font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90 animate-pulse-scale">
-                          👉 SIM, QUERO O PREMIUM!
-                       </Button>
-                       <p className="text-xs mt-4 flex items-center justify-center gap-4">
-                          <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> Oferta por tempo limitado</span>
-                          <span className="flex items-center gap-1"><Lock className="h-3 w-3" /> Pagamento 100% seguro</span>
-                        </p>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-headline text-xl font-bold mb-4">Super Bônus do Premium</h4>
-                    <ul className="space-y-3 text-sm">
-                      <li className="flex gap-3"><Star className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Todo conteúdo do Desafio Básico:</span> Para você começar com a base perfeita.</span></li>
-                      <li className="flex gap-3"><BookOpen className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">E-book "Diástase Zero o Ano Todo":</span> Seu guia para manter os resultados.</span></li>
-                      <li className="flex gap-3"><Heart className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Meditação guiada:</span> Foco e constância para sua jornada.</span></li>
-                      <li className="flex gap-3"><Users className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Grupo EXCLUSIVO no WhatsApp:</span> Suporte e comunidade para te motivar.</span></li>
-                      <li className="flex gap-3"><Award className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Certificado digital de conclusão:</span> Celebre sua conquista.</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <Link href="#" className="group">
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
+                  <Star className="h-10 w-10 text-primary mb-4" />
+                  <h3 className="font-headline text-xl font-bold">Todo conteúdo do Desafio Básico</h3>
+                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Para você começar com a base perfeita e revisar sempre que precisar.</p>
+                  <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                    Acessar
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Card>
+              </Link>
+              <Link href="#" className="group">
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
+                  <BookOpen className="h-10 w-10 text-primary mb-4" />
+                  <h3 className="font-headline text-xl font-bold">E-book "Diástase Zero o Ano Todo"</h3>
+                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Seu guia completo para manter os resultados e continuar evoluindo.</p>
+                  <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                    Baixar agora
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Card>
+              </Link>
+              <Link href="#" className="group">
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
+                  <Heart className="h-10 w-10 text-primary mb-4" />
+                  <h3 className="font-headline text-xl font-bold">Meditação guiada</h3>
+                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Áudios para manter o foco, a motivação e a constância na sua jornada.</p>
+                   <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                    Ouvir agora
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Card>
+              </Link>
+              <Link href="#" className="group">
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
+                  <Users className="h-10 w-10 text-primary mb-4" />
+                  <h3 className="font-headline text-xl font-bold">Grupo EXCLUSIVO no WhatsApp</h3>
+                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Suporte, motivação e uma comunidade de mulheres com o mesmo objetivo que você.</p>
+                   <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                    Entrar no grupo
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Card>
+              </Link>
+              <Link href="#" className="group">
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
+                  <Award className="h-10 w-10 text-primary mb-4" />
+                  <h3 className="font-headline text-xl font-bold">Certificado digital de conclusão</h3>
+                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Celebre sua conquista e seu comprometimento com sua saúde e bem-estar.</p>
+                   <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                    Receber certificado
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Card>
+              </Link>
+            </div>
           </div>
         </section>
+
 
         {/* Exclusive Offers Section */}
         <section className="py-12 md:py-24 bg-accent/20">
