@@ -16,9 +16,9 @@ export default function Home() {
                     <Image 
                         src="https://i.imgur.com/VJtWx2S.png" 
                         alt="Diástase Zero Logo" 
-                        width={150} 
-                        height={150}
-                        data-ai-hint="logo diastasis"
+                        width={90} 
+                        height={90}
+                        className='mx-auto'
                     />
                 </div>
                 <h1 className="font-headline text-3xl md:text-5xl font-bold text-foreground">
@@ -123,67 +123,67 @@ export default function Home() {
         </section>
         
         {/* Super Bonus Section */}
-        <section className="py-12 md:py-24 bg-white">
+        <section className="py-12 md:py-24 bg-primary text-primary-foreground">
           <div className="container px-4 md:px-6">
             <div className="text-center">
               <h2 className="font-headline text-3xl md:text-4xl font-bold flex items-center justify-center gap-3">
                 <Gift className="h-10 w-10 text-accent" /> Super Bônus do Premium
               </h2>
-              <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">
+              <p className="mt-4 max-w-2xl mx-auto md:text-lg text-primary-foreground/80">
                 Além de todo o conteúdo dos módulos, você também recebe acesso a bônus exclusivos para acelerar seus resultados.
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Link href="#" className="group">
-                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
-                  <Star className="h-10 w-10 text-primary mb-4" />
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-primary-foreground/10 text-primary-foreground">
+                  <Star className="h-10 w-10 text-accent mb-4" />
                   <h3 className="font-headline text-xl font-bold">Todo conteúdo do Desafio Básico</h3>
-                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Para você começar com a base perfeita e revisar sempre que precisar.</p>
-                  <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                  <p className="text-primary-foreground/80 text-sm mt-2 flex-grow">Para você começar com a base perfeita e revisar sempre que precisar.</p>
+                  <span className="font-bold text-accent flex items-center gap-2 mt-4">
                     Acessar
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Card>
               </Link>
               <Link href="#" className="group">
-                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
-                  <BookOpen className="h-10 w-10 text-primary mb-4" />
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-primary-foreground/10 text-primary-foreground">
+                  <BookOpen className="h-10 w-10 text-accent mb-4" />
                   <h3 className="font-headline text-xl font-bold">E-book "Diástase Zero o Ano Todo"</h3>
-                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Seu guia completo para manter os resultados e continuar evoluindo.</p>
-                  <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                  <p className="text-primary-foreground/80 text-sm mt-2 flex-grow">Seu guia completo para manter os resultados e continuar evoluindo.</p>
+                  <span className="font-bold text-accent flex items-center gap-2 mt-4">
                     Baixar agora
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Card>
               </Link>
               <Link href="#" className="group">
-                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
-                  <Heart className="h-10 w-10 text-primary mb-4" />
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-primary-foreground/10 text-primary-foreground">
+                  <Heart className="h-10 w-10 text-accent mb-4" />
                   <h3 className="font-headline text-xl font-bold">Meditação guiada</h3>
-                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Áudios para manter o foco, a motivação e a constância na sua jornada.</p>
-                   <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                  <p className="text-primary-foreground/80 text-sm mt-2 flex-grow">Áudios para manter o foco, a motivação e a constância na sua jornada.</p>
+                   <span className="font-bold text-accent flex items-center gap-2 mt-4">
                     Ouvir agora
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Card>
               </Link>
               <Link href="#" className="group">
-                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
-                  <Users className="h-10 w-10 text-primary mb-4" />
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-primary-foreground/10 text-primary-foreground">
+                  <Users className="h-10 w-10 text-accent mb-4" />
                   <h3 className="font-headline text-xl font-bold">Grupo EXCLUSIVO no WhatsApp</h3>
-                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Suporte, motivação e uma comunidade de mulheres com o mesmo objetivo que você.</p>
-                   <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                  <p className="text-primary-foreground/80 text-sm mt-2 flex-grow">Suporte, motivação e uma comunidade de mulheres com o mesmo objetivo que você.</p>
+                   <span className="font-bold text-accent flex items-center gap-2 mt-4">
                     Entrar no grupo
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Card>
               </Link>
               <Link href="#" className="group">
-                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
-                  <Award className="h-10 w-10 text-primary mb-4" />
+                <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-primary-foreground/10 text-primary-foreground">
+                  <Award className="h-10 w-10 text-accent mb-4" />
                   <h3 className="font-headline text-xl font-bold">Certificado digital de conclusão</h3>
-                  <p className="text-muted-foreground text-sm mt-2 flex-grow">Celebre sua conquista e seu comprometimento com sua saúde e bem-estar.</p>
-                   <span className="font-bold text-primary flex items-center gap-2 mt-4">
+                  <p className="text-primary-foreground/80 text-sm mt-2 flex-grow">Celebre sua conquista e seu comprometimento com sua saúde e bem-estar.</p>
+                   <span className="font-bold text-accent flex items-center gap-2 mt-4">
                     Receber certificado
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
