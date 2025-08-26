@@ -28,8 +28,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             <Image 
                 src="https://i.imgur.com/VJtWx2S.png" 
                 alt="Diástase Zero Logo" 
-                width={90} 
-                height={90}
+                width={110} 
+                height={110}
                 className='mx-auto'
             />
           </Link>
