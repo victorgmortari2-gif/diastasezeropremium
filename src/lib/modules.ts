@@ -1,4 +1,4 @@
-import { HeartPulse, Dumbbell, Anchor, LucideIcon } from 'lucide-react';
+import { HeartPulse, Dumbbell, Anchor, LucideIcon, Award, Gift } from 'lucide-react';
 
 export interface Module {
   slug: string;
@@ -12,7 +12,7 @@ export interface Module {
     day: number;
     slug: string;
     title: string;
-    type: 'Vídeo Aula' | 'Exercício' | 'Material' | 'Avaliação';
+    type: 'Vídeo Aula' | 'Exercício' | 'Material' | 'Avaliação' | 'Workshop' | 'Mentoria';
     duration: string;
     description: string;
     videoUrl?: string;
@@ -21,91 +21,133 @@ export interface Module {
 
 export const modules: Module[] = [
   {
-    slug: 'reconexao',
-    title: 'Módulo 1 – Reconexão',
+    slug: 'diagnostico-respiracao',
+    title: 'Módulo 1 – Diagnóstico e Respiração',
     days: 'Dias 1 a 7',
     icon: HeartPulse,
     shortPoints: [
-        'Introdução à diástase',
-        'Respiração diafragmática guiada',
-        'Ativação do transverso abdominal',
-        'Alongamentos posturais',
-        'Mini plano alimentar anti-inflamatório',
+        'Autoteste com vídeo explicativo',
+        'Sessão guiada de respiração hipopressiva',
+        'Ativação do core profundo e pelve',
+        'Cardápio detox de 3 dias',
     ],
-    longDescription: 'Neste primeiro módulo, você vai reaprender a se conectar com seu corpo. Focaremos na base da recuperação: a respiração correta e a ativação dos músculos profundos do abdômen, essenciais para reverter a diástase.',
+    longDescription: 'Comece com o pé direito. Aprenda a diagnosticar sua diástase com precisão e domine as técnicas avançadas de respiração hipopressiva que formam a base para um abdômen forte e recuperado.',
     objectives: [
-        'Entender o que é a diástase e como ela afeta seu corpo.',
-        'Dominar a técnica de respiração diafragmática.',
-        'Aprender a ativar corretamente o transverso abdominal (seu "espartilho natural").',
-        'Melhorar a postura com alongamentos específicos.',
-        'Iniciar uma alimentação que ajuda a desinflamar o corpo.',
+        'Realizar o autoteste de diástase corretamente.',
+        'Dominar a respiração hipopressiva para ativação do core.',
+        'Conectar-se com os músculos do assoalho pélvico.',
+        'Iniciar um processo de desintoxicação alimentar para potencializar resultados.',
     ],
     schedule: [
-        { day: 1, slug: 'introducao-diastase', title: 'Introdução à Diástase Abdominal', type: 'Vídeo Aula', duration: '15 min', description: 'Entenda o que é a diástase, suas causas e como ela afeta seu corpo.', videoUrl: 'https://www.youtube.com/embed/Ke9al-Aliyc' },
-        { day: 2, slug: 'respiracao-diafragmatica', title: 'Respiração Diafragmática Guiada', type: 'Exercício', duration: '10 min', description: 'Aprenda a técnica fundamental para ativação do core.' },
-        { day: 3, slug: 'ativacao-transverso', title: 'Ativação do Transverso Abdominal', type: 'Vídeo Aula', duration: '12 min', description: 'Técnicas para ativar o músculo mais profundo do abdômen.' },
-        { day: 4, slug: 'alongamentos-posturais', title: 'Alongamentos Posturais', type: 'Exercício', duration: '15 min', description: 'Sequência de alongamentos para melhorar a postura.' },
-        { day: 5, slug: 'plano-alimentar', title: 'Mini Plano Alimentar Anti-inflamatório', type: 'Material', duration: '5 min', description: 'Guia prático com alimentos que auxiliam na recuperação.' },
-        { day: 6, slug: 'pratica-integrada-1', title: 'Prática Integrada - Semana 1', type: 'Exercício', duration: '20 min', description: 'Combinação de todos os exercícios aprendidos.' },
-        { day: 7, slug: 'autoavaliacao-1', title: 'Autoavaliação e Planejamento', type: 'Avaliação', duration: '10 min', description: 'Reflita sobre seu progresso e planeje a próxima semana.' },
+        { day: 1, slug: 'autoteste-diastase', title: 'Autoteste com Vídeo Explicativo', type: 'Vídeo Aula', duration: '15 min', description: 'Aprenda a medir sua diástase de forma precisa e segura.', videoUrl: 'https://www.youtube.com/embed/Ke9al-Aliyc' },
+        { day: 2, slug: 'respiracao-hipopressiva', title: 'Sessão Guiada de Respiração Hipopressiva', type: 'Exercício', duration: '20 min', description: 'Técnica fundamental para reduzir a pressão abdominal.' },
+        { day: 3, slug: 'ativacao-core-pelve', title: 'Ativação do Core Profundo e Pelve', type: 'Vídeo Aula', duration: '18 min', description: 'Sinta e ative os músculos que sustentam seu tronco.' },
+        { day: 4, slug: 'cardapio-detox', title: 'Cardápio Detox de 3 Dias', type: 'Material', duration: '10 min', description: 'Um plano alimentar para reduzir a inflamação e o inchaço.' },
+        { day: 5, slug: 'pratica-integrada-1', title: 'Prática Integrada de Respiração', type: 'Exercício', duration: '25 min', description: 'Combine as técnicas aprendidas para uma prática fluida.' },
+        { day: 6, slug: 'revisao-ajustes-1', title: 'Revisão e Ajustes da Técnica', type: 'Avaliação', duration: '15 min', description: 'Tire suas dúvidas e refine sua execução.' },
+        { day: 7, slug: 'planejamento-semana-2', title: 'Planejamento para a Semana 2', type: 'Material', duration: '10 min', description: 'Prepare-se para a fase de fortalecimento intensivo.' },
     ]
   },
   {
-    slug: 'fortalecimento',
-    title: 'Módulo 2 – Fortalecimento',
+    slug: 'treino-intensivo',
+    title: 'Módulo 2 – Treino Intensivo e Estabilidade',
     days: 'Dias 8 a 14',
     icon: Dumbbell,
     shortPoints: [
-        'Exercícios: Ponte, dead bug, elevação de quadril',
-        'Dicas práticas de ergonomia no dia a dia',
-        'Alimentos cicatrizantes para o abdômen',
-        'Aula gravada: "Erros comuns da diástase"',
+        'Treinos hipopressivos com progressão',
+        'Workshop: "Zere sua diástase sem cirurgia"',
+        'Suplementação e alimentação funcional',
     ],
-    longDescription: 'Com a base estabelecida, é hora de fortalecer. Neste módulo, introduzimos exercícios progressivos e seguros para tonificar seu abdômen, além de dicas para aplicar no seu dia a dia e acelerar os resultados.',
+    longDescription: 'É hora de intensificar. Neste módulo, você avançará nos treinos hipopressivos, aprenderá sobre estratégias de alimentação e suplementação que aceleram a cicatrização e participará de um workshop transformador.',
     objectives: [
-        'Executar com perfeição os exercícios base para fechar a diástase.',
-        'Aprender como proteger seu abdômen em tarefas cotidianas.',
-        'Conhecer alimentos que auxiliam na cicatrização dos tecidos.',
-        'Identificar e evitar os erros mais comuns que atrapalham a recuperação.',
-        'Sentir o abdômen mais firme e a postura mais alinhada.',
+        'Progredir nos exercícios hipopressivos com segurança.',
+        'Aprender estratégias práticas para zerar a diástase sem cirurgia.',
+        'Entender como a alimentação e suplementos podem acelerar seus resultados.',
+        'Aumentar a estabilidade e força do seu core.',
     ],
      schedule: [
-        { day: 8, slug: 'progressao-segura', title: 'Progressão Segura de Exercícios', type: 'Vídeo Aula', duration: '18 min', description: 'Como evoluir nos exercícios sem prejudicar a recuperação' },
-        { day: 9, slug: 'ponte-basica', title: 'Ponte Básica e Variações', type: 'Exercício', duration: '15 min', description: 'Fortalecimento dos glúteos e estabilização pélvica' },
-        { day: 10, slug: 'dead-bug', title: 'Dead Bug - Técnica Perfeita', type: 'Vídeo Aula', duration: '14 min', description: 'Exercício fundamental para coordenação e estabilidade' },
-        { day: 11, slug: 'elevacao-quadril', title: 'Elevação de Quadril Controlada', type: 'Exercício', duration: '12 min', description: 'Fortalecimento específico para o core posterior' },
-        { day: 12, slug: 'ergonomia', title: 'Ergonomia no Dia a Dia', type: 'Material', duration: '8 min', description: 'Como manter boa postura nas atividades cotidianas' },
-        { day: 13, slug: 'circuito-fortalecimento', title: 'Circuito de Fortalecimento', type: 'Exercício', duration: '25 min', description: 'Combinação dos exercícios da semana em sequência' },
-        { day: 14, slug: 'correcao-erros', title: 'Correção de Erros Comuns', type: 'Avaliação', duration: '15 min', description: 'Identifique e corrija os principais erros de execução' },
+        { day: 8, slug: 'hipopressivos-progressao', title: 'Treinos Hipopressivos com Progressão', type: 'Exercício', duration: '25 min', description: 'Novas posturas e desafios para seu treino.' },
+        { day: 9, slug: 'workshop-zere-diastase', title: 'Workshop: "Zere sua diástase sem cirurgia"', type: 'Workshop', duration: '45 min', description: 'Uma aula completa com o passo a passo para a recuperação.' },
+        { day: 10, slug: 'suplementacao-alimentacao', title: 'Suplementação e Alimentação Funcional', type: 'Material', duration: '20 min', description: 'O que comer para ajudar seu corpo a se recuperar mais rápido.' },
+        { day: 11, slug: 'treino-estabilidade', title: 'Treino de Estabilidade com Foco no Core', type: 'Exercício', duration: '30 min', description: 'Exercícios que desafiam e fortalecem seu centro.' },
+        { day: 12, slug: 'pratica-integrada-2', title: 'Prática Integrada - Semana 2', type: 'Exercício', duration: '30 min', description: 'Um treino completo unindo todos os aprendizados.' },
+        { day: 13, slug: 'autoavaliacao-2', title: 'Autoavaliação e Correção de Postura', type: 'Avaliação', duration: '15 min', description: 'Verifique seu progresso e ajuste sua postura no dia a dia.' },
+        { day: 14, slug: 'preparacao-remodelagem', title: 'Preparação para a Remodelagem Corporal', type: 'Material', duration: '10 min', description: 'Entenda a próxima fase e prepare seu corpo.' },
     ]
   },
   {
-    slug: 'estabilidade',
-    title: 'Módulo 3 – Estabilidade',
+    slug: 'remodelagem-corporal',
+    title: 'Módulo 3 – Remodelagem Corporal',
     days: 'Dias 15 a 21',
     icon: Anchor,
     shortPoints: [
-        'Treino diário com 5 exercícios evolutivos',
-        'Rotina de sono e autocuidado para resultados',
-        'Check-list de hábitos saudáveis',
-        'Aula: "Como manter os resultados"',
+        'Protocolo de treino avançado',
+        'Mentoria: como manter o abdômen firme',
+        'Plano de 60 dias pós-desafio',
     ],
-    longDescription: 'Na reta final, o foco é a estabilidade. Você aprenderá a integrar a força e o controle adquiridos em uma rotina sólida, garantindo que os resultados não apenas apareçam, mas que sejam duradouros.',
+    longDescription: 'Na reta final, vamos consolidar seus resultados e ir além. Com um protocolo avançado e uma mentoria exclusiva, você aprenderá não só a atingir seu objetivo, mas a manter um abdômen firme para sempre.',
     objectives: [
-        'Realizar um treino diário rápido e eficiente para máxima estabilidade.',
-        'Entender a importância do sono e do autocuidado na recuperação.',
-        'Implementar um checklist de hábitos para manter a barriga firme.',
-        'Criar um plano para continuar sua evolução após o desafio.',
-        'Sentir-se confiante e no controle do seu corpo.',
+        'Executar um protocolo de treino avançado para máxima definição.',
+        'Receber mentoria sobre como manter os resultados a longo prazo.',
+        'Estruturar um plano de manutenção de 60 dias.',
+        'Sentir-se confiante e com total controle sobre seu corpo.',
     ],
     schedule: [
-        { day: 15, slug: 'estabilidade-avancados', title: 'Exercícios de Estabilidade Avançados', type: 'Vídeo Aula', duration: '20 min', description: 'Desafios progressivos para consolidar a recuperação' },
-        { day: 16, slug: 'prancha-segura', title: 'Prancha e Variações Seguras', type: 'Exercício', duration: '18 min', description: 'Fortalecimento isométrico adaptado para diástase' },
-        { day: 17, slug: 'resistencia-muscular', title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '16 min', description: 'Estratégias para aumentar a resistência sem sobrecarga' },
-        { day: 18, slug: 'rotina-manutencao', title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '30 min', description: 'Sequência de exercícios para continuar após o programa' },
-        { day: 19, slug: 'estrategias-longo-prazo', title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo' },
-        { day: 20, slug: 'desafio-final', title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Avalie sua evolução com exercícios progressivos' },
-        { day: 21, slug: 'planejamento-futuro', title: 'Planejamento Futuro', type: 'Avaliação', duration: '15 min', description: 'Crie seu plano personalizado de manutenção' },
+        { day: 15, slug: 'protocolo-avancado', title: 'Protocolo de Treino Avançado', type: 'Exercício', duration: '35 min', description: 'A sequência definitiva para remodelar seu abdômen.' },
+        { day: 16, slug: 'mentoria-abdomen-firme', title: 'Mentoria: Como Manter o Abdômen Firme', type: 'Mentoria', duration: '40 min', description: 'Segredos e estratégias para resultados duradouros.' },
+        { day: 17, slug: 'plano-pos-desafio', title: 'Plano de 60 Dias Pós-Desafio', type: 'Material', duration: '15 min', description: 'Seu guia para continuar evoluindo após o programa.' },
+        { day: 18, slug: 'treino-final', title: 'Treino Final de Consolidação', type: 'Exercício', duration: '30 min', description: 'O último treino do desafio para celebrar sua jornada.' },
+        { day: 19, slug: 'revisao-geral', title: 'Revisão Geral e Dúvidas Finais', type: 'Workshop', duration: '30 min', description: 'Uma última chance para tirar todas as suas dúvidas.' },
+        { day: 20, slug: 'avaliacao-final', title: 'Avaliação Final dos Resultados', type: 'Avaliação', duration: '15 min', description: 'Meça novamente sua diástase e veja sua evolução.' },
+        { day: 21, slug: 'celebracao-proximos-passos', title: 'Celebração e Próximos Passos', type: 'Mentoria', duration: '20 min', description: 'Comemore sua conquista e saiba como continuar.' },
     ]
   },
+  {
+    slug: 'estetica-postura',
+    title: 'Módulo Extra 4 – Estética e Postura',
+    days: 'Bônus',
+    icon: Award,
+    shortPoints: [
+        'Exercícios para afinar cintura',
+        'Técnicas de escultura abdominal leve',
+        'Rituais de autocuidado com foco estético',
+    ],
+    longDescription: 'Um módulo bônus focado em realçar sua beleza natural. Aprenda exercícios específicos para a cintura, técnicas de massagem e rituais que melhoram não só a aparência, mas também a sua relação com seu corpo.',
+    objectives: [
+        'Aprender exercícios que ajudam a afinar a cintura.',
+        'Praticar técnicas de automassagem para esculpir o abdômen.',
+        'Incorporar rituais de autocuidado na sua rotina.',
+        'Melhorar a postura e a elegância dos movimentos.',
+    ],
+    schedule: [
+        { day: 1, slug: 'exercicios-cintura', title: 'Exercícios para Afinar Cintura', type: 'Exercício', duration: '15 min', description: 'Movimentos que tonificam os oblíquos e modelam a cintura.' },
+        { day: 2, slug: 'escultura-abdominal', title: 'Técnicas de Escultura Abdominal Leve', type: 'Vídeo Aula', duration: '20 min', description: 'Automassagem para melhorar o contorno corporal.' },
+        { day: 3, slug: 'rituais-autocuidado', title: 'Rituais de Autocuidado com Foco Estético', type: 'Material', duration: '10 min', description: 'Dicas de cremes, óleos e práticas para a pele.' },
+        { day: 4, slug: 'postura-elegancia', title: 'Postura e Elegância no Dia a Dia', type: 'Workshop', duration: '25 min', description: 'Como manter uma postura que valoriza seu corpo.' },
+    ]
+  },
+  {
+    slug: 'vida-real-corpo-forte',
+    title: 'Módulo Extra 5 – Vida Real, Corpo Forte',
+    days: 'Bônus',
+    icon: Gift,
+    shortPoints: [
+        'Como manter constância na rotina',
+        'Guia de alimentação para mães',
+        'Aula: "20 minutos por dia"',
+    ],
+    longDescription: 'Este módulo é para a mulher real. Dicas práticas para manter a constância mesmo na correria, um guia de alimentação pensado para mães e mulheres ocupadas, e a prova de que 20 minutos por dia são suficientes.',
+    objectives: [
+        'Desenvolver estratégias para manter a constância nos treinos.',
+        'Aprender a fazer escolhas alimentares inteligentes e práticas.',
+        'Estruturar uma rotina de 20 minutos diários que funciona.',
+        'Integrar o cuidado com o corpo à sua vida real e agitada.',
+    ],
+    schedule: [
+        { day: 1, slug: 'manter-constancia', title: 'Como Manter Constância na Rotina', type: 'Workshop', duration: '30 min', description: 'Estratégias mentais e práticas para não desistir.' },
+        { day: 2, slug: 'guia-alimentacao-maes', title: 'Guia Prático de Alimentação para Mães', type: 'Material', duration: '15 min', description: 'Receitas e dicas para uma alimentação saudável e rápida.' },
+        { day: 3, slug: 'aula-20-minutos', title: 'Aula: "Como Manter Tudo com 20 Minutos por Dia"', type: 'Vídeo Aula', duration: '20 min', description: 'O segredo para otimizar seu tempo e ter resultados.' },
+        { day: 4, slug: 'montando-sua-rotina', title: 'Montando Sua Rotina Realista', type: 'Exercício', duration: '15 min', description: 'Planejamento prático para encaixar os treinos na sua vida.' },
+    ]
+  }
 ];

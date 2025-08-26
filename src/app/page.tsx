@@ -22,10 +22,10 @@ export default function Home() {
                     />
                 </div>
                 <h1 className="font-headline text-3xl md:text-5xl font-bold text-foreground">
-                    Bem-vinda ao Desafio Básico do <span className="text-primary">Diástase Zero</span>
+                    Bem-vinda ao Desafio <span className="text-primary">Premium</span> do Diástase Zero
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-                    Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
+                    Zere Sua Diástase com Acompanhamento Completo. Mais estrutura, mais suporte, mais resultados.
                 </p>
                 <Button size="lg" className="mt-6 font-bold text-lg p-8 transition-transform duration-300 hover:scale-105" asChild>
                     <Link href="#modulos">ACESSAR MÓDULOS <ArrowRight className="ml-2 h-5 w-5" /></Link>
@@ -43,7 +43,7 @@ export default function Home() {
                     <div className="absolute bottom-4 left-4 right-4 text-left p-4 bg-black/50 backdrop-blur-sm rounded-lg">
                         <p className="font-bold text-white text-lg">
                             <span className="bg-primary text-primary-foreground rounded-full px-3 py-1 text-sm mr-2">21</span>
-                            Dias de transformação para um abdômen firme e saudável.
+                             Dias de transformação para um abdômen firme e saudável, com suporte completo.
                         </p>
                     </div>
                 </div>
@@ -82,13 +82,13 @@ export default function Home() {
             <div className="container px-4 md:px-6">
                 <div className="text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                        Conheça os Módulos do Desafio
+                        Módulos do Programa Premium
                     </h2>
                     <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">
                         Um guia completo para você fortalecer seu abdômen e recuperar a confiança.
                     </p>
                 </div>
-                <div className="mt-12 grid gap-8 md:grid-cols-3">
+                <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
                     {modules.map((module) => {
                       const Icon = module.icon;
                       return (
@@ -135,11 +135,11 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
-                      POR APENAS R$ 12,90
+                      OFERTA ÚNICA
                     </div>
-                    <h3 className="font-headline text-3xl font-bold mt-4">Upgrade para o Desafio Premium</h3>
+                    <h3 className="font-headline text-3xl font-bold mt-4">Acesso Completo ao Desafio Premium</h3>
                     <p className="mt-2 text-primary-foreground/90">
-                      Está gostando do Desafio Básico? Então aproveite esta oferta única e desbloqueie acesso imediato ao Desafio Premium com todos os módulos avançados e bônus exclusivos.
+                      Aproveite esta oferta única e desbloqueie acesso imediato ao Desafio Premium com todos os módulos avançados e bônus exclusivos para um resultado definitivo.
                     </p>
                     <div className="mt-8 text-center bg-background/20 p-6 rounded-lg">
                        <p className="font-headline text-2xl font-bold text-accent" style={{ textShadow: '0 0 5px black' }}>🔥 OFERTA ESPECIAL</p>
@@ -156,21 +156,13 @@ export default function Home() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-headline text-xl font-bold mb-4">O que você recebe no Premium:</h4>
+                    <h4 className="font-headline text-xl font-bold mb-4">Super Bônus do Premium</h4>
                     <ul className="space-y-3 text-sm">
-                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Diagnóstico e Respiração Avançada:</span> Autoteste, hipopressiva, ativação do core profundo e cardápio detox.</span></li>
-                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Treino Intensivo e Estabilidade:</span> Progressão, workshop "Zere sua diástase" e suplementação.</span></li>
-                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Remodelagem Corporal:</span> Protocolo avançado, mentoria e plano de 60 dias pós-desafio.</span></li>
-                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Estética e Postura Feminina:</span> Exercícios para afinar cintura e alinhar postura.</span></li>
-                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Vida Real, Corpo Forte:</span> Guia de alimentação para mães e rotina de 20 minutos.</span></li>
-                    </ul>
-                    <h4 className="font-headline text-xl font-bold mt-6 mb-4">Super Bônus do Premium</h4>
-                    <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-                        <li className="flex items-center gap-2">✨ Todo conteúdo do Desafio Básico</li>
-                        <li className="flex items-center gap-2">📚 E-book "Diástase Zero o Ano Todo"</li>
-                        <li className="flex items-center gap-2">🧘 Meditação guiada</li>
-                        <li className="flex items-center gap-2">💬 Grupo EXCLUSIVO no WhatsApp</li>
-                        <li className="flex items-center gap-2">🏆 Certificado digital de conclusão</li>
+                      <li className="flex gap-3"><Star className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Todo conteúdo do Desafio Básico:</span> Para você começar com a base perfeita.</span></li>
+                      <li className="flex gap-3"><BookOpen className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">E-book "Diástase Zero o Ano Todo":</span> Seu guia para manter os resultados.</span></li>
+                      <li className="flex gap-3"><Heart className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Meditação guiada:</span> Foco e constância para sua jornada.</span></li>
+                      <li className="flex gap-3"><Users className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Grupo EXCLUSIVO no WhatsApp:</span> Suporte e comunidade para te motivar.</span></li>
+                      <li className="flex gap-3"><Award className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Certificado digital de conclusão:</span> Celebre sua conquista.</span></li>
                     </ul>
                   </div>
                 </div>
@@ -256,5 +248,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
