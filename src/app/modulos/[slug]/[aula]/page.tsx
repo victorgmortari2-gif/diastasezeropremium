@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, Coffee, Apple, Salad, Soup, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, Coffee, Apple, Salad, Soup, CheckCircle, Award } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -111,6 +111,55 @@ const DetoxContent = () => {
     );
 }
 
+const PlanningS2Content = () => {
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg">
+            <div className="text-center mb-8">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Parabéns por ter concluído a primeira semana! 🎉</h2>
+                <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
+                    Você deu um passo muito importante na sua jornada de recuperação da diástase, aprendeu a se conectar com o seu corpo e a executar técnicas fundamentais. Agora, na Semana 2, vamos entrar em uma fase de fortalecimento intensivo. Isso significa que você vai aumentar o desafio dos exercícios, explorar novas posturas e começar a sentir resultados ainda mais evidentes na sua força, estabilidade e consciência corporal.
+                </p>
+            </div>
+
+            <Card className="mb-8 bg-white shadow-md">
+                <CardHeader>
+                    <CardTitle className="font-headline text-xl flex items-center gap-2">
+                        <Award className="h-6 w-6 text-accent" />
+                        Objetivos da Semana
+                    </CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <ul className="space-y-3 text-muted-foreground">
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Progredir nos treinos hipopressivos com novas variações</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Ampliar a estabilidade e força do core</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Aprender sobre alimentação funcional que ajuda na recuperação</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Consolidar técnicas em treinos integrados</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Medir evolução e corrigir postura no dia a dia</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Preparar o corpo para a remodelagem corporal</span></li>
+                    </ul>
+                </CardContent>
+            </Card>
+
+            <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg text-primary-foreground/90 mb-8">
+                <h3 className="font-headline font-bold text-lg mb-2 text-primary">Melhores Práticas</h3>
+                <ul className="space-y-2 text-foreground">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Organize seu tempo: reserve 25 a 45 minutos por dia para as aulas</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Escolha um ambiente tranquilo e confortável</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>A constância é mais importante que a intensidade</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Anote dúvidas e percepções para revisão</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Respeite os limites do seu corpo: cada mulher tem seu ritmo</span></li>
+                </ul>
+            </div>
+
+            <div className="text-center">
+                <p className="font-headline text-lg italic text-accent">
+                    A Semana 2 é um marco no seu processo: aqui você começa a sentir o fortalecimento real da sua base e ganha confiança para seguir firme rumo à recuperação total. Cada exercício é um investimento no seu corpo, na sua autoestima e na sua saúde. 🌸
+                </p>
+            </div>
+        </div>
+    );
+}
+
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
   const lesson = module?.schedule.find((l) => l.slug === params.aula);
@@ -166,6 +215,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             </Card>
           ) : lesson.slug === 'cardapio-detox' ? (
             <DetoxContent />
+          ) : lesson.slug === 'planejamento-semana-2' ? (
+            <PlanningS2Content />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
