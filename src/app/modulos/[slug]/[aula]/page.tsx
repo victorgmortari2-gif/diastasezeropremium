@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Zap, UserCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -410,6 +410,100 @@ const PostChallengePlanContent = () => {
     );
 };
 
+const SelfCareContent = () => {
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg text-foreground">
+            <div className="text-center mb-8">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Rituais de Autocuidado com Foco Estético 🌟</h2>
+                <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
+                    O autocuidado é um dos pilares da transformação. Nesta aula, vamos explorar rituais diários para manter a pele saudável, radiante e rejuvenescida, cuidando do maior órgão do seu corpo.
+                </p>
+            </div>
+
+            <div className="space-y-8">
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Droplet className="h-6 w-6 text-primary" />Cremes e Óleos Essenciais</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        <div>
+                            <h4 className="font-bold mb-2">Cremes Hidratantes:</h4>
+                            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                                <li><strong>Para o rosto:</strong> busque por ácido hialurônico, niacinamida ou vitamina C para hidratação e firmeza.</li>
+                                <li><strong>Para o corpo:</strong> opte por manteiga de karité, óleo de amêndoas ou glicerina para elasticidade.</li>
+                                <li><strong>Dica:</strong> aplique após o banho para melhor absorção.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="font-bold mb-2">Óleos Corporais e Faciais:</h4>
+                            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                                <li><strong>Óleo de rosa mosqueta:</strong> ideal para regeneração e redução de manchas.</li>
+                                <li><strong>Óleo de jojoba:</strong> hidrata sem deixar a pele oleosa.</li>
+                                <li><strong>Dica:</strong> use algumas gotas antes de dormir para nutrir a pele durante a noite.</li>
+                            </ul>
+                        </div>
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Sparkles className="h-6 w-6 text-primary" />Práticas Essenciais</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4 text-muted-foreground">
+                        <p><strong>Limpeza diária:</strong> Manhã e noite para remover impurezas.</p>
+                        <p><strong>Esfoliação semanal:</strong> Remove células mortas e estimula a renovação.</p>
+                        <p><strong>Proteção solar:</strong> Diariamente, mesmo em dias nublados, para prevenir o envelhecimento.</p>
+                        <p><strong>Massagem facial e corporal:</strong> Estimula a circulação e relaxa os músculos.</p>
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-primary/10 border border-primary/20">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3 text-primary"><Heart className="h-6 w-6" />Rituais Complementares</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-foreground">
+                            <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-green-600" /> Banhos relaxantes com óleos.</li>
+                            <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-green-600" /> Hidratação interna (2L de água/dia).</li>
+                            <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-green-600" /> Alimentação equilibrada.</li>
+                            <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-green-600" /> Sono de qualidade.</li>
+                        </ul>
+                    </CardContent>
+                </Card>
+
+                <div>
+                    <h3 className="font-headline text-2xl font-bold text-center mb-6 text-primary">Sugestão de Rotina Diária</h3>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <Card className="bg-white">
+                            <CardHeader><CardTitle className="font-headline text-lg flex items-center gap-2"><Sun className="text-accent" />Manhã</CardTitle></CardHeader>
+                            <CardContent><ul className="list-decimal list-inside text-muted-foreground space-y-1">
+                                <li>Limpeza facial</li>
+                                <li>Hidratação com creme leve</li>
+                                <li>Protetor solar</li>
+                            </ul></CardContent>
+                        </Card>
+                        <Card className="bg-white">
+                            <CardHeader><CardTitle className="font-headline text-lg flex items-center gap-2"><Moon className="text-accent" />Noite</CardTitle></CardHeader>
+                            <CardContent><ul className="list-decimal list-inside text-muted-foreground space-y-1">
+                                <li>Limpeza facial profunda</li>
+                                <li>Aplicação de sérum ou óleo nutritivo</li>
+                                <li>Massagem facial (5-10 min)</li>
+                            </ul></CardContent>
+                        </Card>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className="text-center mt-10">
+                <p className="font-headline text-lg italic text-accent">
+                    O autocuidado não é um luxo, é um investimento em você. 💖 Incorpore essas práticas e sinta a diferença no seu bem-estar e autoestima.
+                </p>
+            </div>
+        </div>
+    )
+}
+
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -474,6 +568,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             <RemodelingPrepContent />
           ) : lesson.slug === 'plano-pos-desafio' ? (
             <PostChallengePlanContent />
+          ) : lesson.slug === 'rituais-autocuidado' ? (
+            <SelfCareContent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
