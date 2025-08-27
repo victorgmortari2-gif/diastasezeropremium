@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -303,11 +303,113 @@ const RemodelingPrepContent = () => {
                  <p className="text-foreground/90">
                     Agora que você está preparada, chegou a hora de avançar para o <strong>Módulo 3 – Remodelagem Corporal</strong>. Nessa nova fase, vamos consolidar seus resultados com um protocolo avançado e estratégias exclusivas para manter seu abdômen firme para sempre. Prepare-se para treinos mais intensos, mentorias transformadoras e um plano de continuidade que vai garantir sua evolução mesmo após o fim do programa.
                  </p>
-                 <p className="font-bold mt-3 text-accent">Você está pronta para transformar todo o esforço em resultados duradouros? 🚀</p>
+                 <p className="font-bold mt-3 text-accent">Você está pronta para transformar todo o esforço em resultados duradouros?</p>
             </div>
         </div>
     )
 }
+
+const PostChallengePlanContent = () => {
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg text-foreground">
+            <div className="text-center mb-8">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Plano de 60 Dias Pós-Desafio 🚀</h2>
+                <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
+                    Parabéns! 🎉 Você concluiu uma das fases mais intensas do programa e já conquistou resultados incríveis. O verdadeiro segredo da transformação está em manter e evoluir seus ganhos ao longo do tempo. Por isso, criamos o Plano de 60 Dias Pós-Desafio, que será seu guia detalhado para fortalecer o abdômen, controlar a diástase, aumentar definição e melhorar sua qualidade de vida de forma sustentável.
+                </p>
+            </div>
+
+            <Card className="mb-8 bg-white shadow-md">
+                <CardHeader>
+                    <CardTitle className="font-headline text-xl flex items-center gap-2 text-accent">
+                        <Calendar className="h-6 w-6" />
+                        Estrutura Completa – Semana a Semana
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-primary">Semanas 1 e 2 – Consolidação</h4>
+                        <p className="text-muted-foreground mb-3"><strong>Objetivo:</strong> manter resultados, reforçar base muscular e corrigir postura.</p>
+                        <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                            <li><strong>Treinos:</strong> 4x por semana (2 sessões de abdômen profundo, 2 sessões de corpo todo).</li>
+                            <li><strong>Dicas:</strong> Foque na execução correta, não na velocidade. Priorize respiração durante cada exercício.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-primary">Semanas 3 e 4 – Intensidade gradual</h4>
+                        <p className="text-muted-foreground mb-3"><strong>Objetivo:</strong> fortalecer músculos estabilizadores e preparar corpo para desafios.</p>
+                        <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                            <li><strong>Treinos:</strong> 4x por semana (1 treino de abdômen com variações, 2 treinos de corpo todo com resistência, 1 treino de mobilidade).</li>
+                            <li><strong>Dicas:</strong> Observe sua postura durante os movimentos. Mantenha progressão gradual.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-primary">Semanas 5 e 6 – Introdução de desafios</h4>
+                        <p className="text-muted-foreground mb-3"><strong>Objetivo:</strong> aumentar resistência, queimar gordura e elevar energia.</p>
+                        <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                            <li><strong>Treinos:</strong> 5x por semana (1 sessão HIIT adaptada, 2 treinos de força + abdômen, 1 de mobilidade, 1 cardio leve).</li>
+                            <li><strong>Dicas:</strong> Faça aquecimento antes do HIIT. Respeite seu limite e adapte.</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4 className="font-bold text-lg mb-2 text-primary">Semanas 7 e 8 – Manutenção e autonomia</h4>
+                        <p className="text-muted-foreground mb-3"><strong>Objetivo:</strong> consolidar hábitos e treinar de forma independente.</p>
+                        <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                            <li><strong>Treinos:</strong> 4–5x por semana (mescla de força, abdômen e aeróbicos).</li>
+                            <li><strong>Dicas:</strong> Crie seu próprio cronograma adaptado. Mantenha diário de treino.</li>
+                        </ul>
+                    </div>
+                </CardContent>
+            </Card>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+                 <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-lg flex items-center gap-2"><UtensilsIcon className="h-5 w-5 text-primary" />Nutrição nos 60 Dias</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                           <li><strong>Proteínas:</strong> 25–30g por refeição (frango, peixe, ovos, tofu).</li>
+                           <li><strong>Carboidratos complexos:</strong> arroz integral, batata-doce, quinoa.</li>
+                           <li><strong>Vegetais variados:</strong> metade do prato em cada refeição.</li>
+                           <li><strong>Gorduras boas:</strong> abacate, azeite de oliva, castanhas.</li>
+                           <li><strong>Hidratação:</strong> 2 a 2,5L de água/dia.</li>
+                        </ul>
+                    </CardContent>
+                 </Card>
+                  <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-lg flex items-center gap-2"><Brain className="h-5 w-5 text-primary" />Mentalidade e Motivação</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                         <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                            <li><strong>Registre evolução:</strong> fotos, medidas, sensações.</li>
+                            <li><strong>Celebre conquistas pequenas.</strong></li>
+                            <li><strong>Consistência > perfeição.</strong></li>
+                            <li><strong>Revise suas metas</strong> e ajuste se necessário.</li>
+                         </ul>
+                    </CardContent>
+                 </Card>
+            </div>
+
+            <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg mb-8">
+                <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center gap-2"><Star className="h-5 w-5" />Dicas Extras</h3>
+                <ul className="space-y-2 text-foreground">
+                    <li className="flex items-start gap-2"><Check className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Durma bem: 7–8h por noite para recuperação muscular.</span></li>
+                    <li className="flex items-start gap-2"><Check className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Respire profundamente durante os exercícios.</span></li>
+                    <li className="flex items-start gap-2"><Check className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Adapte a intensidade, mas não pule treinos.</span></li>
+                </ul>
+            </div>
+
+            <div className="text-center">
+                <p className="font-headline text-lg italic text-accent">
+                    Este plano é seu guia para manter o que você conquistou e evoluir ainda mais. Continue firme, cada passo conta! 🔥
+                </p>
+            </div>
+        </div>
+    );
+};
+
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -370,6 +472,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             <FunctionalFoodContent />
           ) : lesson.slug === 'preparacao-remodelagem' ? (
             <RemodelingPrepContent />
+          ) : lesson.slug === 'plano-pos-desafio' ? (
+            <PostChallengePlanContent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
