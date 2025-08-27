@@ -78,7 +78,7 @@ const DetoxContent = () => {
                         <CardHeader>
                             <CardTitle className="font-headline text-center text-xl text-primary">{day.day}</CardTitle>
                         </CardHeader>
-                        <CardContent className="flex-grow">
+                        <CardContent className="flex-grow p-6">
                             <ul className="space-y-4">
                                 {day.meals.map((meal) => (
                                     <li key={meal.time} className="flex items-start gap-3">
