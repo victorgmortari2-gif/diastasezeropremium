@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Zap, UserCheck } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Zap, UserCheck, Carrot, CookingPot, Shell } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -504,6 +504,118 @@ const SelfCareContent = () => {
     )
 }
 
+const HealthyEatingForMomsContent = () => {
+    const recipes = [
+        {
+            title: "Omelete Nutritiva de Legumes",
+            icon: Shell,
+            ingredients: ["2 ovos", "1/2 cenoura ralada", "1/2 abobrinha ralada", "1 colher de chá de azeite", "Sal e temperos a gosto"],
+            instructions: "Bata os ovos e tempere com sal e ervas. Refogue os legumes rapidamente no azeite. Misture os ovos aos legumes e cozinhe em fogo baixo até firmar.",
+            tip: "Ótimo para café da manhã ou lanche rápido."
+        },
+        {
+            title: "Salada Colorida com Frango Grelhado",
+            icon: Salad,
+            ingredients: ["1 peito de frango grelhado fatiado", "Mix de folhas verdes (alface, rúcula, espinafre)", "Tomate cereja, cenoura ralada e pepino", "1 colher de sopa de azeite e limão para temperar"],
+            instructions: "Monte a salada com todos os ingredientes. Tempere com azeite, limão, sal e pimenta.",
+            tip: "Você pode preparar o frango no domingo e usar durante a semana."
+        },
+        {
+            title: "Wrap Integral de Atum",
+            icon: Rocket,
+            ingredients: ["1 tortilla integral", "1 lata de atum em água", "1 colher de sopa de iogurte natural", "Folhas verdes e cenoura ralada"],
+            instructions: "Misture o atum com o iogurte. Coloque a mistura sobre a tortilla, adicione folhas verdes e cenoura. Enrole como um wrap.",
+            tip: "Excelente opção para almoço ou lanche rápido."
+        },
+        {
+            title: "Bowl de Quinoa com Legumes e Ovo",
+            icon: Soup,
+            ingredients: ["1 xícara de quinoa cozida", "1/2 xícara de brócolis cozido", "1/2 cenoura cozida", "1 ovo cozido ou pochê", "1 colher de chá de azeite"],
+            instructions: "Em uma tigela, monte a base com a quinoa. Adicione os legumes e finalize com o ovo e azeite.",
+            tip: "Ótimo para almoço nutritivo que sacia e fornece energia."
+        },
+        {
+            title: "Smoothie Energético de Frutas",
+            icon: Apple,
+            ingredients: ["1 banana", "1/2 xícara de morangos", "1 colher de sopa de aveia", "1 copo de leite vegetal ou leite desnatado"],
+            instructions: "Bata todos os ingredientes no liquidificador até ficar homogêneo. Sirva imediatamente.",
+            tip: "Ideal para café da manhã rápido ou lanche da tarde."
+        }
+    ];
+
+    const tips = [
+        "Planeje refeições da semana: organize cardápio e compras para evitar improvisos.",
+        "Use alimentos práticos: ovos, atum, legumes pré-cortados e frutas fáceis de consumir.",
+        "Prefira alimentos integrais: pães, arroz e massas integrais fornecem mais fibras.",
+        "Marmiteiras são aliadas: prepare marmitas em quantidade e congele para a semana.",
+        "Lanches rápidos: castanhas, frutas, iogurte ou barrinhas de proteína.",
+        "Cozinhe em porções grandes: arroz, quinoa e legumes duram 3–4 dias na geladeira.",
+        "Use temperos naturais: ervas, limão e azeite substituem molhos industrializados.",
+        "Inclua proteínas em todas as refeições: ovos, frango, peixe, leguminosas ou iogurte.",
+        "Hidrate-se constantemente: água, chás e água de coco ajudam na saciedade e bem-estar.",
+        "Evite pular refeições: pequenas refeições equilibradas mantêm energia e ajudam na concentração."
+    ];
+
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg text-foreground">
+            <div className="text-center mb-8">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Guia Prático de Alimentação para Mães 🌟</h2>
+                <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
+                    Sabemos que a rotina é intensa! Aqui está um guia com receitas e dicas para uma alimentação saudável e rápida, garantindo sua energia e bem-estar.
+                </p>
+            </div>
+
+            <h3 className="font-headline text-2xl font-bold text-center mb-6 text-primary">Receitas Saudáveis e Rápidas</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                {recipes.map((recipe, index) => {
+                    const Icon = recipe.icon;
+                    return (
+                        <Card key={index} className="bg-white flex flex-col">
+                            <CardHeader>
+                                <CardTitle className="font-headline text-lg flex items-center gap-2"><Icon className="h-6 w-6 text-accent" />{recipe.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="flex-grow space-y-3">
+                                <div>
+                                    <h4 className="font-bold text-sm mb-1">Ingredientes:</h4>
+                                    <ul className="list-disc list-inside text-sm text-muted-foreground">
+                                        {recipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-sm mb-1">Modo de Preparo:</h4>
+                                    <p className="text-sm text-muted-foreground">{recipe.instructions}</p>
+                                </div>
+                                <p className="text-xs italic bg-primary/10 p-2 rounded-md text-primary/80"><strong>Dica:</strong> {recipe.tip}</p>
+                            </CardContent>
+                        </Card>
+                    )
+                })}
+            </div>
+
+            <Card className="bg-white mb-8">
+                <CardHeader>
+                    <CardTitle className="font-headline text-xl flex items-center gap-2 text-primary"><Sparkles className="h-6 w-6 text-accent" />Dicas para o Dia a Dia</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                        {tips.map((tip, index) => (
+                             <li key={index} className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                <span className="text-muted-foreground text-sm">{tip}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </CardContent>
+            </Card>
+
+            <div className="text-center mt-8 bg-primary/10 p-6 rounded-lg">
+                <p className="font-headline text-lg italic text-accent">
+                    Cuidar da sua alimentação não precisa ser complicado. Com planejamento, cada refeição se torna um ato de autocuidado que impulsiona sua jornada! 🕒
+                </p>
+            </div>
+        </div>
+    );
+};
+
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -570,6 +682,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             <PostChallengePlanContent />
           ) : lesson.slug === 'rituais-autocuidado' ? (
             <SelfCareContent />
+          ) : lesson.slug === 'guia-alimentacao-maes' ? (
+            <HealthyEatingForMomsContent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
