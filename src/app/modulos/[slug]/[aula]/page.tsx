@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Zap, UserCheck, Carrot, CookingPot, Shell } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Zap, UserCheck, Carrot, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Clock, Lightbulb } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -623,6 +623,87 @@ const HealthyEatingForMomsContent = () => {
     );
 };
 
+const RealisticRoutineContent = () => {
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg text-foreground">
+            <div className="text-center mb-8">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Montando Sua Rotina Realista 🌟</h2>
+                <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
+                    A consistência é um dos pilares para resultados duradouros. Nesta aula, você aprenderá a montar uma rotina que encaixe treinos e hábitos saudáveis na sua vida sem estresse.
+                </p>
+            </div>
+
+            <div className="space-y-8">
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><ThumbsUp className="h-6 w-6 text-primary" />Por que ter uma rotina realista?</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-2 text-muted-foreground">
+                        <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Evita frustração e desânimo.</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Garante consistência, que é mais importante que intensidade.</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Equilibra vida pessoal e saúde de forma sustentável.</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Promove resultados a longo prazo.</span></li>
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Target className="h-6 w-6 text-primary" />Passo a Passo para Montar Sua Rotina</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3 list-decimal list-inside text-muted-foreground">
+                        <li><strong>Avalie seu tempo disponível:</strong> Identifique janelas de 20 a 60 minutos para treinos.</li>
+                        <li><strong>Defina prioridades:</strong> Liste seus objetivos principais e os treinos essenciais.</li>
+                        <li><strong>Escolha dias e horários fixos:</strong> Tente manter uma regularidade semanal.</li>
+                        <li><strong>Planeje treinos curtos e eficazes:</strong> 20 a 40 minutos consistentes são muito eficazes.</li>
+                        <li><strong>Combine treinos e descanso:</strong> Alterne dias de força, abdômen, aeróbicos e descanso.</li>
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Lightbulb className="h-6 w-6 text-primary" />Dicas Práticas para Sustentar a Rotina</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-2 text-muted-foreground">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                            <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Prepare roupas e equipamentos na noite anterior.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Use alarmes para criar o hábito.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Divida treinos em blocos se necessário.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Associe o treino a uma rotina existente.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Faça ajustes semanais conforme imprevistos.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Valorize cada pequena conquista.</span></li>
+                        </ul>
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-primary/5">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3 text-primary"><CalendarCheck className="h-6 w-6" />Exemplo de Rotina Realista Semanal</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-1 text-foreground/80">
+                           <li><strong>Segunda:</strong> Treino de corpo todo – 30 min</li>
+                           <li><strong>Terça:</strong> Abdômen profundo – 20 min + caminhada leve</li>
+                           <li><strong>Quarta:</strong> Descanso ativo – alongamento ou yoga</li>
+                           <li><strong>Quinta:</strong> Treino de força – 30 min</li>
+                           <li><strong>Sexta:</strong> HIIT adaptado ou cardio – 25 min</li>
+                           <li><strong>Sábado:</strong> Treino leve ou passeio ao ar livre</li>
+                           <li><strong>Domingo:</strong> Descanso ou rotina de autocuidado</li>
+                        </ul>
+                        <p className="text-xs italic mt-3 text-muted-foreground">Ajuste os dias e horários conforme sua disponibilidade, mas tente manter a regularidade.</p>
+                    </CardContent>
+                </Card>
+
+            </div>
+
+            <div className="text-center mt-10 bg-primary/10 p-6 rounded-lg">
+                <p className="font-headline text-lg italic text-accent">
+                    Montar uma rotina realista é o segredo para treinar de forma consistente e sustentável. 🔑 Lembre-se: o importante é manter os hábitos no longo prazo e criar uma rotina que seja sua aliada, e não um peso.
+                </p>
+            </div>
+        </div>
+    );
+};
+
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -691,6 +772,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             <SelfCareContent />
           ) : lesson.slug === 'guia-alimentacao-maes' ? (
             <HealthyEatingForMomsContent />
+          ) : lesson.slug === 'montando-sua-rotina' ? (
+            <RealisticRoutineContent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
