@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -78,7 +78,7 @@ const DetoxContent = () => {
                         <CardHeader>
                             <CardTitle className="font-headline text-center text-xl text-primary">{day.day}</CardTitle>
                         </CardHeader>
-                        <CardContent className="flex-grow p-6">
+                        <CardContent className="flex-grow">
                             <ul className="space-y-4">
                                 {day.meals.map((meal) => (
                                     <li key={meal.time} className="flex items-start gap-3">
@@ -241,6 +241,73 @@ const FunctionalFoodContent = () => {
     );
 }
 
+const RemodelingPrepContent = () => {
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg text-foreground">
+            <p className="mb-6 md:text-lg">
+                Nesta aula, vamos preparar você para entrar em uma das fases mais importantes do programa: a <strong>Remodelagem Corporal</strong>. Até aqui, você já fortaleceu sua base com exercícios de estabilidade, treinos hipopressivos e práticas integradas que ativaram o seu core, melhoraram sua postura e começaram a reduzir a diástase. Agora, é o momento de dar um passo além.
+            </p>
+            <p className="mb-8 md:text-lg">
+                A preparação para a remodelagem envolve três pilares fundamentais: ajustes físicos, nutricionais e mentais.
+            </p>
+            
+            <div className="space-y-8">
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Power className="h-6 w-6 text-primary" />Ajustes Físicos</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="mb-4 text-muted-foreground">Seu corpo já está mais forte e adaptado, mas para entrar em treinos mais avançados será essencial:</p>
+                        <ul className="space-y-2 list-disc list-inside">
+                            <li>Manter a regularidade dos exercícios, mesmo nos dias de menor disposição.</li>
+                            <li>Priorizar alongamentos antes e depois das práticas para evitar lesões.</li>
+                            <li>Incluir pequenas caminhadas ou atividades aeróbicas leves que ajudam na circulação e recuperação muscular.</li>
+                        </ul>
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Salad className="h-6 w-6 text-primary" />Ajustes Nutricionais</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                         <p className="mb-4 text-muted-foreground">Nesta etapa, sua alimentação vai desempenhar um papel ainda mais estratégico. Prefira alimentos naturais, de fácil acesso e que otimizam a recuperação:</p>
+                        <ul className="space-y-2 list-disc list-inside">
+                            <li><strong>Proteínas magras:</strong> frango, ovos, peixe e feijão.</li>
+                            <li><strong>Carboidratos integrais:</strong> arroz integral, batata-doce, aveia.</li>
+                            <li><strong>Gorduras boas:</strong> azeite de oliva, abacate, castanhas.</li>
+                            <li><strong>Hidratação:</strong> pelo menos 2 litros de água ao dia para manter músculos e articulações em bom funcionamento.</li>
+                        </ul>
+                        <p className="mt-4 bg-primary/10 p-3 rounded-md text-sm">
+                            <strong>Dica extra:</strong> evite ultraprocessados, excesso de açúcar e bebidas alcoólicas. Eles podem atrasar sua evolução.
+                        </p>
+                    </CardContent>
+                </Card>
+                
+                 <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><BrainCircuit className="h-6 w-6 text-primary" />Ajustes Mentais</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                         <p className="mb-4 text-muted-foreground">A remodelagem corporal exige consistência e disciplina. Esteja preparado para treinos mais longos e desafiadores. Mantenha o foco nos resultados já conquistados e visualize o corpo que você deseja alcançar.</p>
+                         <p className="text-muted-foreground">Lembre-se: cada etapa é um degrau que te aproxima do resultado final. Não pule fases e respeite o ritmo do seu corpo.</p>
+                    </CardContent>
+                </Card>
+            </div>
+            
+            <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg">
+                 <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center gap-2">
+                    <Rocket className="h-5 w-5" />
+                    Chamada para o próximo módulo
+                </h3>
+                 <p className="text-foreground/90">
+                    Agora que você está preparada, chegou a hora de avançar para o <strong>Módulo 3 – Remodelagem Corporal</strong>. Nessa nova fase, vamos consolidar seus resultados com um protocolo avançado e estratégias exclusivas para manter seu abdômen firme para sempre. Prepare-se para treinos mais intensos, mentorias transformadoras e um plano de continuidade que vai garantir sua evolução mesmo após o fim do programa.
+                 </p>
+                 <p className="font-bold mt-3 text-accent">Você está pronta para transformar todo o esforço em resultados duradouros. 🚀</p>
+            </div>
+        </div>
+    )
+}
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -301,6 +368,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             <PlanningS2Content />
           ) : lesson.slug === 'suplementacao-alimentacao' ? (
             <FunctionalFoodContent />
+          ) : lesson.slug === 'preparacao-remodelagem' ? (
+            <RemodelingPrepContent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
