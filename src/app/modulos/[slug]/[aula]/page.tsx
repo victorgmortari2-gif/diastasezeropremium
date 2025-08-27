@@ -303,7 +303,7 @@ const RemodelingPrepContent = () => {
                  <p className="text-foreground/90">
                     Agora que você está preparada, chegou a hora de avançar para o <strong>Módulo 3 – Remodelagem Corporal</strong>. Nessa nova fase, vamos consolidar seus resultados com um protocolo avançado e estratégias exclusivas para manter seu abdômen firme para sempre. Prepare-se para treinos mais intensos, mentorias transformadoras e um plano de continuidade que vai garantir sua evolução mesmo após o fim do programa.
                  </p>
-                 <p className="font-bold mt-3 text-accent">Você está pronta para transformar todo o esforço em resultados duradouros. 🚀</p>
+                 <p className="font-bold mt-3 text-accent">Você está pronta para transformar todo o esforço em resultados duradouros? 🚀</p>
             </div>
         </div>
     )
