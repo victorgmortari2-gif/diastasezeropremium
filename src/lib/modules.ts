@@ -40,7 +40,7 @@ export const modules: Module[] = [
     ],
     schedule: [
         { day: 1, slug: 'autoteste-diastase', title: 'Autoteste com Vídeo Explicativo', type: 'Vídeo Aula', duration: '15 min', description: 'Aprenda a medir sua diástase de forma precisa e segura.', videoUrl: 'https://www.youtube.com/embed/7fityACAWWk' },
-        { day: 2, slug: 'respiracao-hipopressiva', title: 'Sessão Guiada de Respiração Hipopressiva', type: 'Exercício', duration: '20 min', description: 'Técnica fundamental para reduzir a pressão abdominal.', videoUrl: 'https://www.youtube.com/embed/CsvaIIraFQE' },
+        { day: 2, slug: 'respiracao-hipopressiva', title: 'Sessão Guiada de Respiração Hipopressiva', type: 'Exercício', duration: '14 min', description: 'Técnica fundamental para reduzir a pressão abdominal.', videoUrl: 'https://www.youtube.com/embed/CsvaIIraFQE' },
         { day: 3, slug: 'ativacao-core-pelve', title: 'Ativação do Core Profundo e Pelve', type: 'Vídeo Aula', duration: '11 min', description: 'Sinta e ative os músculos que sustentam seu tronco.', videoUrl: 'https://www.youtube.com/embed/3Pz2LxtOoPU' },
         { day: 4, slug: 'cardapio-detox', title: 'Cardápio Detox de 3 Dias', type: 'Material', duration: '10 min', description: 'Um plano alimentar para reduzir a inflamação e o inchaço.' },
         { day: 5, slug: 'pratica-integrada-1', title: 'Prática Integrada de Respiração', type: 'Exercício', duration: '25 min', description: 'Combine as técnicas aprendidas para uma prática fluida.' },
@@ -68,7 +68,7 @@ export const modules: Module[] = [
      schedule: [
         { day: 8, slug: 'hipopressivos-progressao', title: 'Treinos Hipopressivos com Progressão', type: 'Exercício', duration: '25 min', description: 'Novas posturas e desafios para seu treino.' },
         { day: 9, slug: 'workshop-zere-diastase', title: 'Workshop: "Zere sua diástase sem cirurgia"', type: 'Workshop', duration: '45 min', description: 'Uma aula completa com o passo a passo para a recuperação.' },
-        { day: 10, slug: 'suplementacao-alimentacao', title: 'Suplementação e Alimentação Funcional', type: 'Material', duration: '20 min', description: 'O que comer para ajudar seu corpo a se recuperar mais rápido.' },
+        { day: 10, slug: 'suplementacao-alimentacao', title: 'Suplementação e Alimentação Funcional', type: 'Material', duration: '14 min', description: 'O que comer para ajudar seu corpo a se recuperar mais rápido.' },
         { day: 11, slug: 'treino-estabilidade', title: 'Treino de Estabilidade com Foco no Core', type: 'Exercício', duration: '30 min', description: 'Exercícios que desafiam e fortalecem seu centro.' },
         { day: 12, slug: 'pratica-integrada-2', title: 'Prática Integrada - Semana 2', type: 'Exercício', duration: '30 min', description: 'Um treino completo unindo todos os aprendizados.' },
         { day: 13, slug: 'autoavaliacao-2', title: 'Autoavaliação e Correção de Postura', type: 'Avaliação', duration: '15 min', description: 'Verifique seu progresso e ajuste sua postura no dia a dia.' },
