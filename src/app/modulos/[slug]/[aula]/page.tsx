@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, Coffee, Apple, Salad, Soup, CheckCircle, Award } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, Coffee, Apple, Salad, Soup, CheckCircle, Award, ShieldCheck, SoupIcon, Fish, Power, BrainCircuit, HeartHandshake } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -160,6 +160,138 @@ const PlanningS2Content = () => {
     );
 }
 
+const FunctionalFoodContent = () => {
+    const keyPoints = [
+        { icon: Leaf, text: "Alimentos anti-inflamatórios reduzem o inchaço abdominal" },
+        { icon: SoupIcon, text: "Proteínas magras regeneram músculos e tecidos" },
+        { icon: Fish, text: "Fibras melhoram o intestino e reduzem estufamento" },
+        { icon: BrainCircuit, text: "Vitaminas e minerais equilibram energia e imunidade" },
+        { icon: ShieldCheck, text: "Suplementação é um complemento, não substitui alimentação" },
+    ];
+
+    const foodGuide = [
+        {
+            category: "Anti-inflamatórios",
+            items: [
+                "Cúrcuma (1 colher de café/dia)",
+                "Gengibre fresco (2 cm/dia)",
+                "Abacaxi (2 fatias/dia)",
+                "Chá verde ou hibisco (1 xícara/dia)",
+            ]
+        },
+        {
+            category: "Proteínas Magras",
+            items: [
+                "Frango grelhado (100 g)",
+                "Peixe assado (100–120 g)",
+                "Ovos (2 unidades)",
+                "Feijão ou lentilha (½ xícara)",
+            ]
+        },
+        {
+            category: "Fibras e Energia Boa",
+            items: [
+                "Arroz integral (4 colheres de sopa)",
+                "Aveia (2 colheres de sopa)",
+                "Frutas com casca (1 un/dia)",
+                "Vegetais variados (½ prato/refeição)",
+            ]
+        },
+        {
+            category: "Gorduras Boas",
+            items: [
+                "Azeite (1 colher de sobremesa)",
+                "Abacate (2 colheres de sopa)",
+                "Castanhas/nozes (3 a 5 un/dia)",
+            ]
+        }
+    ];
+
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg">
+            <div className="text-center mb-10">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Alimentação: Sua Aliada na Recuperação</h2>
+                <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
+                    A alimentação é uma das peças-chave no processo de recuperação da diástase. O que você coloca no prato pode acelerar sua cicatrização, reduzir inflamação, dar mais energia e até potencializar os resultados dos exercícios. Nesta aula você vai aprender como usar alimentos simples do dia a dia para fortalecer seu corpo de dentro para fora.
+                </p>
+            </div>
+
+            <Card className="mb-8 bg-white shadow-md">
+                <CardHeader>
+                    <CardTitle className="font-headline text-xl flex items-center gap-2 text-accent">
+                        <HeartHandshake className="h-6 w-6" />
+                        Pontos-Chave da Alimentação Funcional
+                    </CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <ul className="space-y-3">
+                        {keyPoints.map((point, index) => {
+                            const Icon = point.icon;
+                            return (
+                                <li key={index} className="flex items-center gap-3">
+                                    <Icon className="h-5 w-5 text-primary flex-shrink-0" />
+                                    <span className="text-muted-foreground">{point.text}</span>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </CardContent>
+            </Card>
+
+            <h3 className="font-headline text-2xl font-bold text-center mb-6 text-primary">Guia de Alimentos Funcionais</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                {foodGuide.map((group) => (
+                    <Card key={group.category} className="bg-white">
+                        <CardHeader>
+                            <CardTitle className="font-headline text-lg text-center">{group.category}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <ul className="space-y-2 text-center text-muted-foreground text-sm">
+                                {group.items.map((item, index) => <li key={index}>{item}</li>)}
+                            </ul>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+
+            <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg mb-8">
+                <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center gap-2">
+                    <Power className="h-5 w-5" />
+                    Suplementação (Opcional)
+                </h3>
+                <p className="text-sm text-foreground mb-4">Lembre-se: suplementos complementam, não substituem uma boa alimentação. Avalie com um profissional.</p>
+                <ul className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-sm text-foreground">
+                    <li className="bg-white/60 p-2 rounded">Vitamina D</li>
+                    <li className="bg-white/60 p-2 rounded">Ômega-3</li>
+                    <li className="bg-white/60 p-2 rounded">Colágeno</li>
+                    <li className="bg-white/60 p-2 rounded">Creatina</li>
+                </ul>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-lg text-accent">Melhores Práticas</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-2 text-muted-foreground">
+                             <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Faça 3 refeições principais + 2 lanches saudáveis</span></li>
+                             <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Beba 2 a 2,5 litros de água por dia</span></li>
+                             <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Evite açúcar, frituras e ultraprocessados</span></li>
+                             <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Respeite a saciedade</span></li>
+                        </ul>
+                    </CardContent>
+                </Card>
+                <div className="flex items-center justify-center bg-primary/5 p-6 rounded-lg">
+                    <p className="font-headline text-lg italic text-accent text-center">
+                        Com pequenos ajustes no dia a dia, sua alimentação se torna uma aliada poderosa contra a inflamação e a favor da sua recuperação. Cada refeição é uma oportunidade de nutrir e fortalecer o seu corpo! 🌸
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
   const lesson = module?.schedule.find((l) => l.slug === params.aula);
@@ -217,6 +349,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             <DetoxContent />
           ) : lesson.slug === 'planejamento-semana-2' ? (
             <PlanningS2Content />
+          ) : lesson.slug === 'suplementacao-alimentacao' ? (
+            <FunctionalFoodContent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
