@@ -540,6 +540,13 @@ const HealthyEatingForMomsContent = () => {
             ingredients: ["1 banana", "1/2 xícara de morangos", "1 colher de sopa de aveia", "1 copo de leite vegetal ou leite desnatado"],
             instructions: "Bata todos os ingredientes no liquidificador até ficar homogêneo. Sirva imediatamente.",
             tip: "Ideal para café da manhã rápido ou lanche da tarde."
+        },
+        {
+            title: "Panquecas de Aveia e Banana",
+            icon: CookingPot,
+            ingredients: ["1 banana madura", "2 ovos", "3 colheres de sopa de aveia em flocos", "Canela a gosto", "1 colher de chá de fermento em pó (opcional)"],
+            instructions: "Amasse a banana em uma tigela e misture com os ovos. Acrescente a aveia, a canela e o fermento, misturando bem até formar uma massa homogênea. Aqueça uma frigideira antiaderente e coloque pequenas porções da massa. Cozinhe em fogo médio até dourar dos dois lados.",
+            tip: "Sirva com frutas frescas ou iogurte natural para um café da manhã ou lanche rápido e nutritivo."
         }
     ];
 
