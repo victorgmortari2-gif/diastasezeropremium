@@ -41,7 +41,7 @@ export const modules: Module[] = [
     schedule: [
         { day: 1, slug: 'autoteste-diastase', title: 'Autoteste com Vídeo Explicativo', type: 'Vídeo Aula', duration: '15 min', description: 'Aprenda a medir sua diástase de forma precisa e segura.', videoUrl: 'https://www.youtube.com/embed/7fityACAWWk' },
         { day: 2, slug: 'respiracao-hipopressiva', title: 'Sessão Guiada de Respiração Hipopressiva', type: 'Exercício', duration: '20 min', description: 'Técnica fundamental para reduzir a pressão abdominal.', videoUrl: 'https://www.youtube.com/embed/CsvaIIraFQE' },
-        { day: 3, slug: 'ativacao-core-pelve', title: 'Ativação do Core Profundo e Pelve', type: 'Vídeo Aula', duration: '18 min', description: 'Sinta e ative os músculos que sustentam seu tronco.', videoUrl: 'https://www.youtube.com/embed/3Pz2LxtOoPU' },
+        { day: 3, slug: 'ativacao-core-pelve', title: 'Ativação do Core Profundo e Pelve', type: 'Vídeo Aula', duration: '11 min', description: 'Sinta e ative os músculos que sustentam seu tronco.', videoUrl: 'https://www.youtube.com/embed/3Pz2LxtOoPU' },
         { day: 4, slug: 'cardapio-detox', title: 'Cardápio Detox de 3 Dias', type: 'Material', duration: '10 min', description: 'Um plano alimentar para reduzir a inflamação e o inchaço.' },
         { day: 5, slug: 'pratica-integrada-1', title: 'Prática Integrada de Respiração', type: 'Exercício', duration: '25 min', description: 'Combine as técnicas aprendidas para uma prática fluida.' },
         { day: 6, slug: 'revisao-ajustes-1', title: 'Revisão e Ajustes da Técnica', type: 'Avaliação', duration: '15 min', description: 'Tire suas dúvidas e refine sua execução.' },
