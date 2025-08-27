@@ -161,142 +161,86 @@ const PlanningS2Content = () => {
 }
 
 const FunctionalFoodContent = () => {
-    const mealPlan = [
-        { 
-            time: "Café da manhã", 
-            items: [
-                "1 copo (200 ml) de água morna com limão → auxilia na digestão e desintoxicação.",
-                "1 fatia de pão integral ou 2 colheres de sopa de aveia.",
-                "1 ovo cozido ou mexido (proteína para reparo muscular).",
-                "1 fruta rica em antioxidantes (1 fatia média de mamão ou 10 morangos)."
-            ]
-        },
-        { 
-            time: "Lanche da manhã", 
-            items: [
-                "1 punhado (30 g) de castanhas-do-pará e amêndoas (fonte de magnésio e selênio).",
-                "1 xícara de chá verde (antioxidante natural)."
-            ]
-        },
-        { 
-            time: "Almoço", 
-            items: [
-                "3 colheres de sopa de arroz integral ou quinoa.",
-                "1 concha média de feijão-preto ou lentilha (rica em ferro e fibras).",
-                "1 filé médio (100 g) de frango grelhado ou peixe (salmão, tilápia ou sardinha).",
-                "Salada variada com folhas verdes, tomate e cenoura ralada temperada com 1 colher de sopa de azeite extra virgem."
-            ]
-        },
-        { 
-            time: "Lanche da tarde", 
-            items: [
-                "1 iogurte natural sem açúcar (170 g) com 1 colher de sopa de linhaça ou chia.",
-                "1 banana média amassada (rica em potássio e energia para os treinos)."
-            ]
-        },
-        { 
-            time: "Jantar", 
-            items: [
-                "1 prato de sopa de legumes (abóbora, chuchu, cenoura e couve).",
-                "1 filé de peixe grelhado (100 g)."
-            ]
-        },
-        { 
-            time: "Ceia (opcional)", 
-            items: [
-                "1 copo de leite morno ou chá calmante (camomila ou erva-doce).",
-                "1 quadradinho de chocolate 70% cacau."
-            ]
-        }
-    ];
-
     return (
         <div className="bg-beige/50 p-6 sm:p-8 rounded-lg">
-            <div className="text-center mb-10">
-                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2 flex items-center justify-center gap-2">
-                    <Leaf className="h-8 w-8" />
-                    Importância da Alimentação Funcional
-                </h2>
+            <div className="text-center mb-8">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Alimentação: Sua Aliada na Recuperação</h2>
                 <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
-                    A recuperação da diástase abdominal depende não apenas dos exercícios, mas também do combustível que você oferece ao seu corpo. A alimentação funcional tem como objetivo reduzir a inflamação, melhorar a digestão, regular os hormônios e fornecer nutrientes que aceleram a regeneração dos tecidos musculares e da fáscia abdominal.
+                   A alimentação é uma das peças-chave no processo de recuperação da diástase. O que você coloca no prato pode acelerar sua cicatrização, reduzir inflamação, dar mais energia e até potencializar os resultados dos exercícios. Nesta aula você vai aprender como usar alimentos simples do dia a dia para fortalecer seu corpo de dentro para fora.
                 </p>
             </div>
 
             <Card className="mb-8 bg-white shadow-md">
                 <CardHeader>
                     <CardTitle className="font-headline text-xl flex items-center gap-2 text-accent">
-                        <HeartHandshake className="h-6 w-6" />
-                        Estratégias Principais
+                        Pontos-Chave da Alimentação Funcional
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
-                    <div>
-                        <h3 className="font-bold flex items-center gap-2 text-foreground"><Flame className="h-5 w-5 text-primary" />Controle da Inflamação</h3>
-                        <ul className="list-disc list-inside pl-5 mt-1 text-sm space-y-1">
-                            <li>Prefira alimentos ricos em antioxidantes e anti-inflamatórios.</li>
-                            <li>Evite ultraprocessados, frituras e excesso de açúcar.</li>
-                        </ul>
-                    </div>
-                     <div>
-                        <h3 className="font-bold flex items-center gap-2 text-foreground"><Beef className="h-5 w-5 text-primary" />Fortalecimento do Core via Nutrição</h3>
-                        <ul className="list-disc list-inside pl-5 mt-1 text-sm space-y-1">
-                            <li>Nutrientes como proteínas magras, fibras, zinco, magnésio e vitaminas do complexo B são essenciais para regenerar os músculos.</li>
-                        </ul>
-                    </div>
-                     <div>
-                        <h3 className="font-bold flex items-center gap-2 text-foreground"><BrainCircuit className="h-5 w-5 text-primary" />Equilíbrio Hormonal</h3>
-                        <ul className="list-disc list-inside pl-5 mt-1 text-sm space-y-1">
-                            <li>O estresse e a má alimentação aumentam o cortisol, que pode prejudicar a recuperação. Alimentos ricos em triptofano e magnésio ajudam a regular.</li>
-                        </ul>
-                    </div>
-                </CardContent>
-            </Card>
-
-            <h3 className="font-headline text-2xl font-bold text-center mb-6 text-primary">🥗 Sugestão de Alimentos Funcionais do Dia a Dia</h3>
-            <div className="space-y-6 mb-8">
-                {mealPlan.map((meal) => (
-                    <Card key={meal.time} className="bg-white">
-                        <CardHeader>
-                            <CardTitle className="font-headline text-lg">{meal.time}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <ul className="space-y-2 text-muted-foreground text-sm list-disc list-inside">
-                                {meal.items.map((item, index) => <li key={index}>{item}</li>)}
-                            </ul>
-                        </CardContent>
-                    </Card>
-                ))}
-            </div>
-
-            <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg mb-8">
-                <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center gap-2">
-                    <Power className="h-5 w-5" />
-                    Suplementação Recomendada (com orientação profissional)
-                </h3>
-                <ul className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-sm text-foreground mt-4">
-                    <li className="bg-white/60 p-2 rounded">Vitamina D</li>
-                    <li className="bg-white/60 p-2 rounded">Magnésio</li>
-                    <li className="bg-white/60 p-2 rounded">Whey Protein</li>
-                    <li className="bg-white/60 p-2 rounded">Colágeno tipo II</li>
-                </ul>
-            </div>
-
-            <Card className="bg-white">
-                <CardHeader>
-                    <CardTitle className="font-headline text-lg text-accent">🎯 Pontos-Chave da Aula</CardTitle>
-                </CardHeader>
                 <CardContent>
-                    <ul className="space-y-2 text-muted-foreground">
-                         <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>O foco deve ser em alimentos naturais e de fácil preparo.</span></li>
-                         <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Comer em intervalos regulares ajuda a manter energia e evitar picos de fome.</span></li>
-                         <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>A suplementação é um complemento, não substitui uma boa alimentação.</span></li>
-                         <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Hidratação é fundamental: 2 litros de água por dia.</span></li>
+                    <ul className="space-y-3 text-muted-foreground">
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Alimentos anti-inflamatórios reduzem o inchaço abdominal</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Proteínas magras regeneram músculos e tecidos</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Fibras melhoram o intestino e reduzem estufamento</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Vitaminas e minerais equilibram energia e imunidade</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" /><span>Suplementação é um complemento, não substitui alimentação</span></li>
                     </ul>
                 </CardContent>
             </Card>
+            
+            <h3 className="font-headline text-2xl font-bold text-center mb-6 text-primary">Guia de Alimentos Funcionais</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <Card className="bg-white">
+                    <CardHeader><CardTitle className="font-headline text-lg">Anti-inflamatórios</CardTitle></CardHeader>
+                    <CardContent><ul className="list-disc list-inside text-muted-foreground"><li>Cúrcuma (1 colher de café/dia)</li><li>Gengibre fresco (2 cm/dia)</li><li>Abacaxi (2 fatias/dia)</li><li>Chá verde ou hibisco (1 xícara/dia)</li></ul></CardContent>
+                </Card>
+                 <Card className="bg-white">
+                    <CardHeader><CardTitle className="font-headline text-lg">Proteínas Magras</CardTitle></CardHeader>
+                    <CardContent><ul className="list-disc list-inside text-muted-foreground"><li>Frango grelhado (100 g)</li><li>Peixe assado (100–120 g)</li><li>Ovos (2 unidades)</li><li>Feijão ou lentilha (½ xícara)</li></ul></CardContent>
+                </Card>
+                 <Card className="bg-white">
+                    <CardHeader><CardTitle className="font-headline text-lg">Fibras e Energia Boa</CardTitle></CardHeader>
+                    <CardContent><ul className="list-disc list-inside text-muted-foreground"><li>Arroz integral (4 colheres de sopa)</li><li>Aveia (2 colheres de sopa)</li><li>Frutas com casca (1 un/dia)</li><li>Vegetais variados (½ prato/refeição)</li></ul></CardContent>
+                </Card>
+                 <Card className="bg-white">
+                    <CardHeader><CardTitle className="font-headline text-lg">Gorduras Boas</CardTitle></CardHeader>
+                    <CardContent><ul className="list-disc list-inside text-muted-foreground"><li>Azeite (1 colher de sobremesa)</li><li>Abacate (2 colheres de sopa)</li><li>Castanhas/nozes (3 a 5 un/dia)</li></ul></CardContent>
+                </Card>
+            </div>
+            
+            <Card className="mb-8 bg-primary/10 border border-primary/20">
+                <CardHeader>
+                    <CardTitle className="font-headline text-lg text-primary">Suplementação (Opcional)</CardTitle>
+                    <p className="text-sm text-foreground/80">Lembre-se: suplementos complementam, não substituem uma boa alimentação. Avalie com um profissional.</p>
+                </CardHeader>
+                 <CardContent>
+                    <ul className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-sm">
+                        <li className="bg-white/60 p-2 rounded">Vitamina D</li>
+                        <li className="bg-white/60 p-2 rounded">Ômega-3</li>
+                        <li className="bg-white/60 p-2 rounded">Colágeno</li>
+                        <li className="bg-white/60 p-2 rounded">Creatina</li>
+                    </ul>
+                </CardContent>
+            </Card>
+
+            <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg mb-8">
+                <h3 className="font-headline font-bold text-lg mb-2 text-primary">Melhores Práticas</h3>
+                <ul className="space-y-2 text-foreground">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Faça 3 refeições principais + 2 lanches saudáveis</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Beba 2 a 2,5 litros de água por dia</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Evite açúcar, frituras e ultraprocessados</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" /><span>Respeite a saciedade</span></li>
+                </ul>
+            </div>
+
+            <div className="text-center">
+                <p className="font-headline text-lg italic text-accent">
+                    Com pequenos ajustes no dia a dia, sua alimentação se torna uma aliada poderosa contra a inflamação e a favor da sua recuperação. Cada refeição é uma oportunidade de nutrir e fortalecer o seu corpo! 🌸
+                </p>
+            </div>
         </div>
     );
 }
+
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
