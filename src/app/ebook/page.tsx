@@ -28,7 +28,7 @@ export default function EbookPage() {
       </header>
 
       <main className="container px-4 md:px-6 py-12">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <section className="mb-8 text-center">
             <h1 className="font-headline text-3xl md:text-4xl font-bold">E-book: Diástase ZERO o Ano Todo</h1>
             <p className="mt-2 text-muted-foreground md:text-lg">Seu guia completo para manter os resultados e continuar evoluindo.</p>
@@ -37,7 +37,7 @@ export default function EbookPage() {
           <section className="flex justify-center">
             <iframe 
               src="https://gamma.app/embed/r15ntxl0h3vw0hl" 
-              style={{ width: '700px', maxWidth: '100%', height: '450px', border: 'none' }} 
+              style={{ width: '900px', maxWidth: '100%', height: '650px', border: 'none' }} 
               allow="fullscreen" 
               title="Diástase ZERO o Ano Todo:">
             </iframe>
