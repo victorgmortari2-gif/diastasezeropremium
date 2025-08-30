@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Zap, UserCheck, Carrot, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Clock, Lightbulb } from 'lucide-react';
+import { ArrowLeft, Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, ShieldCheck, Power, BrainCircuit, HeartHandshake, Flame, Apple, Salad, Soup, Fish, Beef, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Zap, UserCheck, Carrot, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Clock, Lightbulb, HelpCircle, BookCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { LessonContent } from './content';
