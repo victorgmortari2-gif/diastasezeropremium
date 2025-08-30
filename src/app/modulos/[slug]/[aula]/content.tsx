@@ -327,7 +327,7 @@ const RemodelingPrepContent = () => {
             <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg text-center">
                 <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center justify-center gap-2">
                     <Rocket className="h-5 w-5" />
-                    Chamada para o próximo módulo
+                    Pronta para o Próximo Nível?
                 </h3>
                 <p className="text-foreground/90 mb-4">
                     Agora que você está preparada, chegou a hora de avançar para o <strong>Módulo 3 – Remodelagem Corporal</strong>. Nessa nova fase, vamos consolidar seus resultados com um protocolo avançado e estratégias exclusivas para manter seu abdômen firme para sempre.
