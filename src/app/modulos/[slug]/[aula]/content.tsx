@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb, Soup, Apple, AlertTriangle, ShieldCheck, ArrowRight, HelpCircle, BookCheck, PartyPopper } from 'lucide-react';
+import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb, Soup, Apple, AlertTriangle, ShieldCheck, ArrowRight, HelpCircle, BookCheck, PartyPopper, Gift, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -746,6 +746,80 @@ const RealisticRoutineContent = () => {
                     Montar uma rotina realista é o segredo para treinar de forma consistente e sustentável. 🔑 Lembre-se: o importante é manter os hábitos no longo prazo e criar uma rotina que seja sua aliada, e não um peso.
                 </p>
             </div>
+
+            <section className="py-12 md:py-16">
+                <div className="container px-4 md:px-6">
+                    <div className="text-center mb-8">
+                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Leve Sua Evolução para o Próximo Nível</h2>
+                        <p className="mt-4 max-w-2xl mx-auto md:text-lg text-muted-foreground">
+                            Você aprendeu a criar uma rotina sustentável. Agora, que tal acelerar seus resultados com ferramentas exclusivas que complementam perfeitamente o seu esforço?
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                        <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                            <CardHeader className="items-center text-center">
+                                <Gift className="h-10 w-10 text-primary" />
+                                <CardTitle className="font-headline text-xl">Plano Alimentar Personalizado</CardTitle>
+                            </CardHeader>
+                            <CardContent className="text-center flex-grow">
+                                <p className="text-muted-foreground text-sm">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
+                            </CardContent>
+                            <CardFooter className="flex-col gap-2">
+                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <Button className="mt-2 w-full transition-transform duration-300 hover:scale-105">Adicionar ao meu acesso</Button>
+                            </CardFooter>
+                        </Card>
+                         <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                            <CardHeader className="items-center text-center">
+                                <BookOpen className="h-10 w-10 text-primary" />
+                                <CardTitle className="font-headline text-xl">E-book Premium + Guia de Roupas</CardTitle>
+                            </CardHeader>
+                            <CardContent className="text-center flex-grow">
+                                <p className="text-muted-foreground text-sm">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
+                            </CardContent>
+                            <CardFooter className="flex-col gap-2">
+                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <Button className="mt-2 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
+                            </CardFooter>
+                        </Card>
+                         <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                            <CardHeader className="items-center text-center">
+                                <Award className="h-10 w-10 text-primary" />
+                                <CardTitle className="font-headline text-xl">Programa Pós-Desafio</CardTitle>
+                            </CardHeader>
+                            <CardContent className="text-center flex-grow">
+                                <p className="text-muted-foreground text-sm">Continuação de 60 dias com treinos, calendário e estratégias para manter os resultados.</p>
+                            </CardContent>
+                            <CardFooter className="flex-col gap-2">
+                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <Button className="mt-2 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
+                            </CardFooter>
+                        </Card>
+                         <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                            <CardHeader className="items-center text-center">
+                                <Sparkles className="h-10 w-10 text-primary" />
+                                <CardTitle className="font-headline text-xl">Pack de Meditações Guiadas</CardTitle>
+                            </CardHeader>
+                            <CardContent className="text-center flex-grow">
+                                <p className="text-muted-foreground text-sm">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
+                            </CardContent>
+                            <CardFooter className="flex-col gap-2">
+                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <Button className="mt-2 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>
+                            </CardFooter>
+                        </Card>
+                    </div>
+                    <div className="mt-10 text-center">
+                        <Button size="lg" className="font-bold text-xl p-8 animate-pulse-scale">
+                            Adquira todas as ofertas por apenas R$ 18,90
+                        </Button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
@@ -851,7 +925,7 @@ const CelebrationContent = () => {
     const celebrationSuggestions = [
         "Tire um tempo para si. Faça um alongamento suave, uma meditação guiada ou simplesmente sente-se em silêncio e sinta a força do seu corpo que foi reativado.",
         "Use roupas que te façam sentir bem e celebre o progresso do seu corpo de forma positiva e sem julgamentos.",
-        "Compartilhe sua jornada com alguém de confiança. Falar sobre o que você superou e conquistou torna a vitória ainda mais real."
+        "Compartilhe sua jornada com alguém de confiança. Falar sobre o que you superou e conquistou torna a vitória ainda mais real."
     ];
 
     const nextStepsPillars = [
