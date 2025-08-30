@@ -153,9 +153,25 @@ const PlanningS2Content = () => {
             </div>
 
             <div className="text-center">
-                <p className="font-headline text-lg italic text-accent">
+                <p className="font-headline text-lg italic text-accent mb-6">
                     A Semana 2 é um marco no seu processo: aqui você começa a sentir o fortalecimento real da sua base e ganha confiança para seguir firme rumo à recuperação total. Cada exercício é um investimento no seu corpo, na sua autoestima e na sua saúde. 🌸
                 </p>
+            </div>
+            
+            <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg text-center">
+                <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center justify-center gap-2">
+                    <Rocket className="h-5 w-5" />
+                    Pronta para o Próximo Desafio?
+                </h3>
+                <p className="text-foreground/90 mb-4">
+                    Você concluiu a primeira semana com sucesso! Agora é hora de avançar para a fase de treino intensivo e estabilidade.
+                </p>
+                <Button asChild className="transition-transform duration-300 hover:scale-105">
+                    <Link href="/modulos/treino-intensivo">
+                        Avançar para o Módulo 2
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
             </div>
         </div>
     );
