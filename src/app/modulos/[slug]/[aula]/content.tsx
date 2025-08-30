@@ -1,7 +1,9 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb, Soup, Apple, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb, Soup, Apple, AlertTriangle, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 
 const DetoxContent = () => {
@@ -322,15 +324,21 @@ const RemodelingPrepContent = () => {
                 </Card>
             </div>
             
-            <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg">
-                 <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center gap-2">
+            <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg text-center">
+                <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center justify-center gap-2">
                     <Rocket className="h-5 w-5" />
                     Chamada para o próximo módulo
                 </h3>
-                 <p className="text-foreground/90">
-                    Agora que você está preparada, chegou a hora de avançar para o <strong>Módulo 3 – Remodelagem Corporal</strong>. Nessa nova fase, vamos consolidar seus resultados com um protocolo avançado e estratégias exclusivas para manter seu abdômen firme para sempre. Prepare-se para treinos mais intensos, mentorias transformadoras e um plano de continuidade que vai garantir sua evolução mesmo após o fim do programa.
-                 </p>
-                 <p className="font-bold mt-3 text-accent">Você está pronta para transformar todo o esforço em resultados duradouros?</p>
+                <p className="text-foreground/90 mb-4">
+                    Agora que você está preparada, chegou a hora de avançar para o <strong>Módulo 3 – Remodelagem Corporal</strong>. Nessa nova fase, vamos consolidar seus resultados com um protocolo avançado e estratégias exclusivas para manter seu abdômen firme para sempre.
+                </p>
+                <p className="font-bold mb-6 text-accent">Você está pronta para transformar todo o esforço em resultados duradouros?</p>
+                <Button asChild className="transition-transform duration-300 hover:scale-105">
+                    <Link href="/modulos/remodelagem-corporal">
+                        Avançar para o Módulo 3
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
             </div>
         </div>
     )
