@@ -166,12 +166,6 @@ const PlanningS2Content = () => {
                 <p className="text-foreground/90 mb-4">
                     Você concluiu a primeira semana com sucesso! Agora é hora de avançar para a fase de treino intensivo e estabilidade.
                 </p>
-                <Button asChild className="transition-transform duration-300 hover:scale-105">
-                    <Link href="/modulos/treino-intensivo">
-                        Avançar para o Módulo 2
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                </Button>
             </div>
         </div>
     );
@@ -938,6 +932,35 @@ const CelebrationContent = () => {
     );
 };
 
+const PostureAndEleganceContent = () => {
+    return (
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg">
+            <div className="text-center mb-8">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-2">Postura e Elegância no Dia a Dia</h2>
+                <p className="text-muted-foreground md:text-lg max-w-3xl mx-auto">
+                    Como manter uma postura que valoriza seu corpo.
+                </p>
+            </div>
+            {/* Conteúdo da aula aqui */}
+            <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg text-center">
+                <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center justify-center gap-2">
+                    <Rocket className="h-5 w-5" />
+                    Pronta para o Próximo Desafio?
+                </h3>
+                <p className="text-foreground/90 mb-4">
+                    Você concluiu este módulo bônus com sucesso! Agora é hora de avançar para a próxima fase.
+                </p>
+                <Button asChild className="transition-transform duration-300 hover:scale-105">
+                    <Link href="/modulos/vida-real-corpo-forte">
+                        Avançar para o Módulo 5
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
+            </div>
+        </div>
+    );
+};
+
 
 
 export const LessonContent = ({ slug }: { slug: string }) => {
@@ -962,6 +985,8 @@ export const LessonContent = ({ slug }: { slug: string }) => {
             return <GeneralReviewContent />;
         case 'celebracao-proximos-passos':
             return <CelebrationContent />;
+        case 'postura-elegancia':
+            return <PostureAndEleganceContent />;
         default:
             return (
                 <Card>
