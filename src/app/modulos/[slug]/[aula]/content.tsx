@@ -823,9 +823,15 @@ const GeneralReviewContent = () => {
                     <Rocket className="h-5 w-5" />
                     A Base Está Firme. Agora, Vamos Além!
                 </h3>
-                <p className="text-foreground/90">
+                <p className="text-foreground/90 mb-4">
                     Você construiu uma fundação sólida, corrigiu os erros e superou os desafios. O que vem a seguir não é apenas mais do mesmo, mas um nível totalmente novo de força e confiança. No próximo módulo, vamos explorar como integrar todo o seu corpo, usando a força do seu core como ponto de partida para um poder e estabilidade sem precedentes.
                 </p>
+                <Button asChild className="mt-4 transition-transform duration-300 hover:scale-105">
+                    <Link href="/modulos/estetica-postura">
+                        Avançar para o Módulo Extra
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
             </div>
         </div>
     );
