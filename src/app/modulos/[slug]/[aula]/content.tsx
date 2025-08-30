@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb } from 'lucide-react';
+import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb, Soup, Apple, AlertTriangle, ShieldCheck } from 'lucide-react';
 
 
 const DetoxContent = () => {
@@ -159,14 +159,114 @@ const PlanningS2Content = () => {
 }
 
 const FunctionalFoodContent = () => {
+    const alimentacaoPillars = [
+        {
+            titulo_pilar: "1. Redução da Inflamação",
+            descricao_pilar: "A inflamação crônica pode prejudicar a reparação dos tecidos. Alimentos ricos em ômega-3 e antioxidantes ajudam a combatê-la.",
+            exemplos: ["**Ômega-3:** Salmão, sardinha, chia, linhaça, nozes.", "**Antioxidantes:** Frutas vermelhas, vegetais folhosos (couve, espinafre), cúrcuma e gengibre."]
+        },
+        {
+            titulo_pilar: "2. Reparação de Tecidos e Colágeno",
+            descricao_pilar: "O colágeno é a proteína principal do tecido conjuntivo (linha alba). A produção de colágeno depende de vitaminas e minerais específicos.",
+            exemplos: ["**Proteínas Magras:** Frango, ovos, peixes, leguminosas.", "**Vitamina C:** Pimentão, brócolis, laranjas, morangos.", "**Zinco:** Sementes de abóbora, grão-de-bico, carne vermelha magra."]
+        },
+        {
+            titulo_pilar: "3. Saúde Intestinal: O Eixo Intestino-Core",
+            descricao_pilar: "Um intestino saudável é fundamental para a absorção de nutrientes e para a redução da inflamação sistêmica. O 'eixo intestino-core' sugere uma forte conexão entre a saúde intestinal e a força do seu centro.",
+            exemplos: ["**Probióticos:** Iogurte natural, kefir, kombucha.", "**Fibras:** Aveia, batata-doce, feijão, vegetais e frutas."]
+        }
+    ];
+
+    const suplementos = [
+        { nome_suplemento: "Colágeno Hidrolisado", beneficios: "Pode ajudar a fornecer os aminoácidos necessários para a produção de colágeno e fortalecer os tecidos." },
+        { nome_suplemento: "Ômega-3 (DHA/EPA)", beneficios: "Poderoso anti-inflamatório, pode auxiliar na redução da inflamação que impede a recuperação." },
+        { nome_suplemento: "Vitamina D", beneficios: "Essencial para a saúde óssea e muscular, e tem papel importante na regulação de processos inflamatórios." },
+        { nome_suplemento: "Proteína em Pó (Whey ou Vegetal)", beneficios: "Ajuda a atingir a ingestão diária de proteínas, vital para a reparação muscular e de tecidos." }
+    ];
+    
+    const dicas = [
+        "Priorize alimentos de verdade, sem rótulos ou com poucos ingredientes.",
+        "Mantenha-se hidratada! A água é essencial para o transporte de nutrientes e a saúde dos tecidos.",
+        "Inclua uma fonte de proteína em todas as refeições para sustentar seus músculos.",
+        "Adicione sementes (chia, linhaça) e especiarias (cúrcuma, gengibre) aos seus pratos para um impulso anti-inflamatório."
+    ];
+
     return (
-        <Card>
-            <CardContent className="p-8 text-center">
-                <p className="text-muted-foreground">O conteúdo desta aula estará disponível em breve.</p>
-            </CardContent>
-        </Card>
+        <div className="bg-beige/50 p-6 sm:p-8 rounded-lg text-foreground">
+            <p className="mb-6 md:text-lg">
+                A recuperação da diástase é um processo completo, e a nutrição é um dos pilares mais importantes. Os exercícios fortalecem o seu core, mas os alimentos são o combustível que seu corpo usa para reparar os tecidos, reduzir a inflamação e construir a força que você precisa. Pense na alimentação como a sua maior aliada.
+            </p>
+
+            <div className="space-y-8">
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Utensils className="h-6 w-6 text-primary" />Alimentação Funcional: O Combustível para a Cura</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                        <p className="text-muted-foreground">A alimentação funcional foca em alimentos que têm propriedades específicas para promover a saúde e prevenir doenças. Para a recuperação da diástase, nosso foco é em três áreas-chave:</p>
+                        {alimentacaoPillars.map((pilar, index) => (
+                            <div key={index} className="border-l-4 border-primary/20 pl-4">
+                                <h4 className="font-bold text-lg mb-1">{pilar.titulo_pilar}</h4>
+                                <p className="text-muted-foreground mb-2">{pilar.descricao_pilar}</p>
+                                <ul className="space-y-1 text-sm">
+                                    {pilar.exemplos.map((ex, i) => (
+                                        <li key={i} dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><Sparkles className="h-6 w-6 text-primary" />Suplementação Estratégica: Um Apoio Adicional</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="bg-yellow-100/50 border-l-4 border-yellow-400 text-yellow-800 p-4 rounded-md mb-6">
+                            <p className="flex items-start gap-2"><AlertTriangle className="h-6 w-6 mt-0.5 flex-shrink-0" /><strong>ATENÇÃO:</strong> A suplementação deve ser sempre orientada por um profissional de saúde (médico ou nutricionista). Este conteúdo é informativo e não substitui uma consulta individualizada.</p>
+                        </div>
+                        <div className="space-y-4">
+                           {suplementos.map((sup, index) =>(
+                               <div key={index}>
+                                   <h4 className="font-bold">{sup.nome_suplemento}</h4>
+                                   <p className="text-muted-foreground text-sm">{sup.beneficios}</p>
+                               </div>
+                           ))}
+                        </div>
+                    </CardContent>
+                </Card>
+
+                <Card className="bg-white">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3"><CheckCircle className="h-6 w-6 text-primary" />Dicas Práticas para o Dia a Dia</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-3">
+                           {dicas.map((dica, index) => (
+                               <li key={index} className="flex items-start gap-2">
+                                   <Check className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                                   <span className="text-muted-foreground">{dica}</span>
+                                </li>
+                           ))}
+                        </ul>
+                    </CardContent>
+                </Card>
+            </div>
+            
+            <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg">
+                 <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center gap-2">
+                    <Star className="h-5 w-5" />
+                    Sua Escolha, Seu Resultado
+                </h3>
+                 <p className="text-foreground/90">
+                    Lembre-se: não existe pílula mágica. A verdadeira recuperação vem da combinação de exercícios corretos e de uma alimentação inteligente. Você tem o poder de nutrir seu corpo para que ele possa se curar e se fortalecer de dentro para fora.
+                 </p>
+            </div>
+        </div>
     );
-}
+};
+
 
 const RemodelingPrepContent = () => {
     return (
@@ -659,3 +759,5 @@ export const LessonContent = ({ slug }: { slug: string }) => {
             );
     }
 };
+
+    
