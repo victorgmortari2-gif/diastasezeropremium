@@ -2,11 +2,46 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { ArrowLeft, BookCheck, CheckCircle, HelpCircle, PartyPopper, Rocket, Star } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
-import { LessonContent } from './content';
+import dynamic from 'next/dynamic';
+import { Skeleton } from '@/components/ui/skeleton';
 
+const LoadingComponent = () => (
+    <div className="space-y-8">
+        <Skeleton className="h-24 w-full" />
+        <Skeleton className="h-48 w-full" />
+        <Skeleton className="h-48 w-full" />
+    </div>
+);
+
+const CelebrationContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/celebration-content').then(mod => mod.CelebrationContent), { loading: () => <LoadingComponent /> });
+const DetoxContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/detox-content').then(mod => mod.DetoxContent), { loading: () => <LoadingComponent /> });
+const FunctionalFoodContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/functional-food-content').then(mod => mod.FunctionalFoodContent), { loading: () => <LoadingComponent /> });
+const GeneralReviewContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/general-review-content').then(mod => mod.GeneralReviewContent), { loading: () => <LoadingComponent /> });
+const HealthyEatingForMomsContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/healthy-eating-for-moms-content').then(mod => mod.HealthyEatingForMomsContent), { loading: () => <LoadingComponent /> });
+const PlanningS2Content = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/planning-s2-content').then(mod => mod.PlanningS2Content), { loading: () => <LoadingComponent /> });
+const PostChallengePlanContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/post-challenge-plan-content').then(mod => mod.PostChallengePlanContent), { loading: () => <LoadingComponent /> });
+const PostureAndEleganceContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/posture-and-elegance-content').then(mod => mod.PostureAndEleganceContent), { loading: () => <LoadingComponent /> });
+const RealisticRoutineContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/realistic-routine-content').then(mod => mod.RealisticRoutineContent), { loading: () => <LoadingComponent /> });
+const RemodelingPrepContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/remodeling-prep-content').then(mod => mod.RemodelingPrepContent), { loading: () => <LoadingComponent /> });
+const SelfCareContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/self-care-content').then(mod => mod.SelfCareContent), { loading: () => <LoadingComponent /> });
+
+
+const lessonComponentMap: Record<string, React.ComponentType> = {
+    'cardapio-detox': DetoxContent,
+    'planejamento-semana-2': PlanningS2Content,
+    'suplementacao-alimentacao': FunctionalFoodContent,
+    'preparacao-remodelagem': RemodelingPrepContent,
+    'plano-pos-desafio': PostChallengePlanContent,
+    'rituais-autocuidado': SelfCareContent,
+    'guia-alimentacao-maes': HealthyEatingForMomsContent,
+    'montando-sua-rotina': RealisticRoutineContent,
+    'revisao-geral': GeneralReviewContent,
+    'celebracao-proximos-passos': CelebrationContent,
+    'postura-elegancia': PostureAndEleganceContent,
+};
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -15,6 +50,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
   if (!module || !lesson) {
     notFound();
   }
+  
+  const LessonContentComponent = lessonComponentMap[lesson.slug];
 
   return (
     <div className="bg-background min-h-screen">
@@ -61,8 +98,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
                 </div>
               </CardContent>
             </Card>
-          ) : lesson.slug ? (
-            <LessonContent slug={lesson.slug} />
+          ) : LessonContentComponent ? (
+            <LessonContentComponent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
