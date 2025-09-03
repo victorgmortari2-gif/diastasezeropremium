@@ -71,7 +71,7 @@ export const modules: Module[] = [
         { day: 10, slug: 'suplementacao-alimentacao', title: 'Suplementação e Alimentação Funcional', type: 'Material', duration: '14 min', description: 'O que comer para ajudar seu corpo a se recuperar mais rápido.' },
         { day: 11, slug: 'treino-estabilidade', title: 'Treino de Estabilidade com Foco no Core', type: 'Exercício', duration: '30 min', description: 'Exercícios que desafiam e fortalecem seu centro.', videoUrl: 'https://www.youtube.com/embed/SSctsslEj0E' },
         { day: 12, slug: 'pratica-integrada-2', title: 'Prática Integrada - Semana 2', type: 'Exercício', duration: '30 min', description: 'Um treino completo unindo todos os aprendizados.', videoUrl: 'https://www.youtube.com/embed/LkTHczGwU50' },
-        { day: 13, slug: 'autoavaliacao-2', title: 'Autoavaliação e Correção de Postura', type: 'Avaliação', duration: '15 min', description: 'Verifique seu progresso e ajuste sua postura no dia a dia.' },
+        { day: 13, slug: 'autoavaliacao-2', title: 'Autoavaliação e Correção de Postura', type: 'Avaliação', duration: '15 min', description: 'Verifique seu progresso e ajuste sua postura no dia a dia.', videoUrl: 'https://www.youtube.com/embed/7PQ2IHTQ7Wg' },
         { day: 14, slug: 'preparacao-remodelagem', title: 'Preparação para a Remodelagem Corporal', type: 'Material', duration: '10 min', description: 'Entenda a próxima fase e prepare seu corpo.' },
     ]
   },
