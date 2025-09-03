@@ -16,30 +16,18 @@ const LoadingComponent = () => (
     </div>
 );
 
-const CelebrationContent = dynamic(() => import('@/app/modulos/content/celebration-content').then(mod => mod.CelebrationContent), { loading: () => <LoadingComponent /> });
-const DetoxContent = dynamic(() => import('@/app/modulos/content/detox-content').then(mod => mod.DetoxContent), { loading: () => <LoadingComponent /> });
-const FunctionalFoodContent = dynamic(() => import('@/app/modulos/content/functional-food-content').then(mod => mod.FunctionalFoodContent), { loading: () => <LoadingComponent /> });
-const GeneralReviewContent = dynamic(() => import('@/app/modulos/content/general-review-content').then(mod => mod.GeneralReviewContent), { loading: () => <LoadingComponent /> });
-const HealthyEatingForMomsContent = dynamic(() => import('@/app/modulos/content/healthy-eating-for-moms-content').then(mod => mod.HealthyEatingForMomsContent), { loading: () => <LoadingComponent /> });
-const PlanningS2Content = dynamic(() => import('@/app/modulos/content/planning-s2-content').then(mod => mod.PlanningS2Content), { loading: () => <LoadingComponent /> });
-const PostChallengePlanContent = dynamic(() => import('@/app/modulos/content/post-challenge-plan-content').then(mod => mod.PostChallengePlanContent), { loading: () => <LoadingComponent /> });
-const PostureAndEleganceContent = dynamic(() => import('@/app/modulos/content/posture-and-elegance-content').then(mod => mod.PostureAndEleganceContent), { loading: () => <LoadingComponent /> });
-const RealisticRoutineContent = dynamic(() => import('@/app/modulos/content/realistic-routine-content').then(mod => mod.RealisticRoutineContent), { loading: () => <LoadingComponent /> });
-const RemodelingPrepContent = dynamic(() => import('@/app/modulos/content/remodeling-prep-content').then(mod => mod.RemodelingPrepContent), { loading: () => <LoadingComponent /> });
-const SelfCareContent = dynamic(() => import('@/app/modulos/content/self-care-content').then(mod => mod.SelfCareContent), { loading: () => <LoadingComponent /> });
-
 const lessonComponentMap: Record<string, React.ComponentType> = {
-    'cardapio-detox': DetoxContent,
-    'planejamento-semana-2': PlanningS2Content,
-    'suplementacao-alimentacao': FunctionalFoodContent,
-    'preparacao-remodelagem': RemodelingPrepContent,
-    'plano-pos-desafio': PostChallengePlanContent,
-    'rituais-autocuidado': SelfCareContent,
-    'guia-alimentacao-maes': HealthyEatingForMomsContent,
-    'montando-sua-rotina': RealisticRoutineContent,
-    'revisao-geral': GeneralReviewContent,
-    'celebracao-proximos-passos': CelebrationContent,
-    'postura-elegancia': PostureAndEleganceContent,
+    'cardapio-detox': dynamic(() => import('@/app/modulos/content/detox-content').then(mod => mod.DetoxContent), { loading: () => <LoadingComponent /> }),
+    'planejamento-semana-2': dynamic(() => import('@/app/modulos/content/planning-s2-content').then(mod => mod.PlanningS2Content), { loading: () => <LoadingComponent /> }),
+    'suplementacao-alimentacao': dynamic(() => import('@/app/modulos/content/functional-food-content').then(mod => mod.FunctionalFoodContent), { loading: () => <LoadingComponent /> }),
+    'preparacao-remodelagem': dynamic(() => import('@/app/modulos/content/remodeling-prep-content').then(mod => mod.RemodelingPrepContent), { loading: () => <LoadingComponent /> }),
+    'plano-pos-desafio': dynamic(() => import('@/app/modulos/content/post-challenge-plan-content').then(mod => mod.PostChallengePlanContent), { loading: () => <LoadingComponent /> }),
+    'rituais-autocuidado': dynamic(() => import('@/app/modulos/content/self-care-content').then(mod => mod.SelfCareContent), { loading: () => <LoadingComponent /> }),
+    'guia-alimentacao-maes': dynamic(() => import('@/app/modulos/content/healthy-eating-for-moms-content').then(mod => mod.HealthyEatingForMomsContent), { loading: () => <LoadingComponent /> }),
+    'montando-sua-rotina': dynamic(() => import('@/app/modulos/content/realistic-routine-content').then(mod => mod.RealisticRoutineContent), { loading: () => <LoadingComponent /> }),
+    'revisao-geral': dynamic(() => import('@/app/modulos/content/general-review-content').then(mod => mod.GeneralReviewContent), { loading: () => <LoadingComponent /> }),
+    'celebracao-proximos-passos': dynamic(() => import('@/app/modulos/content/celebration-content').then(mod => mod.CelebrationContent), { loading: () => <LoadingComponent /> }),
+    'postura-elegancia': dynamic(() => import('@/app/modulos/content/posture-and-elegance-content').then(mod => mod.PostureAndEleganceContent), { loading: () => <LoadingComponent /> }),
 };
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
