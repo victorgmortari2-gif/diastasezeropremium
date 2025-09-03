@@ -66,7 +66,7 @@ export const modules: Module[] = [
         'Aumentar a estabilidade e força do seu core.',
     ],
      schedule: [
-        { day: 8, slug: 'hipopressivos-progressao', title: 'Treinos Hipopressivos com Progressão', type: 'Exercício', duration: '25 min', description: 'Novas posturas e desafios para seu treino.' },
+        { day: 8, slug: 'hipopressivos-progressao', title: 'Treinos Hipopressivos com Progressão', type: 'Exercício', duration: '25 min', description: 'Novas posturas e desafios para seu treino.', videoUrl: 'https://www.youtube.com/embed/z4CvXcK7XJ4' },
         { day: 9, slug: 'workshop-zere-diastase', title: 'Workshop: "Zere sua diástase sem cirurgia"', type: 'Workshop', duration: '45 min', description: 'Uma aula completa com o passo a passo para a recuperação.' },
         { day: 10, slug: 'suplementacao-alimentacao', title: 'Suplementação e Alimentação Funcional', type: 'Material', duration: '14 min', description: 'O que comer para ajudar seu corpo a se recuperar mais rápido.' },
         { day: 11, slug: 'treino-estabilidade', title: 'Treino de Estabilidade com Foco no Core', type: 'Exercício', duration: '30 min', description: 'Exercícios que desafiam e fortalecem seu centro.' },
