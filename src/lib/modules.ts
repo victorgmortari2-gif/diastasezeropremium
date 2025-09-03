@@ -43,7 +43,7 @@ export const modules: Module[] = [
         { day: 2, slug: 'respiracao-hipopressiva', title: 'Sessão Guiada de Respiração Hipopressiva', type: 'Exercício', duration: '14 min', description: 'Técnica fundamental para reduzir a pressão abdominal.', videoUrl: 'https://www.youtube.com/embed/CsvaIIraFQE' },
         { day: 3, slug: 'ativacao-core-pelve', title: 'Ativação do Core Profundo e Pelve', type: 'Vídeo Aula', duration: '11 min', description: 'Sinta e ative os músculos que sustentam seu tronco.', videoUrl: 'https://www.youtube.com/embed/3Pz2LxtOoPU' },
         { day: 4, slug: 'cardapio-detox', title: 'Cardápio Detox de 3 Dias', type: 'Material', duration: '10 min', description: 'Um plano alimentar para reduzir a inflamação e o inchaço.' },
-        { day: 5, slug: 'pratica-integrada-1', title: 'Prática Integrada de Respiração', type: 'Exercício', duration: '25 min', description: 'Combine as técnicas aprendidas para uma prática fluida.' },
+        { day: 5, slug: 'pratica-integrada-1', title: 'Prática Integrada de Respiração', type: 'Exercício', duration: '25 min', description: 'Combine as técnicas aprendidas para uma prática fluida.', videoUrl: 'https://www.youtube.com/embed/Z4qzwrP3JA8' },
         { day: 6, slug: 'revisao-ajustes-1', title: 'Revisão e Ajustes da Técnica', type: 'Avaliação', duration: '15 min', description: 'Tire suas dúvidas e refine sua execução.' },
         { day: 7, slug: 'planejamento-semana-2', title: 'Planejamento para a Semana 2', type: 'Material', duration: '10 min', description: 'Prepare-se para a fase de fortalecimento intensivo.' },
     ]
