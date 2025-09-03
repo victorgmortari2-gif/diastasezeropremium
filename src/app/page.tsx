@@ -30,15 +30,6 @@ export default function Home() {
                 <Button size="lg" className="mt-6 font-bold text-lg p-8 transition-transform duration-300 hover:scale-105" asChild>
                     <Link href="#modulos">ACESSAR MÓDULOS <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
-                <div className="relative mt-8 max-w-4xl mx-auto aspect-video">
-                  <iframe
-                    className="w-full h-full rounded-xl shadow-2xl"
-                    src="https://www.youtube.com/embed/v_1GMsjrWsQ"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
-                </div>
             </div>
         </section>
         
