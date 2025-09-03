@@ -22,7 +22,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
         case 'Exercício': return <Activity className="h-6 w-6 text-primary" />;
         case 'Material': return <BookText className="h-6 w-6 text-primary" />;
         case 'Avaliação': return <GraduationCap className="h-6 w-6 text-primary" />;
-        default: return null;
+        default: return <BookText className="h-6 w-6 text-primary" />;
     }
   }
 

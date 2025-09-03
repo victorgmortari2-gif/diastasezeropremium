@@ -1,10 +1,10 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb, Soup, Apple, AlertTriangle, ShieldCheck, ArrowRight, HelpCircle, BookCheck, PartyPopper, Gift, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Leaf, Droplets, Utensils, Bed, Sparkles, CheckCircle, Award, Power, BrainCircuit, Rocket, Check, Calendar, UtensilsIcon, Brain, Star, Sun, Moon, Droplet, Heart, Salad, CookingPot, Shell, ThumbsUp, Target, CalendarCheck, Lightbulb, Soup, Apple, AlertTriangle, ArrowRight, HelpCircle, BookCheck, PartyPopper, Gift, BookOpen } from 'lucide-react';
 
 
 const DetoxContent = () => {
@@ -156,6 +156,12 @@ const PlanningS2Content = () => {
                 <p className="font-headline text-lg italic text-accent mb-6">
                     A Semana 2 é um marco no seu processo: aqui você começa a sentir o fortalecimento real da sua base e ganha confiança para seguir firme rumo à recuperação total. Cada exercício é um investimento no seu corpo, na sua autoestima e na sua saúde. 🌸
                 </p>
+                <Button asChild className="transition-transform duration-300 hover:scale-105">
+                    <Link href="/modulos/treino-intensivo">
+                        Avançar para o Módulo 2
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
             </div>
             
         </div>

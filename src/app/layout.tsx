@@ -29,9 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${ptSans.variable}`}>
-      <head>
-        {/* The preconnect links are no longer needed when using next/font */}
-      </head>
       <body className="font-body antialiased">
         {children}
         <Toaster />

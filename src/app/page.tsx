@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Award, BookOpen, Gift, Zap, Users, Lock, Clock, ArrowRight, Star, Heart, TrendingUp, Monitor, Zap as ZapIcon, CircleCheckBig, HeartPulse, Dumbbell, Anchor } from "lucide-react";
+import { Award, BookOpen, Gift, Zap, Users, ArrowRight, Star, Heart, TrendingUp, Monitor } from "lucide-react";
 import { modules } from "@/lib/modules";
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
                 <p className="mt-2 text-muted-foreground">Em qualquer dispositivo</p>
               </div>
               <div className="flex flex-col items-center">
-                <ZapIcon className="h-10 w-10 text-primary" />
+                <Zap className="h-10 w-10 text-primary" />
                 <h3 className="mt-4 font-bold text-xl font-headline">Prático</h3>
                 <p className="mt-2 text-muted-foreground">Exercícios rápidos e eficientes</p>
               </div>
