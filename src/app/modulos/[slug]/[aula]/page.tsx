@@ -28,6 +28,7 @@ const lessonComponentMap: Record<string, React.ComponentType> = {
     'revisao-geral': dynamic(() => import('@/app/modulos/content/general-review-content').then(mod => mod.GeneralReviewContent), { loading: () => <LoadingComponent /> }),
     'celebracao-proximos-passos': dynamic(() => import('@/app/modulos/content/celebration-content').then(mod => mod.CelebrationContent), { loading: () => <LoadingComponent /> }),
     'postura-elegancia': dynamic(() => import('@/app/modulos/content/posture-and-elegance-content').then(mod => mod.PostureAndEleganceContent), { loading: () => <LoadingComponent /> }),
+    'revisao-ajustes-1': dynamic(() => import('@/app/modulos/content/review-adjustments-1-content').then(mod => mod.ReviewAdjustments1Content), { loading: () => <LoadingComponent /> }),
 };
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
