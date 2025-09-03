@@ -2,8 +2,8 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, BookCheck, CheckCircle, HelpCircle, PartyPopper, Rocket, Star } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowLeft } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -27,7 +27,6 @@ const PostureAndEleganceContent = dynamic(() => import('@/app/modulos/[slug]/[au
 const RealisticRoutineContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/realistic-routine-content').then(mod => mod.RealisticRoutineContent), { loading: () => <LoadingComponent /> });
 const RemodelingPrepContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/remodeling-prep-content').then(mod => mod.RemodelingPrepContent), { loading: () => <LoadingComponent /> });
 const SelfCareContent = dynamic(() => import('@/app/modulos/[slug]/[aula]/content/self-care-content').then(mod => mod.SelfCareContent), { loading: () => <LoadingComponent /> });
-
 
 const lessonComponentMap: Record<string, React.ComponentType> = {
     'cardapio-detox': DetoxContent,
