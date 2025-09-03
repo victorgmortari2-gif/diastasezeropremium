@@ -120,7 +120,7 @@ export const modules: Module[] = [
         'Melhorar a postura e a elegância dos movimentos.',
     ],
     schedule: [
-        { day: 1, slug: 'exercicios-cintura', title: 'Exercícios para Afinar Cintura', type: 'Exercício', duration: '15 min', description: 'Movimentos que tonificam os oblíquos e modelam a cintura.' },
+        { day: 1, slug: 'exercicios-cintura', title: 'Exercícios para Afinar Cintura', type: 'Exercício', duration: '15 min', description: 'Movimentos que tonificam os oblíquos e modelam a cintura.', videoUrl: 'https://www.youtube.com/embed/LylrJB4yCKc' },
         { day: 2, slug: 'escultura-abdominal', title: 'Técnicas de Escultura Abdominal Leve', type: 'Vídeo Aula', duration: '20 min', description: 'Automassagem para melhorar o contorno corporal.' },
         { day: 3, slug: 'rituais-autocuidado', title: 'Rituais de Autocuidado com Foco Estético', type: 'Material', duration: '10 min', description: 'Dicas de cremes, óleos e práticas para a pele.' },
         { day: 4, slug: 'postura-elegancia', title: 'Postura e Elegância no Dia a Dia', type: 'Workshop', duration: '25 min', description: 'Como manter uma postura que valoriza seu corpo.' },
