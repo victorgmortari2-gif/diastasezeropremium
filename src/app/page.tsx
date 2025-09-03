@@ -22,7 +22,7 @@ export default function Home() {
                     />
                 </div>
                 <h1 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
-                    Bem-vinda ao Desafio <span className="text-accent">Premium</span> do <span className="text-primary">Diástase Zero</span>
+                    Bem-vinda ao Desafio <span className="text-gold">Premium</span> do <span className="text-primary">Diástase Zero</span>
                 </h1>
                 <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
                     Zere Sua Diástase com Acompanhamento Completo. Mais estrutura, mais suporte, mais resultados.
