@@ -200,8 +200,8 @@ export default function Home() {
         {/* Exclusive Offers Section */}
         <section className="py-16 md:py-24 bg-primary text-primary-foreground">
             <div className="container px-4 md:px-6">
-                <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">Ofertas Exclusivas para Você</h2>
-                 <p className="mt-4 max-w-2xl mx-auto text-center md:text-lg">
+                <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4 text-white">Ofertas Exclusivas para Você</h2>
+                 <p className="mt-4 max-w-2xl mx-auto text-center md:text-lg text-white/90">
                     Potencialize sua jornada com ferramentas e guias que vão acelerar seus resultados.
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
@@ -271,7 +271,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-12 text-center">
-                    <Button size="lg" className="font-bold text-xl md:text-2xl py-8 px-10 md:px-12 animate-pulse-scale bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button size="lg" className="font-bold text-xl md:text-2xl py-8 px-10 md:px-12 animate-pulse-scale bg-gold text-gold-foreground hover:bg-gold/90">
                         Adquira todas as ofertas por apenas R$ 18,90
                     </Button>
                 </div>
