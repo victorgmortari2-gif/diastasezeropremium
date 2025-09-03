@@ -158,15 +158,6 @@ const PlanningS2Content = () => {
                 </p>
             </div>
             
-            <div className="mt-10 bg-primary/10 border-l-4 border-primary p-6 rounded-lg text-center">
-                <h3 className="font-headline font-bold text-lg mb-2 text-primary flex items-center justify-center gap-2">
-                    <Rocket className="h-5 w-5" />
-                    Pronta para o Próximo Desafio?
-                </h3>
-                <p className="text-foreground/90 mb-4">
-                    Você concluiu a primeira semana com sucesso! Agora é hora de avançar para a fase de treino intensivo e estabilidade.
-                </p>
-            </div>
         </div>
     );
 }
