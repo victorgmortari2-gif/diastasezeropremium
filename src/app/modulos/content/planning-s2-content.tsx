@@ -30,7 +30,7 @@ export function PlanningS2Content() {
                         </div>
                     </div>
                     <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0"><Target className="h-8 w-8 text-primary" /></div>
+                        <div className="flex-shrink-0"><Target className="h-8 w-8 text-primary" /></div>'
                         <div>
                             <h3 className="font-bold text-lg">Foco na Estabilidade</h3>
                             <p className="text-sm text-muted-foreground">Você aprenderá exercícios isométricos e de estabilização que ensinam seu core a se manter contraído e firme durante movimentos, prevenindo a pressão excessiva na linha alba.</p>
@@ -54,6 +54,19 @@ export function PlanningS2Content() {
                     <p className="text-muted-foreground mb-4">
                         Desafio e Consistência. Alguns exercícios podem parecer difíceis no início. Não desanime! Respeite seus limites, mas não tenha medo de sair da zona de conforto. A consistência é mais importante que a perfeição. Fazer um pouco todos os dias trará resultados muito maiores do que fazer muito em um dia só.
                     </p>
+                </CardContent>
+            </Card>
+
+            <Card className="bg-primary/10 text-center">
+                <CardContent className="p-6">
+                     <p className="text-foreground font-semibold mb-4">
+                        Você concluiu a primeira semana! Está pronta para intensificar seu treino e acelerar ainda mais seus resultados?
+                    </p>
+                    <Button asChild>
+                        <Link href="/modulos/treino-intensivo">
+                            Ir para a Semana 2 <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
                 </CardContent>
             </Card>
 
