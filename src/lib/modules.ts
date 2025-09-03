@@ -144,7 +144,7 @@ export const modules: Module[] = [
         'Integrar o cuidado com o corpo à sua vida real e agitada.',
     ],
     schedule: [
-        { day: 1, slug: 'manter-constancia', title: 'Como Manter Constância na Rotina', type: 'Workshop', duration: '30 min', description: 'Estratégias mentais e práticas para não desistir.' },
+        { day: 1, slug: 'manter-constancia', title: 'Como Manter Constância na Rotina', type: 'Workshop', duration: '30 min', description: 'Estratégias mentais e práticas para não desistir.', videoUrl: 'https://www.youtube.com/embed/2nxewgS5CCw' },
         { day: 2, slug: 'guia-alimentacao-maes', title: 'Guia Prático de Alimentação para Mães', type: 'Material', duration: '15 min', description: 'Receitas e dicas para uma alimentação saudável e rápida.' },
         { day: 3, slug: 'aula-20-minutos', title: 'Aula: "Como Manter Tudo com 20 Minutos por Dia"', type: 'Vídeo Aula', duration: '20 min', description: 'O segredo para otimizar seu tempo e ter resultados.' },
         { day: 4, slug: 'montando-sua-rotina', title: 'Montando Sua Rotina Realista', type: 'Exercício', duration: '15 min', description: 'Planejamento prático para encaixar os treinos na sua vida.' },
