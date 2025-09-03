@@ -16,8 +16,8 @@ export default function Home() {
                     <Image 
                         src="https://i.imgur.com/VJtWx2S.png" 
                         alt="Diástase Zero Logo" 
-                        width={100} 
-                        height={100}
+                        width={90} 
+                        height={90}
                         className='mx-auto'
                     />
                 </div>
@@ -120,7 +120,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="text-center">
               <h2 className="font-headline text-3xl md:text-4xl font-bold flex items-center justify-center gap-3 text-foreground">
-                <Gift className="h-10 w-10 text-primary" /> Super Bônus do Premium
+                <Gift className="h-10 w-10 text-gold" /> Super Bônus do Premium
               </h2>
               <p className="mt-4 max-w-2xl mx-auto md:text-lg text-muted-foreground">
                 Além de todo o conteúdo dos módulos, você também recebe acesso a bônus exclusivos para acelerar seus resultados.
