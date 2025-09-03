@@ -198,10 +198,10 @@ export default function Home() {
         </section>
 
         {/* Exclusive Offers Section */}
-        <section className="py-16 md:py-24 bg-accent/10">
+        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
             <div className="container px-4 md:px-6">
                 <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">Ofertas Exclusivas para Você</h2>
-                 <p className="mt-4 max-w-2xl mx-auto text-center text-muted-foreground md:text-lg">
+                 <p className="mt-4 max-w-2xl mx-auto text-center md:text-lg">
                     Potencialize sua jornada com ferramentas e guias que vão acelerar seus resultados.
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
