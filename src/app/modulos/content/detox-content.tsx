@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Leaf, Fish, Droplets, Egg, Apple, Carrot, Citrus } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
 
 export function DetoxContent() {
   const foods = [
@@ -10,6 +12,40 @@ export function DetoxContent() {
     { name: "Gengibre e Cúrcuma", description: "Especiarias com forte ação anti-inflamatória e digestiva.", icon: <Carrot className="h-8 w-8 text-primary" /> },
     { name: "Água com Limão", description: "Alcaliniza o corpo e estimula a digestão pela manhã.", icon: <Citrus className="h-8 w-8 text-primary" /> },
   ];
+
+  const detoxPlan = [
+      {
+          day: "Dia 1",
+          meals: {
+              "Manhã (em jejum)": "1 copo de água morna com suco de ½ limão.",
+              "Café da Manhã": "Ovos mexidos (2 ovos) com cúrcuma + ½ abacate pequeno amassado com um fio de azeite e sal.",
+              "Almoço": "Salmão grelhado (1 filé médio, cerca de 150g) + salada de folhas verdes à vontade (alface, rúcula) com cenoura ralada e pepino em rodelas. Tempere com azeite, limão e pouco sal.",
+              "Lanche da Tarde": "Shake de frutas vermelhas (1 xícara de mirtilos e morangos) com água ou leite de amêndoas sem açúcar + 1 colher de sopa de chia.",
+              "Jantar": "Sopa cremosa de legumes (abobrinha, chuchu e cenoura) batida no liquidificador com gengibre ralado (1 colher de chá) e frango desfiado (100g).",
+          }
+      },
+      {
+          day: "Dia 2",
+          meals: {
+              "Manhã (em jejum)": "1 copo de água morna com suco de ½ limão.",
+              "Café da Manhã": "Mingau de aveia (3 colheres de sopa de aveia) com água ou leite de coco + 1 banana fatiada e canela em pó.",
+              "Almoço": "Salada colorida de atum (1 lata de atum em água) com vegetais picados (brócolis cozido no vapor, pimentão e tomate). Tempere com azeite de oliva e uma pitada de açafrão-da-terra.",
+              "Lanche da Tarde": "1 punhado de amêndoas ou nozes (cerca de 10 unidades) + 1 xícara de chá de hortelã.",
+              "Jantar": "Sopa de lentilha (½ xícara de lentilha cozida) com vegetais (cenoura, aipo e alho-poró) e um fio de azeite.",
+          }
+      },
+      {
+          day: "Dia 3",
+          meals: {
+              "Manhã (em jejum)": "1 copo de água morna com suco de ½ limão.",
+              "Café da Manhã": "Smoothie verde (1 folha de couve, ½ pepino, ½ maçã verde e 200ml de água de coco) + 1 colher de sopa de sementes de abóbora.",
+              "Almoço": "Filé de frango grelhado (1 filé médio, cerca de 150g) + ½ xícara de quinoa cozida + salada de folhas à vontade com beterraba ralada. Tempere com azeite e limão.",
+              "Lanche da Tarde": "1 xícara de frutas vermelhas ou 1 maçã + 1 colher de sopa de sementes de girassol.",
+              "Jantar": "Peixe cozido no vapor (tilápia ou pescada, 1 filé médio) com legumes (brócolis e cenoura) e um pouco de gengibre ralado.",
+          }
+      }
+  ]
+
   return (
     <div className="space-y-6">
       <Card>
@@ -44,29 +80,26 @@ export function DetoxContent() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="font-headline text-2xl">Exemplo de Cardápio para 1 Dia</CardTitle>
+          <CardTitle className="font-headline text-2xl">Exemplo de Cardápio para 3 Dias</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div>
-            <h3 className="font-bold text-lg">Manhã (em jejum)</h3>
-            <p className="text-muted-foreground">1 copo de água com suco de 1/2 limão.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Café da Manhã</h3>
-            <p className="text-muted-foreground">Ovos mexidos com cúrcuma + 1/2 abacate com azeite e sal.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Almoço</h3>
-            <p className="text-muted-foreground">Salmão grelhado + salada de folhas verdes à vontade com cenoura ralada, temperada com azeite, limão e pouco sal.</p>
-          </div>
-           <div>
-            <h3 className="font-bold text-lg">Lanche da Tarde</h3>
-            <p className="text-muted-foreground">Shake de frutas vermelhas com água ou leite vegetal + 1 colher de chia.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Jantar</h3>
-            <p className="text-muted-foreground">Sopa de legumes (abobrinha, chuchu, cenoura) com frango desfiado e gengibre ralado.</p>
-          </div>
+        <CardContent>
+          <Accordion type="single" collapsible defaultValue="item-0">
+            {detoxPlan.map((dayPlan, index) => (
+              <AccordionItem value={`item-${index}`} key={index}>
+                <AccordionTrigger className="text-xl font-bold text-primary">{dayPlan.day}</AccordionTrigger>
+                <AccordionContent>
+                  <div className="space-y-4">
+                    {Object.entries(dayPlan.meals).map(([meal, description]) => (
+                      <div key={meal}>
+                        <h3 className="font-bold text-lg">{meal}</h3>
+                        <p className="text-muted-foreground">{description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </CardContent>
       </Card>
 
