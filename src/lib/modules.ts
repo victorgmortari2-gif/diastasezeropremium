@@ -99,7 +99,7 @@ export const modules: Module[] = [
         { day: 18, slug: 'treino-final', title: 'Treino Final de Consolidação', type: 'Exercício', duration: '13 min', description: 'O último treino do desafio para celebrar sua jornada.', videoUrl: 'https://www.youtube.com/embed/RlqzJY5vi38' },
         { day: 19, slug: 'celebracao-proximos-passos', title: 'Celebração e Próximos Passos', type: 'Mentoria', duration: '10 min', description: 'Comemore sua conquista e saiba como continuar.' },
         { day: 20, slug: 'avaliacao-final', title: 'Mitos e Verdades Sobre a Diástase', type: 'Avaliação', duration: '15 min', description: 'Meça novamente sua diástase e veja sua evolução.', videoUrl: 'https://www.youtube.com/embed/6uZmNSvbMqo'},
-        { day: 21, slug: 'revisao-geral', title: 'Revisão Geral e Dúvidas Finais', type: 'Workshop', duration: '30 min', description: 'Uma última chance para tirar todas as suas dúvidas.' },
+        { day: 21, slug: 'revisao-geral', title: 'Revisão Geral e Dúvidas Finais', type: 'Workshop', duration: '10 min', description: 'Uma última chance para tirar todas as suas dúvidas.' },
     ]
   },
   {
