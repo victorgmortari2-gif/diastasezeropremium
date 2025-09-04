@@ -94,7 +94,7 @@ export const modules: Module[] = [
     ],
     schedule: [
         { day: 15, slug: 'protocolo-avancado', title: 'Protocolo de Treino Avançado', type: 'Exercício', duration: '13 min', description: 'A sequência definitiva para remodelar seu abdômen.', videoUrl: 'https://www.youtube.com/embed/RlqzJY5vi38' },
-        { day: 16, slug: 'mentoria-abdomen-firme', title: 'Mentoria: Como Manter o Abdômen Firme', type: 'Mentoria', duration: '40 min', description: 'Segredos e estratégias para resultados duradouros.', videoUrl: 'https://www.youtube.com/embed/eJibnWJad44' },
+        { day: 16, slug: 'mentoria-abdomen-firme', title: 'Mentoria: Como Manter o Abdômen Firme', type: 'Mentoria', duration: '8 min', description: 'Segredos e estratégias para resultados duradouros.', videoUrl: 'https://www.youtube.com/embed/eJibnWJad44' },
         { day: 17, slug: 'plano-pos-desafio', title: 'Plano de 60 Dias Pós-Desafio', type: 'Material', duration: '15 min', description: 'Seu guia para continuar evoluindo após o programa.' },
         { day: 18, slug: 'treino-final', title: 'Treino Final de Consolidação', type: 'Exercício', duration: '13 min', description: 'O último treino do desafio para celebrar sua jornada.', videoUrl: 'https://www.youtube.com/embed/RlqzJY5vi38' },
         { day: 19, slug: 'celebracao-proximos-passos', title: 'Celebração e Próximos Passos', type: 'Mentoria', duration: '10 min', description: 'Comemore sua conquista e saiba como continuar.' },
