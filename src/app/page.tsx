@@ -198,14 +198,14 @@ export default function Home() {
         </section>
 
         {/* Exclusive Offers Section */}
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+        <section className="py-16 md:py-24 bg-zinc-900 text-primary-foreground">
             <div className="container px-4 md:px-6">
                 <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4 text-white">Ofertas Exclusivas para Você</h2>
                  <p className="mt-4 max-w-2xl mx-auto text-center md:text-lg text-white/90">
                     Potencialize sua jornada com ferramentas e guias que vão acelerar seus resultados.
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col bg-card text-foreground">
                         <CardHeader className="items-center text-center">
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Gift className="h-8 w-8 text-primary" />
@@ -221,7 +221,7 @@ export default function Home() {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col bg-card text-foreground">
                         <CardHeader className="items-center text-center">
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <BookOpen className="h-8 w-8 text-primary" />
@@ -237,7 +237,7 @@ export default function Home() {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col bg-card text-foreground">
                         <CardHeader className="items-center text-center">
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Award className="h-8 w-8 text-primary" />
@@ -253,7 +253,7 @@ export default function Home() {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                    <Card className="transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col bg-card text-foreground">
                         <CardHeader className="items-center text-center">
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Zap className="h-8 w-8 text-primary" />
