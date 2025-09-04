@@ -16,8 +16,8 @@ export default function Home() {
                     <Image 
                         src="https://i.imgur.com/VJtWx2S.png" 
                         alt="Diástase Zero Logo" 
-                        width={90} 
-                        height={90}
+                        width={180} 
+                        height={180}
                         className='mx-auto'
                     />
                 </div>
@@ -265,8 +265,7 @@ export default function Home() {
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
-                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>
-                            </div>
+                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>                            </div>
                         </CardContent>
                     </Card>
                 </div>
