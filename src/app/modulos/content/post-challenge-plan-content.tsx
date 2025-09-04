@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
 import { BookOpen, Target, ShieldCheck, Heart, Leaf, Star } from "lucide-react";
 
 export function PostChallengePlanContent() {
@@ -84,7 +83,6 @@ export function PostChallengePlanContent() {
                 ))}
               </TableBody>
             </Table>
-             <Button variant="outline" className="mt-4">Exportar para as Planilhas</Button>
           </div>
           <div>
             <h3 className="font-bold text-xl mb-2">Fase 2: Progressão e Fortalecimento (Semanas 5-8)</h3>
@@ -105,7 +103,6 @@ export function PostChallengePlanContent() {
                 ))}
               </TableBody>
             </Table>
-             <Button variant="outline" className="mt-4">Exportar para as Planilhas</Button>
           </div>
         </CardContent>
       </Card>
@@ -121,7 +118,7 @@ export function PostChallengePlanContent() {
                         <CardTitle className="text-lg">Treino de Core 1 (Consolidação)</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p><strong>Elevação Pélvica:</strong> Deitada, joelhos flexionados, pés no chão. Expire e eleve o quadril. Mantenha por 3 segundos.</p>
+                        <p><strong>Elevação Pélvica:</strong> Deitada, joelhos flexionados, pés no chão. Expire e eleve o quadril.</p>
                         <p className="mt-2"><strong>Dead Bug:</strong> Deitada, braços para cima, pernas a 90°. Ao expirar, estenda braço e perna opostos.</p>
                     </CardContent>
                 </Card>
