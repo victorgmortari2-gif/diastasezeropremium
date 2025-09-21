@@ -14,32 +14,32 @@ export function RealisticRoutineContent() {
         {
             title: "Plano Alimentar Personalizado",
             description: "Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.",
-            price: "R$ 9,90",
-            originalPrice: "R$ 23,90",
+            price: "R$ 14,90",
+            originalPrice: "R$ 27,90",
             icon: <Gift className="h-10 w-10 text-primary" />,
             buttonText: "Adicionar ao meu acesso"
         },
         {
             title: "Guia de Confiança e Estilo",
             description: "Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.",
-            price: "R$ 9,90",
-            originalPrice: "R$ 23,90",
+            price: "R$ 14,90",
+            originalPrice: "R$ 27,90",
             icon: <BookOpen className="h-10 w-10 text-primary" />,
             buttonText: "Quero este guia"
         },
         {
             title: "Programa Pós-Desafio",
             description: "Continuação de 60 dias com treinos, calendário e estratégias para manter os resultados.",
-            price: "R$ 9,90",
-            originalPrice: "R$ 23,90",
+            price: "R$ 14,90",
+            originalPrice: "R$ 27,90",
             icon: <Award className="h-10 w-10 text-primary" />,
             buttonText: "Continuar minha evolução"
         },
         {
             title: "Pack de Meditações Guiadas",
             description: "Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.",
-            price: "R$ 9,90",
-            originalPrice: "R$ 23,90",
+            price: "R$ 14,90",
+            originalPrice: "R$ 27,90",
             icon: <Zap className="h-10 w-10 text-primary" />,
             buttonText: "Adicionar meditações"
         }
@@ -103,7 +103,7 @@ export function RealisticRoutineContent() {
                     </div>
                     <div className="mt-10 text-center">
                         <Button size="lg" className="font-bold text-xl p-6">
-                            Adquira todas as ofertas por apenas R$ 18,90
+                            Adquira todas as ofertas por apenas R$ 39,90
                         </Button>
                     </div>
                 </div>

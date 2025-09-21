@@ -215,8 +215,8 @@ export default function Home() {
                         <CardContent className="text-center flex-grow flex flex-col">
                             <p className="text-muted-foreground text-sm mb-4">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
                             <div className="mt-auto">
-                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
-                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                                 <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar ao meu acesso</Button>
                             </div>
                         </CardContent>
@@ -231,8 +231,8 @@ export default function Home() {
                         <CardContent className="text-center flex-grow flex flex-col">
                             <p className="text-muted-foreground text-sm mb-4">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
                              <div className="mt-auto">
-                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
-                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                                 <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
                             </div>
                         </CardContent>
@@ -247,8 +247,8 @@ export default function Home() {
                         <CardContent className="text-center flex-grow flex flex-col">
                             <p className="text-muted-foreground text-sm mb-4">Plano de 60 dias com treinos e estratégias para manter seus resultados para sempre.</p>
                              <div className="mt-auto">
-                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
-                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                                 <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
                             </div>
                         </CardContent>
@@ -263,15 +263,15 @@ export default function Home() {
                         <CardContent className="text-center flex-grow flex flex-col">
                             <p className="text-muted-foreground text-sm mb-4">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
                              <div className="mt-auto">
-                                <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
-                                <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                                <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
+                                <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                                 <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>                            </div>
                         </CardContent>
                     </Card>
                 </div>
                 <div className="mt-12 text-center">
                     <Button size="lg" className="font-bold text-xl md:text-2xl py-8 px-10 md:px-12 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90">
-                        Adquira todas as ofertas por apenas R$ 18,90
+                        Adquira todas as ofertas por apenas R$ 39,90
                     </Button>
                 </div>
             </div>
