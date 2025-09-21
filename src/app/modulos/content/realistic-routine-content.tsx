@@ -20,7 +20,7 @@ export function RealisticRoutineContent() {
             buttonText: "Adicionar ao meu acesso"
         },
         {
-            title: "E-book Premium + Guia de Roupas",
+            title: "Guia de Confiança e Estilo",
             description: "Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.",
             price: "R$ 9,90",
             originalPrice: "R$ 23,90",
@@ -77,17 +77,17 @@ export function RealisticRoutineContent() {
                 </CardContent>
             </Card>
             
-            <section className="py-12 bg-accent/20 rounded-lg">
+            <section className="py-12 bg-beige rounded-lg">
                 <div className="container px-4 md:px-6">
                     <div className="text-center mb-10">
-                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Potencialize Sua Evolução</h2>
+                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Ofertas Exclusivas para Você</h2>
                         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">
-                            Você já deu o passo mais importante ao se comprometer com sua saúde. Agora, para acelerar e solidificar seus resultados, preparamos ofertas exclusivas que complementam perfeitamente sua jornada.
+                            Potencialize sua jornada com ferramentas e guias que vão acelerar seus resultados.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {exclusiveOffers.map((offer, index) => (
-                             <Card key={index} className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
+                             <Card key={index} className="bg-background transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
                                 <CardHeader className="items-center">
                                     {offer.icon}
                                     <CardTitle className="text-center font-headline text-xl">{offer.title}</CardTitle>
@@ -102,7 +102,7 @@ export function RealisticRoutineContent() {
                         ))}
                     </div>
                     <div className="mt-10 text-center">
-                        <Button size="lg" className="font-bold text-2xl p-8 animate-pulse-scale">
+                        <Button size="lg" className="font-bold text-xl p-6">
                             Adquira todas as ofertas por apenas R$ 18,90
                         </Button>
                     </div>

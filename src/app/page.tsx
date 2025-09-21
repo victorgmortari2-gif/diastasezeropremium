@@ -198,10 +198,10 @@ export default function Home() {
         </section>
 
         {/* Exclusive Offers Section */}
-        <section className="py-16 md:py-24 bg-zinc-900 text-primary-foreground">
+        <section className="py-16 md:py-24 bg-beige text-foreground">
             <div className="container px-4 md:px-6">
-                <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4 text-white">Ofertas Exclusivas para Você</h2>
-                 <p className="mt-4 max-w-2xl mx-auto text-center md:text-lg text-white/90">
+                <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">Ofertas Exclusivas para Você</h2>
+                 <p className="mt-4 max-w-2xl mx-auto text-center md:text-lg text-muted-foreground">
                     Potencialize sua jornada com ferramentas e guias que vão acelerar seus resultados.
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
@@ -210,7 +210,7 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Gift className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">Plano Alimentar</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Plano Alimentar Personalizado</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
                             <p className="text-muted-foreground text-sm mb-4">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
@@ -226,10 +226,10 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <BookOpen className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">E-book Premium</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Guia de Confiança e Estilo</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
-                            <p className="text-muted-foreground text-sm mb-4">Guia de automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
+                            <p className="text-muted-foreground text-sm mb-4">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 23,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
@@ -242,7 +242,7 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Award className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">Pós-Desafio</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Programa Pós-Desafio</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
                             <p className="text-muted-foreground text-sm mb-4">Plano de 60 dias com treinos e estratégias para manter seus resultados para sempre.</p>
@@ -258,7 +258,7 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Zap className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">Pack de Meditações</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Pack de Meditações Guiadas</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
                             <p className="text-muted-foreground text-sm mb-4">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
@@ -270,7 +270,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-12 text-center">
-                    <Button size="lg" className="font-bold text-xl md:text-2xl py-8 px-10 md:px-12 animate-pulse-scale bg-gold text-gold-foreground hover:bg-gold/90">
+                    <Button size="lg" className="font-bold text-xl md:text-2xl py-8 px-10 md:px-12 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90">
                         Adquira todas as ofertas por apenas R$ 18,90
                     </Button>
                 </div>
