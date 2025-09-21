@@ -27,10 +27,6 @@ export function TwentyMinDayContent() {
 
     return (
         <div className="space-y-8">
-            <header className="text-center mb-10">
-                <h1 className="font-headline text-3xl font-bold">Aula: O Segredo para Otimizar Seu Tempo e Ter Resultados em 20 Minutos por Dia</h1>
-            </header>
-
             <Card>
                 <CardContent className="p-6">
                     <p className="text-muted-foreground">
