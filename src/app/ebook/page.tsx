@@ -23,7 +23,7 @@ export default function EbookPage() {
                 className='mx-auto'
             />
           </Link>
-          <div className="font-headline text-lg font-bold text-primary">Diástase Zero</div>
+          <div className="w-48"></div>
         </div>
       </header>
 
