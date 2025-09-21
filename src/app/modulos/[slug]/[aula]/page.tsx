@@ -96,17 +96,6 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
               </CardContent>
             </Card>
           )}
-
-          <section className="mt-8">
-            <h2 className="font-headline text-2xl font-bold mb-4">Resumo da Aula</h2>
-            <Card>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">
-                  Nesta aula, você aprenderá os pontos-chave sobre {lesson.title.toLowerCase()}. Abordaremos os conceitos fundamentais e as melhores práticas para garantir que você execute as técnicas corretamente e com segurança. Prepare-se para dar um passo importante na sua jornada de recuperação!
-                </p>
-              </CardContent>
-            </Card>
-          </section>
         </div>
       </main>
 
