@@ -13,8 +13,8 @@
     --card-foreground: 20 14.3% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
-    --primary: 175 70% 35%;
-    --primary-foreground: 175 70% 98%;
+    --primary: 160 100% 23%;
+    --primary-foreground: 160 100% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 210 40% 9%;
     --muted: 210 40% 96.1%;
@@ -25,7 +25,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 210 40% 89.8%;
     --input: 210 40% 89.8%;
-    --ring: 175 70% 35%;
+    --ring: 160 100% 23%;
     --gold: 45 85% 55%;
     --gold-foreground: 45 85% 5%;
     --chart-1: 12 76% 61%;
@@ -50,8 +50,8 @@
     --card-foreground: 30 50% 98%;
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 30 50% 98%;
-    --primary: 175 70% 45%;
-    --primary-foreground: 175 70% 10%;
+    --primary: 160 100% 28%;
+    --primary-foreground: 160 100% 98%;
     --secondary: 210 40% 14.9%;
     --secondary-foreground: 30 50% 98%;
     --muted: 210 40% 14.9%;
@@ -62,7 +62,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 210 40% 14.9%;
     --input: 210 40% 14.9%;
-    --ring: 175 70% 45%;
+    --ring: 160 100% 28%;
     --gold: 45 85% 55%;
     --gold-foreground: 45 85% 5%;
     --chart-1: 220 70% 50%;
