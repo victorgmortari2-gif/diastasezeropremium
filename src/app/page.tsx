@@ -270,7 +270,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-12 text-center">
-                    <Button size="lg" className="font-bold text-xl md:text-2xl py-8 px-10 md:px-12 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Button size="lg" className="font-bold text-lg md:text-xl py-6 px-8 md:py-8 md:px-10 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90">
                         Adquira todas as ofertas por apenas R$ 39,90
                     </Button>
                 </div>
