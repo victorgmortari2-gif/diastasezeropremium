@@ -12,32 +12,32 @@ export function RealisticRoutineContent() {
 
     const exclusiveOffers = [
         {
-            title: "Plano Alimentar Personalizado",
-            description: "Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.",
+            title: "Plano Alimentar (Secreto) para Desinchar",
+            description: "Descubra o poder do Plano Alimentar Secreto, seu guia de 30 dias para uma vida sem inchaço e inflamação, com lista de compras e substituições..",
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <Gift className="h-10 w-10 text-primary" />,
             buttonText: "Adicionar ao meu acesso"
         },
         {
-            title: "Guia de Confiança e Estilo",
-            description: "Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.",
+            title: "Guia Definitivo Para Vestir o que Você Ama",
+            description: "Técnicas de Automassagem para um corpo leve, os segredos de postura que alongam a silhueta, e dicas de looks que te fazem sentir imparável. Sua confiança é o melhor acessório.",
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <BookOpen className="h-10 w-10 text-primary" />,
             buttonText: "Quero este guia"
         },
         {
-            title: "Programa Pós-Desafio",
-            description: "Continuação de 60 dias com treinos, calendário e estratégias para manter os resultados.",
+            title: "Protocolo Zero Celulite",
+            description: "Chegou o momento de encerrar o ciclo das inseguranças. O PROTOCOLO ZERO CELULITE oferece o caminho mais rápido e eficaz para conquistar a pele que você sempre desejou.",
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <Award className="h-10 w-10 text-primary" />,
             buttonText: "Continuar minha evolução"
         },
         {
-            title: "Pack de Meditações Guiadas",
-            description: "Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.",
+            title: "Meditações Guiadas \"Mente em Foco, Corpo em Harmonia\"",
+            description: "Sua transformação começa de dentro. Áudios de 10-25 min para construir disciplina inabalável e blindar sua autoestima. É o equilíbrio emocional que garante sua constância e os seus resultados.",
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <Zap className="h-10 w-10 text-primary" />,

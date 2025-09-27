@@ -210,10 +210,10 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Gift className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">Plano Alimentar Personalizado</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Plano Alimentar (Secreto) para Desinchar</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
-                            <p className="text-muted-foreground text-sm mb-4">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
+                            <p className="text-muted-foreground text-sm mb-4">Descubra o poder do Plano Alimentar Secreto, seu guia de 30 dias para uma vida sem inchaço e inflamação, com lista de compras e substituições..</p>
                             <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
@@ -226,10 +226,10 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <BookOpen className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">Guia de Confiança e Estilo</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Guia Definitivo Para Vestir o que Você Ama</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
-                            <p className="text-muted-foreground text-sm mb-4">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
+                            <p className="text-muted-foreground text-sm mb-4">Técnicas de Automassagem para um corpo leve, os segredos de postura que alongam a silhueta, e dicas de looks que te fazem sentir imparável. Sua confiança é o melhor acessório.</p>
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
@@ -242,10 +242,10 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Award className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">Programa Pós-Desafio</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Protocolo Zero Celulite</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
-                            <p className="text-muted-foreground text-sm mb-4">Plano de 60 dias com treinos e estratégias para manter seus resultados para sempre.</p>
+                            <p className="text-muted-foreground text-sm mb-4">Chegou o momento de encerrar o ciclo das inseguranças. O PROTOCOLO ZERO CELULITE oferece o caminho mais rápido e eficaz para conquistar a pele que você sempre desejou.</p>
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
@@ -258,10 +258,10 @@ export default function Home() {
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 <Zap className="h-8 w-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-xl pt-2">Pack de Meditações Guiadas</CardTitle>
+                            <CardTitle className="font-headline text-xl pt-2">Meditações Guiadas "Mente em Foco, Corpo em Harmonia"</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center flex-grow flex flex-col">
-                            <p className="text-muted-foreground text-sm mb-4">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
+                            <p className="text-muted-foreground text-sm mb-4">Sua transformação começa de dentro. Áudios de 10-25 min para construir disciplina inabalável e blindar sua autoestima. É o equilíbrio emocional que garante sua constância e os seus resultados.</p>
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
