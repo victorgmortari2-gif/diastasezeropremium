@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, Award, BookOpen, Gift, Zap } from "lucide-react";
+import Link from "next/link";
 
 export function RealisticRoutineContent() {
     const routineKeys = [
@@ -17,7 +18,8 @@ export function RealisticRoutineContent() {
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <Gift className="h-10 w-10 text-primary" />,
-            buttonText: "Adicionar ao meu acesso"
+            buttonText: "Adicionar ao meu acesso",
+            link: "https://go.tribopay.com.br/xxzyjsqss3"
         },
         {
             title: "Guia Definitivo Para Vestir o que Você Ama",
@@ -25,7 +27,8 @@ export function RealisticRoutineContent() {
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <BookOpen className="h-10 w-10 text-primary" />,
-            buttonText: "Quero este guia"
+            buttonText: "Quero este guia",
+            link: "https://go.tribopay.com.br/b0qxhlcuaf"
         },
         {
             title: "Protocolo Zero Celulite",
@@ -33,7 +36,8 @@ export function RealisticRoutineContent() {
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <Award className="h-10 w-10 text-primary" />,
-            buttonText: "Continuar minha evolução"
+            buttonText: "Continuar minha evolução",
+            link: "https://go.tribopay.com.br/nasud6qmbv"
         },
         {
             title: "Meditações Guiadas \"Mente em Foco, Corpo em Harmonia\"",
@@ -41,7 +45,8 @@ export function RealisticRoutineContent() {
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
             icon: <Zap className="h-10 w-10 text-primary" />,
-            buttonText: "Adicionar meditações"
+            buttonText: "Adicionar meditações",
+            link: "https://go.tribopay.com.br/prbluqfcdj"
         }
     ];
 
@@ -96,14 +101,18 @@ export function RealisticRoutineContent() {
                                     <p className="text-muted-foreground text-sm flex-grow">{offer.description}</p>
                                     <p className="text-sm line-through text-muted-foreground mt-4">De {offer.originalPrice}</p>
                                     <p className="text-2xl font-bold text-primary">por apenas {offer.price}</p>
-                                    <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">{offer.buttonText}</Button>
+                                    <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                                        <Link href={offer.link} target="_blank" rel="noopener noreferrer">{offer.buttonText}</Link>
+                                    </Button>
                                 </CardContent>
                             </Card>
                         ))}
                     </div>
                     <div className="mt-10 text-center">
-                        <Button size="lg" className="font-bold text-xl p-6">
-                            Adquira todas as ofertas por apenas R$ 39,90
+                        <Button size="lg" className="font-bold text-lg p-6" asChild>
+                            <Link href="https://go.tribopay.com.br/bvyaujeoan" target="_blank" rel="noopener noreferrer">
+                                Adquira todas as ofertas por apenas R$ 39,90
+                            </Link>
                         </Button>
                     </div>
                 </div>

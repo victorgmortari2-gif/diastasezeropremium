@@ -217,7 +217,9 @@ export default function Home() {
                             <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
-                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar ao meu acesso</Button>
+                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                                  <Link href="https://go.tribopay.com.br/xxzyjsqss3" target="_blank" rel="noopener noreferrer">Adicionar ao meu acesso</Link>
+                                </Button>
                             </div>
                         </CardContent>
                     </Card>
@@ -233,7 +235,9 @@ export default function Home() {
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
-                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
+                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                                  <Link href="https://go.tribopay.com.br/b0qxhlcuaf" target="_blank" rel="noopener noreferrer">Quero este guia</Link>
+                                </Button>
                             </div>
                         </CardContent>
                     </Card>
@@ -249,7 +253,9 @@ export default function Home() {
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
-                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
+                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                                  <Link href="https://go.tribopay.com.br/nasud6qmbv" target="_blank" rel="noopener noreferrer">Continuar minha evolução</Link>
+                                </Button>
                             </div>
                         </CardContent>
                     </Card>
@@ -265,13 +271,18 @@ export default function Home() {
                              <div className="mt-auto">
                                 <p className="text-sm line-through text-muted-foreground">De R$ 27,90</p>
                                 <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
-                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>                            </div>
+                                <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                                  <Link href="https://go.tribopay.com.br/prbluqfcdj" target="_blank" rel="noopener noreferrer">Adicionar meditações</Link>
+                                </Button>
+                            </div>
                         </CardContent>
                     </Card>
                 </div>
                 <div className="mt-12 text-center">
-                    <Button size="lg" className="font-bold text-lg md:text-xl py-6 px-8 md:py-8 md:px-10 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90">
-                        Adquira todas as ofertas por apenas R$ 39,90
+                    <Button size="lg" className="font-bold text-lg md:text-xl py-6 px-8 md:py-8 md:px-10 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                         <Link href="https://go.tribopay.com.br/bvyaujeoan" target="_blank" rel="noopener noreferrer">
+                            Adquira todas as ofertas por apenas R$ 39,90
+                         </Link>
                     </Button>
                 </div>
             </div>
