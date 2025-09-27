@@ -34,7 +34,7 @@ export default function AtualizacoesPage() {
                 <CardContent className="p-8 text-center flex flex-col items-center">
                     <Info className="h-12 w-12 text-primary mb-4" />
                     <p className="text-lg text-muted-foreground">
-                        No momento não existem atualizações disponíveis, mas assim que elas forem lançadas estaremos te notificando.
+                        No momento, todas as aulas do Diástase Zero estão completas e atualizadas. Assim que novos conteúdos ou módulos forem adicionados, você será o(a) primeiro(a) a saber e notificaremos você por e-mail.
                     </p>
                 </CardContent>
             </Card>
