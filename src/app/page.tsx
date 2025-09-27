@@ -160,7 +160,7 @@ export default function Home() {
                   </span>
                 </Card>
               </Link>
-              <Link href="#" className="group">
+              <Link href="https://chat.whatsapp.com/BBK8G1MZsYGIJZLSieF9tC" target="_blank" rel="noopener noreferrer" className="group">
                 <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-card">
                   <Users className="h-10 w-10 text-gold mb-4" />
                   <h3 className="font-headline text-xl font-bold">Grupo EXCLUSIVO no WhatsApp</h3>
