@@ -182,7 +182,7 @@ export default function Home() {
                   </span>
                 </Card>
               </Link>
-              <Link href="#" className="group">
+              <Link href="/atualizacoes" className="group">
                 <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-card">
                   <Zap className="h-10 w-10 text-gold mb-4" />
                   <h3 className="font-headline text-xl font-bold">Acesso a todas as atualizações</h3>
@@ -279,7 +279,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-12 text-center">
-                    <Button size="lg" className="font-bold text-lg md:text-xl py-6 px-8 md:py-8 md:px-10 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                    <Button size="lg" className="font-bold text-base md:text-lg p-6 px-4 md:px-8 md:py-8 animate-pulse-scale bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                          <Link href="https://go.tribopay.com.br/bvyaujeoan" target="_blank" rel="noopener noreferrer">
                             Adquira todas as ofertas por apenas R$ 39,90
                          </Link>
