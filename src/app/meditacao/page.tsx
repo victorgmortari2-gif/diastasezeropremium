@@ -5,7 +5,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind } from 'lucide-react';
+import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Literata } from 'next/font/google';
 import { Card, CardContent } from '@/components/ui/card';
@@ -67,6 +67,33 @@ const meditationJourneys = [
   },
 ];
 
+const bonusSessions = [
+  {
+    title: 'Calma para Ansiedade',
+    duration: '10 min',
+    description: 'Ancore sua mente e acalme a tempestade.',
+    imageUrl: 'https://picsum.photos/seed/meditation_bonus1/600/400',
+    icon: <Anchor className="h-5 w-5 text-white/80" />,
+    dataAiHint: 'dark calm'
+  },
+  {
+    title: 'Alinhamento dos Chakras',
+    duration: '12 min',
+    description: 'Equilibre seus centros de energia vital.',
+    imageUrl: 'https://picsum.photos/seed/meditation_bonus2/600/400',
+    icon: <Zap className="h-5 w-5 text-white/80" />,
+    dataAiHint: 'night lights'
+  },
+  {
+    title: 'Relaxamento Noturno',
+    duration: '23 min',
+    description: 'Prepare seu corpo e mente para um sono profundo.',
+    imageUrl: 'https://picsum.photos/seed/meditation_bonus3/600/400',
+    icon: <BedDouble className="h-5 w-5 text-white/80" />,
+    dataAiHint: 'new york'
+  },
+];
+
 
 export default function MeditacaoPage() {
   return (
@@ -108,7 +135,7 @@ export default function MeditacaoPage() {
             </Button>
         </section>
         
-        <section>
+        <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
               Suas 6 Jornadas de Transformação
@@ -143,6 +170,43 @@ export default function MeditacaoPage() {
               </Card>
             ))}
           </div>
+        </section>
+
+        <section>
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
+                Aulas Bônus
+                </h2>
+                <p className="mt-4 text-lg text-gray-600">
+                Explore outras áreas do seu bem-estar com estas sessões especiais.
+                </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {bonusSessions.map((session) => (
+                <Card key={session.title} className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <div className="relative">
+                    <Image
+                        src={session.imageUrl}
+                        alt={session.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-48 object-cover"
+                        data-ai-hint={session.dataAiHint}
+                    />
+                    <div className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm p-2 rounded-full">
+                        {session.icon}
+                    </div>
+                    <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/70 to-transparent w-full">
+                        <h3 className="text-white text-xl font-bold">{session.title}</h3>
+                        <p className="text-white/80 text-sm">{session.duration}</p>
+                    </div>
+                    </div>
+                    <CardContent className="p-5">
+                    <p className="text-gray-600">{session.description}</p>
+                    </CardContent>
+                </Card>
+                ))}
+            </div>
         </section>
       </main>
 
