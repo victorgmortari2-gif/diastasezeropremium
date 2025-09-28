@@ -64,7 +64,7 @@ export default function CertificadoPage() {
           </Button>
           <Link href="/">
             <Image 
-                src="https://i.imgur.com/VJtWx2S.png" 
+                src="https://i.imgur.com/NfDtSSk.png" 
                 alt="Diástase Zero Logo" 
                 width={180} 
                 height={180}
@@ -138,7 +138,7 @@ export default function CertificadoPage() {
                 <div className="absolute top-8 left-8 right-8 bottom-8 border-2 border-gold rounded-md"></div>
                  <div className="relative z-10 text-center flex flex-col items-center justify-center min-h-[450px]">
                     <Image 
-                      src="https://i.imgur.com/VJtWx2S.png" 
+                      src="https://i.imgur.com/NfDtSSk.png" 
                       alt="Diástase Zero Logo" 
                       width={180} 
                       height={180}

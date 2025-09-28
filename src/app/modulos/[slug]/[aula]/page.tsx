@@ -54,7 +54,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
           </Button>
           <Link href="/">
             <Image 
-                src="https://i.imgur.com/VJtWx2S.png" 
+                src="https://i.imgur.com/NfDtSSk.png" 
                 alt="Diástase Zero Logo" 
                 width={180} 
                 height={180}
