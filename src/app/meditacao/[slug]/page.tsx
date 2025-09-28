@@ -1,5 +1,6 @@
 
-import { meditations } from '@/lib/meditations';
+
+import { meditations } from '@/lib/meditations.tsx';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';

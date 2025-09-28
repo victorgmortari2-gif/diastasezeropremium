@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Literata } from 'next/font/google';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { meditations } from '@/lib/meditations';
+import { meditations } from '@/lib/meditations.tsx';
 
 
 const literata = Literata({

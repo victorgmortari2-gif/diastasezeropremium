@@ -1,4 +1,3 @@
-
 import { Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, LucideIcon } from 'lucide-react';
 import { ReactElement } from 'react';
 
@@ -140,7 +139,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation5/600/400',
     icon: <Shield className="h-5 w-5 text-white/80" />,
     dataAiHint: 'diver ocean',
-    videoUrl: 'https://www_youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
     type: 'Meditação Guiada',
     benefits: ['Maior autoconfiança', 'Redução da autocrítica', 'Amor próprio genuíno', 'Paz interior duradoura'],
     whatYouWillExperience: [
