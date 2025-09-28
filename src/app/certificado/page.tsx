@@ -182,6 +182,9 @@ export default function CertificadoPage() {
        <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
         @media print {
+          @page {
+            size: landscape;
+          }
           body * {
             visibility: hidden;
           }
