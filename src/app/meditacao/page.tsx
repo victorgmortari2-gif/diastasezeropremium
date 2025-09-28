@@ -1,11 +1,10 @@
 
-
 'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, CheckCircle, Smile, BrainCircuit, Award, Leaf } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Literata } from 'next/font/google';
 import { Card, CardContent } from '@/components/ui/card';
@@ -92,6 +91,29 @@ const bonusSessions = [
     icon: <BedDouble className="h-5 w-5 text-white/80" />,
     dataAiHint: 'new york'
   },
+];
+
+const transformations = [
+    {
+        title: "Autoestima Fortalecida",
+        description: "Desenvolva uma relação saudável consigo mesmo e cultive amor próprio genuíno.",
+        icon: <Smile className="h-8 w-8 text-[#5DADE2]" />
+    },
+    {
+        title: "Foco Laser",
+        description: "Melhore sua capacidade de concentração e elimine distrações mentais.",
+        icon: <BrainCircuit className="h-8 w-8 text-[#5DADE2]" />
+    },
+    {
+        title: "Consistência Diária",
+        description: "Construa hábitos sólidos e mantenha disciplina em suas metas.",
+        icon: <Award className="h-8 w-8 text-[#5DADE2]" />
+    },
+    {
+        title: "Equilíbrio Emocional",
+        description: "Gerencie suas emoções com sabedoria e encontre estabilidade interior.",
+        icon: <Leaf className="h-8 w-8 text-[#5DADE2]" />
+    }
 ];
 
 
@@ -209,7 +231,7 @@ export default function MeditacaoPage() {
             </div>
         </section>
 
-        <section className="py-20 bg-white/50 rounded-lg">
+        <section className="py-20 bg-white/50 rounded-lg mb-20">
           <div className="container px-4 md:px-6 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold" style={{ color: '#5DADE2', fontFamily: 'var(--font-literata)' }}>
               Libere seu Potencial de Autoestima com Meditações Guiadas
@@ -255,6 +277,28 @@ export default function MeditacaoPage() {
                   </Button>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container px-4 md:px-6 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
+                Transformações que Você Vai Experimentar
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+                Baseadas em neurociência e práticas milenares, essas meditações criam mudanças reais e duradouras.
+            </p>
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                {transformations.map((item) => (
+                    <div key={item.title} className="flex flex-col items-center">
+                        <div className="bg-white/70 p-4 rounded-full shadow-md mb-4">
+                            {item.icon}
+                        </div>
+                        <h3 className="font-bold text-xl text-gray-800 mb-2">{item.title}</h3>
+                        <p className="text-gray-600 text-sm max-w-xs">{item.description}</p>
+                    </div>
+                ))}
             </div>
           </div>
         </section>
