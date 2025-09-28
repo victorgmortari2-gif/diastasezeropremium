@@ -402,6 +402,18 @@ export default function MeditacaoPage() {
           </div>
         </section>
 
+        <section className="py-12 mt-8 text-center">
+          <div className="container">
+            <Leaf className="h-8 w-8 mx-auto text-gray-600 mb-4" />
+            <h3 className="text-2xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
+              Inner Journey - Jornada Interior
+            </h3>
+            <p className="text-gray-600 mt-2 flex items-center justify-center">
+              © 2025 Inner Journey. Desenvolvido com <Heart className="h-4 w-4 text-red-500 mx-1" /> para sua jornada interior.
+            </p>
+          </div>
+        </section>
+
       </main>
 
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t mt-auto border-gray-200">
