@@ -37,7 +37,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation1/600/400',
     icon: <Heart className="h-5 w-5 text-white/80" />,
     dataAiHint: 'architecture confidence',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/yKJ8jwIvrfA',
     type: 'Meditação Guiada',
     benefits: ['Maior autoconfiança', 'Redução da autocrítica', 'Amor próprio genuíno', 'Paz interior duradoura'],
     whatYouWillExperience: [
@@ -63,7 +63,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation2/600/400',
     icon: <Diamond className="h-5 w-5 text-white/80" />,
     dataAiHint: 'desk workspace',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/3bHFMkHkftQ',
     type: 'Meditação Guiada',
     benefits: ['Melhora do foco', 'Clareza mental', 'Redução de distrações', 'Aumento da produtividade'],
     whatYouWillExperience: [
@@ -89,7 +89,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation3/600/400',
     icon: <RefreshCw className="h-5 w-5 text-white/80" />,
     dataAiHint: 'waterfall nature',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/Ox_0Ty-hLEA',
     type: 'Meditação Guiada',
     benefits: ['Disciplina fortalecida', 'Criação de hábitos', 'Aumento da resiliência', 'Perseverança'],
     whatYouWillExperience: [
@@ -115,7 +115,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation4/600/400',
     icon: <Scale className="h-5 w-5 text-white/80" />,
     dataAiHint: 'strawberry fruit',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/j-TV5HMrM94',
     type: 'Meditação Guiada',
     benefits: ['Inteligência emocional', 'Redução do estresse', 'Melhora nos relacionamentos', 'Clareza mental'],
     whatYouWillExperience: [
@@ -141,7 +141,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation5/600/400',
     icon: <Shield className="h-5 w-5 text-white/80" />,
     dataAiHint: 'diver ocean',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/NtWrVB4lnWY',
     type: 'Meditação Guiada',
     benefits: ['Força de vontade', 'Autocontrole', 'Fim da procrastinação', 'Resiliência mental'],
     whatYouWillExperience: [
@@ -167,7 +167,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation6/600/400',
     icon: <Wind className="h-5 w-5 text-white/80" />,
     dataAiHint: 'paint brushes',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/BicDUMqo78Q',
     type: 'Meditação Guiada',
     benefits: ['Redução do estresse', 'Paz interior', 'Clareza mental', 'Relaxamento profundo'],
     whatYouWillExperience: [
@@ -193,7 +193,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation_bonus1/600/400',
     icon: <Anchor className="h-5 w-5 text-white/80" />,
     dataAiHint: 'dark calm',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/sJjyX9W-E-Y',
     type: 'Meditação Guiada',
     benefits: ['Alívio da ansiedade', 'Clareza mental', 'Foco no presente', 'Regulação emocional'],
     whatYouWillExperience: [
@@ -219,7 +219,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation_bonus2/600/400',
     icon: <Zap className="h-5 w-5 text-white/80" />,
     dataAiHint: 'night lights',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/FOBOa-AIFMg',
     type: 'Meditação Guiada',
     benefits: ['Equilíbrio energético', 'Vitalidade aumentada', 'Bem-estar emocional', 'Autoconhecimento'],
     whatYouWillExperience: [
@@ -245,7 +245,7 @@ export const meditations: Meditation[] = [
     imageUrl: 'https://picsum.photos/seed/meditation_bonus3/600/400',
     icon: <BedDouble className="h-5 w-5 text-white/80" />,
     dataAiHint: 'new york',
-    videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
+    videoUrl: 'https://www.youtube.com/embed/dkg1N8-cFV8',
     type: 'Meditação Guiada',
     benefits: ['Melhora a qualidade do sono', 'Reduz a insônia', 'Relaxamento profundo', 'Mente calma'],
     whatYouWillExperience: [
