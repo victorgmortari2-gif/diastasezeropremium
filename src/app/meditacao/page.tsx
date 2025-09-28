@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, CheckCircle, Smile, BrainCircuit, Award, Leaf } from 'lucide-react';
+import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, CheckCircle, Smile, BrainCircuit, Award, Leaf, Star, Moon, Sparkles } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Literata } from 'next/font/google';
 import { Card, CardContent } from '@/components/ui/card';
@@ -139,6 +139,27 @@ const testimonials = [
     role: "Psicóloga",
     avatarUrl: "https://picsum.photos/seed/testimonial3/100/100",
     dataAiHint: "woman nature"
+  }
+];
+
+const journeySteps = [
+  {
+    days: "Dias 1-10",
+    title: "Primeiros Dias",
+    description: "Estabeleça o hábito com sessões de autoestima e foco. Sinta os primeiros sinais de clareza mental.",
+    icon: <Star className="h-8 w-8 text-gray-700" />
+  },
+  {
+    days: "Dias 11-20",
+    title: "Aprofundamento",
+    description: "Desenvolva disciplina e consistência. Perceba mudanças na sua capacidade de concentração.",
+    icon: <Moon className="h-8 w-8 text-gray-700" />
+  },
+  {
+    days: "Dias 21-30",
+    title: "Transformação",
+    description: "Integre equilíbrio emocional e serenidade. Experimente uma versão mais centrada de si mesmo.",
+    icon: <Sparkles className="h-8 w-8 text-gray-700" />
   }
 ];
 
@@ -353,6 +374,29 @@ export default function MeditacaoPage() {
                     </div>
                   </CardContent>
                 </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container px-4 md:px-6 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
+              Sua Jornada de 30 Dias
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+              Um plano estruturado para incorporar meditação na sua rotina e ver resultados tangíveis.
+            </p>
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+              {journeySteps.map((step) => (
+                <div key={step.title} className="flex flex-col items-center text-center">
+                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-white/70 shadow-md mb-4">
+                    {step.icon}
+                  </div>
+                  <Badge variant="secondary" className="mb-2 bg-[#A9CCE3]/50 text-[#1B4F72]">{step.days}</Badge>
+                  <h3 className="font-bold text-2xl text-gray-800 mb-2" style={{ fontFamily: 'var(--font-literata)' }}>{step.title}</h3>
+                  <p className="text-gray-600 max-w-xs">{step.description}</p>
+                </div>
               ))}
             </div>
           </div>
