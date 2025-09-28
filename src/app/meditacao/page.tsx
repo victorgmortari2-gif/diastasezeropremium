@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Literata } from 'next/font/google';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { meditations } from '@/lib/meditations';
 
 
 const literata = Literata({
@@ -18,83 +19,8 @@ const literata = Literata({
   variable: '--font-literata',
 });
 
-const meditationJourneys = [
-  {
-    title: 'Autoestima Radiante',
-    duration: '14 min',
-    description: 'Cultive amor próprio e confiança interior.',
-    imageUrl: 'https://picsum.photos/seed/meditation1/600/400',
-    icon: <Heart className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'architecture confidence'
-  },
-  {
-    title: 'Foco Diamante',
-    duration: '33 min',
-    description: 'Desenvolva concentração laser e clareza mental.',
-    imageUrl: 'https://picsum.photos/seed/meditation2/600/400',
-    icon: <Diamond className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'desk workspace'
-  },
-  {
-    title: 'Consistência Sólida',
-    duration: '23 min',
-    description: 'Fortaleça disciplina e perseverança diária.',
-    imageUrl: 'https://picsum.photos/seed/meditation3/600/400',
-    icon: <RefreshCw className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'waterfall nature'
-  },
-  {
-    title: 'Equilíbrio Emocional',
-    duration: '14 min',
-    description: 'Harmonize suas emoções com sabedoria.',
-    imageUrl: 'https://picsum.photos/seed/meditation4/600/400',
-    icon: <Scale className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'strawberry fruit'
-  },
-  {
-    title: 'Disciplina Interior',
-    duration: '17 min',
-    description: 'Construa força de vontade inabalável.',
-    imageUrl: 'https://picsum.photos/seed/meditation5/600/400',
-    icon: <Shield className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'diver ocean'
-  },
-  {
-    title: 'Serenidade Profunda',
-    duration: '12 min',
-    description: 'Encontre paz interior duradoura.',
-    imageUrl: 'https://picsum.photos/seed/meditation6/600/400',
-    icon: <Wind className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'paint brushes'
-  },
-];
-
-const bonusSessions = [
-  {
-    title: 'Calma para Ansiedade',
-    duration: '10 min',
-    description: 'Ancore sua mente e acalme a tempestade.',
-    imageUrl: 'https://picsum.photos/seed/meditation_bonus1/600/400',
-    icon: <Anchor className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'dark calm'
-  },
-  {
-    title: 'Alinhamento dos Chakras',
-    duration: '12 min',
-    description: 'Equilibre seus centros de energia vital.',
-    imageUrl: 'https://picsum.photos/seed/meditation_bonus2/600/400',
-    icon: <Zap className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'night lights'
-  },
-  {
-    title: 'Relaxamento Noturno',
-    duration: '23 min',
-    description: 'Prepare seu corpo e mente para um sono profundo.',
-    imageUrl: 'https://picsum.photos/seed/meditation_bonus3/600/400',
-    icon: <BedDouble className="h-5 w-5 text-white/80" />,
-    dataAiHint: 'new york'
-  },
-];
+const meditationJourneys = meditations.filter(m => m.category === 'journey');
+const bonusSessions = meditations.filter(m => m.category === 'bonus');
 
 const transformations = [
     {
@@ -216,28 +142,30 @@ export default function MeditacaoPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {meditationJourneys.map((journey) => (
-              <Card key={journey.title} className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                <div className="relative">
-                  <Image
-                    src={journey.imageUrl}
-                    alt={journey.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover"
-                    data-ai-hint={journey.dataAiHint}
-                  />
-                  <div className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm p-2 rounded-full">
-                    {journey.icon}
+              <Link key={journey.slug} href={`/meditacao/${journey.slug}`} className="block group">
+                <Card className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 h-full">
+                  <div className="relative">
+                    <Image
+                      src={journey.imageUrl}
+                      alt={journey.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-48 object-cover"
+                      data-ai-hint={journey.dataAiHint}
+                    />
+                    <div className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm p-2 rounded-full">
+                      {journey.icon}
+                    </div>
+                    <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/70 to-transparent w-full">
+                      <h3 className="text-white text-xl font-bold">{journey.title}</h3>
+                      <p className="text-white/80 text-sm">{journey.duration}</p>
+                    </div>
                   </div>
-                  <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/70 to-transparent w-full">
-                    <h3 className="text-white text-xl font-bold">{journey.title}</h3>
-                    <p className="text-white/80 text-sm">{journey.duration}</p>
-                  </div>
-                </div>
-                <CardContent className="p-5">
-                  <p className="text-gray-600">{journey.description}</p>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-5">
+                    <p className="text-gray-600">{journey.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </section>
@@ -253,28 +181,30 @@ export default function MeditacaoPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {bonusSessions.map((session) => (
-                <Card key={session.title} className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                    <div className="relative">
-                    <Image
-                        src={session.imageUrl}
-                        alt={session.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-48 object-cover"
-                        data-ai-hint={session.dataAiHint}
-                    />
-                    <div className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm p-2 rounded-full">
-                        {session.icon}
-                    </div>
-                    <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/70 to-transparent w-full">
-                        <h3 className="text-white text-xl font-bold">{session.title}</h3>
-                        <p className="text-white/80 text-sm">{session.duration}</p>
-                    </div>
-                    </div>
-                    <CardContent className="p-5">
-                    <p className="text-gray-600">{session.description}</p>
-                    </CardContent>
-                </Card>
+                 <Link key={session.slug} href={`/meditacao/${session.slug}`} className="block group">
+                    <Card className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 h-full">
+                        <div className="relative">
+                        <Image
+                            src={session.imageUrl}
+                            alt={session.title}
+                            width={600}
+                            height={400}
+                            className="w-full h-48 object-cover"
+                            data-ai-hint={session.dataAiHint}
+                        />
+                        <div className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm p-2 rounded-full">
+                            {session.icon}
+                        </div>
+                        <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/70 to-transparent w-full">
+                            <h3 className="text-white text-xl font-bold">{session.title}</h3>
+                            <p className="text-white/80 text-sm">{session.duration}</p>
+                        </div>
+                        </div>
+                        <CardContent className="p-5">
+                          <p className="text-gray-600">{session.description}</p>
+                        </CardContent>
+                    </Card>
+                  </Link>
                 ))}
             </div>
         </section>
