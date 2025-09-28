@@ -117,7 +117,7 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
             
             <aside>
                 <div className="sticky top-24 space-y-6">
-                    <Card className="bg-white/70 border-2 border-white">
+                    <Card style={{ backgroundColor: '#D6EAF8' }}>
                         <CardHeader>
                             <CardTitle className="text-2xl text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>{meditation.title}</CardTitle>
                         </CardHeader>
