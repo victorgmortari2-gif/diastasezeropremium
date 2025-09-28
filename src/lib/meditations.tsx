@@ -1,3 +1,4 @@
+
 import { Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, LucideIcon } from 'lucide-react';
 import { ReactElement } from 'react';
 
@@ -57,7 +58,7 @@ export const meditations: Meditation[] = [
     title: 'Foco Diamante',
     duration: '33 min',
     description: 'Desenvolva concentração laser e clareza mental.',
-    longDescription: 'Esta meditação é desenhada para afiar sua mente como um diamante. Através de técnicas de visualização e concentração, você aprenderá a direcionar sua atenção, ignorar distrações e alcançar um estado de clareza mental profunda.',
+    longDescription: 'Esta meditação é desenhada para afiar sua mente como um diamante. Através de técnicas de visualização e concentração, você aprenderá a direcionar sua atenção, ignorar distrações e alcançar um estado de clareza mental profunda para realizar suas tarefas com mais eficiência e menos estresse.',
     imageUrl: 'https://picsum.photos/seed/meditation2/600/400',
     icon: <Diamond className="h-5 w-5 text-white/80" />,
     dataAiHint: 'desk workspace',
@@ -65,10 +66,10 @@ export const meditations: Meditation[] = [
     type: 'Meditação Guiada',
     benefits: ['Foco aprimorado', 'Redução da procrastinação', 'Clareza nos objetivos', 'Produtividade elevada'],
     whatYouWillExperience: [
-        'Técnicas de respiração para acalmar a mente',
-        'Exercícios de foco para aumentar a concentração',
-        'Visualizações para fortalecer a clareza mental',
-        'Sensação de estar no controle de seus pensamentos',
+        'Técnicas de respiração para acalmar a mente.',
+        'Exercícios de foco para aumentar a concentração.',
+        'Visualizações para fortalecer a clareza mental.',
+        'Sensação de estar no controle de seus pensamentos.',
     ],
     info: {
         duration: '33 minutos',
@@ -83,23 +84,23 @@ export const meditations: Meditation[] = [
     title: 'Consistência Sólida',
     duration: '23 min',
     description: 'Fortaleça disciplina e perseverança diária.',
-    longDescription: 'Uma jornada interior profunda para cultivar amor próprio genuíno e confiança inabalável. Esta prática combina técnicas de mindfulness com afirmações positivas, ajudando você a reconhecer seu valor intrínseco e desenvolver uma autoestima saudável e duradoura.',
+    longDescription: 'Desenvolva o poder da consistência para alcançar seus objetivos. Esta meditação ajuda a construir a disciplina e a perseverança necessárias para manter hábitos positivos e trabalhar em direção às suas metas de longo prazo. Com esta prática, você vai fortalecer sua força de vontade e criar um momentum para o sucesso.',
     imageUrl: 'https://picsum.photos/seed/meditation3/600/400',
     icon: <RefreshCw className="h-5 w-5 text-white/80" />,
     dataAiHint: 'waterfall nature',
     videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
     type: 'Meditação Guiada',
-    benefits: ['Maior autoconfiança', 'Redução da autocrítica', 'Amor próprio genuíno', 'Paz interior duradoura'],
+    benefits: ['Disciplina fortalecida', 'Realização de metas', 'Aumento da resiliência', 'Perseverança diária'],
     whatYouWillExperience: [
-        'Reconexão com sua essência e valor pessoal.',
-        'Dissolução de autocríticas e pensamentos limitantes.',
-        'Cultivo de compaixão e aceitação própria.',
-        'Fortalecimento da confiança interior.',
+        'Fortalecimento da força de vontade',
+        'Técnicas para superar a procrastinação',
+        'Criação de um momentum para o sucesso',
+        'Desenvolvimento de uma mentalidade resiliente',
     ],
     info: {
         duration: '23 minutos',
         type: 'Disciplina',
-        level: 'Iniciante',
+        level: 'Intermediário',
         frequency: 'Diária',
     }
   },
