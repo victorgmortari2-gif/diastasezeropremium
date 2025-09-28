@@ -1,4 +1,5 @@
 
+
 import { Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, LucideIcon } from 'lucide-react';
 import { ReactElement } from 'react';
 
@@ -92,10 +93,10 @@ export const meditations: Meditation[] = [
     type: 'Meditação Guiada',
     benefits: ['Disciplina fortalecida', 'Realização de metas', 'Aumento da resiliência', 'Perseverança diária'],
     whatYouWillExperience: [
-        'Fortalecimento da força de vontade',
-        'Técnicas para superar a procrastinação',
-        'Criação de um momentum para o sucesso',
-        'Desenvolvimento de uma mentalidade resiliente',
+        'Fortalecimento da força de vontade.',
+        'Técnicas para superar a procrastinação.',
+        'Criação de um momentum para o sucesso.',
+        'Desenvolvimento de uma mentalidade resiliente.',
     ],
     info: {
         duration: '23 minutos',
@@ -110,24 +111,24 @@ export const meditations: Meditation[] = [
     title: 'Equilíbrio Emocional',
     duration: '14 min',
     description: 'Harmonize suas emoções com sabedoria.',
-    longDescription: 'Uma jornada interior profunda para cultivar amor próprio genuíno e confiança inabalável. Esta prática combina técnicas de mindfulness com afirmações positivas, ajudando você a reconhecer seu valor intrínseco e desenvolver uma autoestima saudável e duradoura.',
+    longDescription: 'Aprenda a navegar pelas suas emoções com graça e sabedoria. Esta meditação guiada oferece ferramentas para observar seus sentimentos sem julgamento, promovendo uma maior harmonia interna e resiliência emocional.',
     imageUrl: 'https://picsum.photos/seed/meditation4/600/400',
     icon: <Scale className="h-5 w-5 text-white/80" />,
     dataAiHint: 'strawberry fruit',
     videoUrl: 'https://www.youtube.com/embed/irZ304T3P8k',
     type: 'Meditação Guiada',
-    benefits: ['Maior autoconfiança', 'Redução da autocrítica', 'Amor próprio genuíno', 'Paz interior duradoura'],
+    benefits: ['Inteligência emocional', 'Redução do estresse', 'Melhora nos relacionamentos', 'Clareza mental'],
     whatYouWillExperience: [
-        'Reconexão com sua essência e valor pessoal.',
-        'Dissolução de autocríticas e pensamentos limitantes.',
-        'Cultivo de compaixão e aceitação própria.',
-        'Fortalecimento da confiança interior.',
+        'Técnicas para identificar e acolher emoções.',
+        'Desenvolvimento de uma perspectiva equilibrada.',
+        'Redução da reatividade emocional.',
+        'Aumento da paz e estabilidade interior.',
     ],
     info: {
         duration: '14 minutos',
         type: 'Equilíbrio',
-        level: 'Iniciante',
-        frequency: 'Diária',
+        level: 'Todos os níveis',
+        frequency: 'Sempre que necessário',
     }
   },
   {
