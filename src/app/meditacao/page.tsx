@@ -8,6 +8,8 @@ import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap,
 import { Badge } from '@/components/ui/badge';
 import { Literata } from 'next/font/google';
 import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+
 
 const literata = Literata({
   subsets: ['latin'],
@@ -116,6 +118,29 @@ const transformations = [
     }
 ];
 
+const testimonials = [
+  {
+    quote: "Essas meditações mudaram completamente minha rotina. Sinto mais confiança e foco no dia a dia.",
+    name: "Ana Silva",
+    role: "Empresária",
+    avatarUrl: "https://picsum.photos/seed/testimonial1/100/100",
+    dataAiHint: "woman smiling"
+  },
+  {
+    quote: "Em apenas 2 semanas consegui criar consistência nos meus estudos. Incrível!",
+    name: "Carlos Santos",
+    role: "Estudante",
+    avatarUrl: "https://picsum.photos/seed/testimonial2/100/100",
+    dataAiHint: "man thinking"
+  },
+  {
+    quote: "O equilíbrio emocional que encontrei foi transformador. Recomendo para todos.",
+    name: "Marina Costa",
+    role: "Psicóloga",
+    avatarUrl: "https://picsum.photos/seed/testimonial3/100/100",
+    dataAiHint: "woman nature"
+  }
+];
 
 export default function MeditacaoPage() {
   return (
@@ -302,6 +327,37 @@ export default function MeditacaoPage() {
             </div>
           </div>
         </section>
+
+        <section className="py-20">
+          <div className="container px-4 md:px-6 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
+                Transformações Reais
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+                Pessoas como você já experimentaram mudanças profundas.
+            </p>
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {testimonials.map((testimonial) => (
+                <Card key={testimonial.name} className="bg-white/70 p-6 rounded-lg shadow-sm">
+                  <CardContent className="p-0 flex flex-col h-full">
+                    <p className="text-gray-600 text-base mb-6 flex-grow">"{testimonial.quote}"</p>
+                    <div className="flex items-center">
+                      <Avatar className="h-12 w-12 mr-4">
+                        <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
+                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <p className="font-bold text-gray-800">{testimonial.name}</p>
+                        <p className="text-sm text-gray-500">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t mt-auto border-gray-200">
@@ -318,3 +374,5 @@ export default function MeditacaoPage() {
     </div>
   );
 }
+
+    
