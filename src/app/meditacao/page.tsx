@@ -5,7 +5,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble } from 'lucide-react';
+import { ArrowLeft, Heart, Diamond, RefreshCw, Scale, Shield, Wind, Anchor, Zap, BedDouble, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Literata } from 'next/font/google';
 import { Card, CardContent } from '@/components/ui/card';
@@ -172,7 +172,7 @@ export default function MeditacaoPage() {
           </div>
         </section>
 
-        <section>
+        <section className="mb-20">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
                 Aulas Bônus
@@ -207,6 +207,56 @@ export default function MeditacaoPage() {
                 </Card>
                 ))}
             </div>
+        </section>
+
+        <section className="py-20 bg-white/50 rounded-lg">
+          <div className="container px-4 md:px-6 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold" style={{ color: '#5DADE2', fontFamily: 'var(--font-literata)' }}>
+              Libere seu Potencial de Autoestima com Meditações Guiadas
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Você está gostando das nossas meditações?
+            </p>
+            <p className="mt-2 text-md text-gray-500 max-w-2xl mx-auto">
+              Se você busca fortalecer sua autoconfiança, aprender a se valorizar e sentir-se mais segura e merecedora, esta é a sua chance!
+            </p>
+            <div className="mt-12">
+              <Card className="bg-white shadow-xl max-w-2xl mx-auto text-left">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-800 text-center mb-6" style={{ fontFamily: 'var(--font-literata)' }}>
+                    Libere o acesso ao nosso Pacote Exclusivo com mais de 50 Meditações Guiadas!
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Este pacote premium foi desenhado especialmente para mulheres que querem transformar a visão que têm de si mesmas. Ele vai te ajudar a:
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#5DADE2] mr-3 mt-1 flex-shrink-0" />
+                      <span>Redescobrir seu valor e silenciar a autocrítica.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#5DADE2] mr-3 mt-1 flex-shrink-0" />
+                      <span>Construir o amor-próprio dia após dia, com gentileza.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#5DADE2] mr-3 mt-1 flex-shrink-0" />
+                      <span>Aliviar o estresse e as preocupações que minam sua energia.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-[#5DADE2] mr-3 mt-1 flex-shrink-0" />
+                      <span>Despertar a força e a segurança para viver a vida que você merece.</span>
+                    </li>
+                  </ul>
+                  <p className="text-gray-600 mb-8">
+                    Dê o primeiro passo para uma vida mais leve, confiante e feliz. Toque aqui e descubra como destravar o acesso e comece a jornada para a sua melhor versão!
+                  </p>
+                  <Button size="lg" className="w-full font-bold text-lg" style={{ backgroundColor: '#5DADE2' }}>
+                    LIBERAR MEU ACESSO ÀS +50 MEDITAÇÕES
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </section>
       </main>
 
