@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -137,7 +138,14 @@ export default function CertificadoPage() {
             <div className="border-4 border-primary p-8 rounded-lg bg-white shadow-lg relative printable-area">
                 <div className="absolute top-8 left-8 right-8 bottom-8 border-2 border-gold rounded-md"></div>
                  <div className="relative z-10 text-center flex flex-col items-center justify-center min-h-[500px]">
-                    <Medal className="h-20 w-20 text-gold mb-4" />
+                    <Image 
+                        src="https://i.imgur.com/NfDtSSk.png" 
+                        alt="Diástase Zero Logo" 
+                        width={150} 
+                        height={150}
+                        className='mx-auto'
+                    />
+                    <Medal className="h-16 w-16 text-gold my-4" />
                     <h1 className="font-headline text-4xl font-bold text-gray-800">Certificado de Conclusão</h1>
                     <p className="text-muted-foreground text-lg mt-8">Certificamos que</p>
                     <p className="font-headline text-3xl text-primary font-semibold my-4">{formData?.name}</p>
