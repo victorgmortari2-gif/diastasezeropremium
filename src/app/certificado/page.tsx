@@ -143,10 +143,12 @@ export default function CertificadoPage() {
                         alt="Diástase Zero Logo" 
                         width={150} 
                         height={150}
-                        className='mx-auto'
+                        className='mx-auto mb-8'
                     />
-                    <Medal className="h-16 w-16 text-gold my-4" />
-                    <h1 className="font-headline text-4xl font-bold text-gray-800">Certificado de Conclusão</h1>
+                    <h1 className="font-headline text-4xl font-bold text-gray-800 flex items-center gap-3">
+                        <Medal className="h-10 w-10 text-gold" />
+                        Certificado de Conclusão
+                    </h1>
                     <p className="text-muted-foreground text-lg mt-8">Certificamos que</p>
                     <p className="font-headline text-3xl text-primary font-semibold my-4">{formData?.name}</p>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
