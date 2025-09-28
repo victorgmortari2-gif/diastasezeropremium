@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import Link from 'next/link';
@@ -193,18 +194,18 @@ export default function MeditacaoPage() {
               <Leaf className="h-4 w-4" />
               Inner Journey - Jornada Interior
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
               Transforme sua mente em 10-30 minutos
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl mx-auto">
               Desenvolva autoestima, foco e disciplina com práticas cientificamente validadas.
             </p>
-            <Button size="lg" className="mt-8 font-bold text-lg" style={{ backgroundColor: '#5DADE2' }}>
-              Começar a Jornada
+            <Button size="lg" asChild className="mt-8 font-bold text-lg" style={{ backgroundColor: '#5DADE2' }}>
+              <Link href="#journeys">Começar a Jornada</Link>
             </Button>
         </section>
         
-        <section className="mb-20">
+        <section id="journeys" className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
               Suas 6 Jornadas de Transformação
@@ -431,5 +432,3 @@ export default function MeditacaoPage() {
     </div>
   );
 }
-
-    
