@@ -40,7 +40,8 @@ export function RealisticRoutineContent() {
             link: "https://go.tribopay.com.br/nasud6qmbv"
         },
         {
-            title: "Meditações Guiadas \"Mente em Foco, Corpo em Harmonia\"",
+            title: "Inner Journey – Meditações Guiadas",
+            subtitle: "(Mente em Foco, Corpo em Harmonia)",
             description: "Sua transformação começa de dentro. Áudios de 10-25 min para construir disciplina inabalável e blindar sua autoestima. É o equilíbrio emocional que garante sua constância e os seus resultados.",
             price: "R$ 14,90",
             originalPrice: "R$ 27,90",
@@ -96,6 +97,7 @@ export function RealisticRoutineContent() {
                                 <CardHeader className="items-center">
                                     {offer.icon}
                                     <CardTitle className="text-center font-headline text-xl">{offer.title}</CardTitle>
+                                    {offer.subtitle && <p className="text-sm text-muted-foreground text-center">{offer.subtitle}</p>}
                                 </CardHeader>
                                 <CardContent className="text-center flex flex-col flex-grow">
                                     <p className="text-muted-foreground text-sm flex-grow">{offer.description}</p>
