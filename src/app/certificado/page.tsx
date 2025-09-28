@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { ArrowLeft, Award, Download } from 'lucide-react';
+import { ArrowLeft, Award, Download, Medal } from 'lucide-react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -136,28 +136,21 @@ export default function CertificadoPage() {
             {/* Certificado para impressão */}
             <div className="border-4 border-primary p-8 rounded-lg bg-white shadow-lg relative printable-area">
                 <div className="absolute top-8 left-8 right-8 bottom-8 border-2 border-gold rounded-md"></div>
-                 <div className="relative z-10 text-center flex flex-col items-center justify-center min-h-[450px]">
-                    <Image 
-                      src="https://i.imgur.com/NfDtSSk.png" 
-                      alt="Diástase Zero Logo" 
-                      width={180} 
-                      height={180}
-                      className="mb-6"
-                    />
+                 <div className="relative z-10 text-center flex flex-col items-center justify-center min-h-[500px]">
+                    <Medal className="h-20 w-20 text-gold mb-4" />
                     <h1 className="font-headline text-4xl font-bold text-gray-800">Certificado de Conclusão</h1>
                     <p className="text-muted-foreground text-lg mt-8">Certificamos que</p>
                     <p className="font-headline text-3xl text-primary font-semibold my-4">{formData?.name}</p>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-                        concluiu com sucesso o programa <span className="font-bold">Diástase Zero</span>, demonstrando dedicação e compromisso com sua saúde e bem-estar.
+                        concluiu com sucesso o programa <span className="font-bold">Diástase Zero - Premium</span>, demonstrando dedicação e compromisso com sua saúde e bem-estar.
                     </p>
-                    <div className="mt-12 w-full flex justify-center">
+                    <div className="mt-16 w-full flex justify-center">
                       <div className="text-center">
-                        <p className="text-muted-foreground">_________________________</p>
-                        <p className="text-muted-foreground font-bold text-sm">Gizele Monteiro</p>
-                         <p className="text-muted-foreground text-xs">Idealizadora do Diástase Zero</p>
+                        <p className="text-4xl text-gray-700" style={{ fontFamily: "'Dancing Script', cursive" }}>Stephanie Medeiros</p>
+                        <p className="text-muted-foreground text-xs mt-1">Idealizadora do Diástase Zero</p>
                       </div>
                     </div>
-                    <p className="text-xs text-muted-foreground absolute bottom-12">{currentDate}</p>
+                    <p className="text-xs text-muted-foreground absolute bottom-12 right-12">{currentDate}</p>
                  </div>
             </div>
             <Button variant="link" onClick={() => setSubmitted(false)} className="mt-4 print:hidden">Gerar outro certificado</Button>
@@ -177,6 +170,7 @@ export default function CertificadoPage() {
         </nav>
       </footer>
        <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
         @media print {
           body * {
             visibility: hidden;
@@ -190,6 +184,8 @@ export default function CertificadoPage() {
             top: 0;
             width: 100%;
             height: 100%;
+            margin: 0;
+            padding: 0;
           }
         }
       `}</style>
