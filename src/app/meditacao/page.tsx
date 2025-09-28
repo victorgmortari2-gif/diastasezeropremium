@@ -189,8 +189,9 @@ export default function MeditacaoPage() {
 
       <main className="flex-grow container px-4 md:px-6 py-12">
         <section className="text-center max-w-2xl mx-auto mb-20">
-            <Badge className="mb-4 text-base" style={{ backgroundColor: '#A9CCE3', color: '#1B4F72' }}>
-              Pack de Meditações Guiadas
+            <Badge className="mb-4 text-base inline-flex items-center gap-2" style={{ backgroundColor: '#A9CCE3', color: '#1B4F72' }}>
+              <Leaf className="h-4 w-4" />
+              Inner Journey - Jornada Interior
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
               Transforme sua mente em 10-30 minutos
