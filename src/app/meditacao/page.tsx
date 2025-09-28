@@ -1,4 +1,6 @@
 
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -64,13 +66,6 @@ export default function MeditacaoPage() {
           </Link>
         </nav>
       </footer>
-       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,700&display=swap');
-        
-        .font-serif {
-            font-family: 'Literata', serif;
-        }
-      `}</style>
     </div>
   );
 }
