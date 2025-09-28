@@ -137,30 +137,39 @@ export default function CertificadoPage() {
             {/* Certificado para impressão */}
             <div className="border-4 border-primary p-8 rounded-lg bg-white shadow-lg relative printable-area">
                 <div className="absolute top-8 left-8 right-8 bottom-8 border-2 border-gold rounded-md"></div>
-                 <div className="relative z-10 text-center flex flex-col items-center justify-center min-h-[500px]">
-                    <Image 
-                        src="https://i.imgur.com/NfDtSSk.png" 
-                        alt="Diástase Zero Logo" 
-                        width={150} 
-                        height={150}
-                        className='mx-auto mb-8'
-                    />
-                    <h1 className="font-headline text-4xl font-bold text-gray-800 flex items-center gap-3">
-                        <Medal className="h-10 w-10 text-gold" />
-                        Certificado de Conclusão
-                    </h1>
-                    <p className="text-muted-foreground text-lg mt-8">Certificamos que</p>
-                    <p className="font-headline text-3xl text-primary font-semibold my-4">{formData?.name}</p>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-                        concluiu com sucesso o programa <span className="font-bold">Diástase Zero - Premium</span>, demonstrando dedicação e compromisso com sua saúde e bem-estar.
-                    </p>
-                    <div className="mt-16 w-full flex justify-center">
-                      <div className="text-center">
-                        <p className="text-4xl text-gray-700" style={{ fontFamily: "'Dancing Script', cursive" }}>Stephanie Medeiros</p>
-                        <p className="text-muted-foreground text-xs mt-1">Idealizadora do Diástase Zero</p>
+                 <div className="relative z-10 text-center flex flex-col items-center justify-between min-h-[500px]">
+                    <div>
+                        <Image 
+                            src="https://i.imgur.com/NfDtSSk.png" 
+                            alt="Diástase Zero Logo" 
+                            width={150} 
+                            height={150}
+                            className='mx-auto mb-4'
+                        />
+                         <h1 className="font-headline text-4xl font-bold text-gray-800 flex items-center justify-center gap-3">
+                            <Medal className="h-10 w-10 text-gold" />
+                            Certificado de Conclusão
+                        </h1>
+                    </div>
+                    
+                    <div>
+                        <p className="text-muted-foreground text-lg mt-8">Certificamos que</p>
+                        <p className="font-headline text-3xl text-primary font-semibold my-4">{formData?.name}</p>
+                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+                            concluiu com sucesso o programa <span className="font-bold">Diástase Zero - Premium</span>, demonstrando dedicação e compromisso com sua saúde e bem-estar.
+                        </p>
+                    </div>
+
+                    <div className="w-full flex justify-between items-end mt-16">
+                      <div className="text-center w-1/2">
+                          <p className="text-4xl text-gray-700" style={{ fontFamily: "'Dancing Script', cursive" }}>Stephanie Medeiros</p>
+                          <p className="text-muted-foreground text-xs mt-1 border-t border-gray-400 mx-auto w-48 pt-1">Idealizadora do Diástase Zero</p>
+                      </div>
+                       <div className="text-center w-1/2">
+                          <p className="text-sm text-gray-700">{currentDate}</p>
+                          <p className="text-muted-foreground text-xs mt-1 border-t border-gray-400 mx-auto w-48 pt-1">Data de Emissão</p>
                       </div>
                     </div>
-                    <p className="text-xs text-muted-foreground absolute bottom-12 right-12">{currentDate}</p>
                  </div>
             </div>
             <Button variant="link" onClick={() => setSubmitted(false)} className="mt-4 print:hidden">Gerar outro certificado</Button>
@@ -184,6 +193,11 @@ export default function CertificadoPage() {
         @media print {
           @page {
             size: landscape;
+            margin: 0;
+          }
+          body {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
           }
           body * {
             visibility: hidden;
@@ -192,13 +206,14 @@ export default function CertificadoPage() {
             visibility: visible;
           }
           .printable-area {
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             margin: 0;
-            padding: 0;
+            padding: 2rem;
+            box-sizing: border-box;
           }
         }
       `}</style>
