@@ -16,6 +16,8 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
     notFound();
   }
 
+  const otherMeditations = meditations.filter((m) => m.slug !== params.slug);
+
   const tips = [
     {
       title: "Use fones de ouvido",
@@ -153,7 +155,41 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
         </div>
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t mt-12">
+       <section className="py-16 md:py-24 bg-slate-50/70">
+          <div className="container px-4 md:px-6">
+              <h2 className="font-headline text-3xl font-bold text-center mb-12">Outras Meditações</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                  {otherMeditations.map((med) => (
+                    <Link key={med.slug} href={`/meditacao/${med.slug}`} className="block group">
+                      <Card className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 h-full">
+                        <div className="relative">
+                          <Image
+                            src={med.imageUrl}
+                            alt={med.title}
+                            width={600}
+                            height={400}
+                            className="w-full h-48 object-cover"
+                            data-ai-hint={med.dataAiHint}
+                          />
+                          <div className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm p-2 rounded-full">
+                            {med.icon}
+                          </div>
+                          <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/70 to-transparent w-full">
+                            <h3 className="text-white text-xl font-bold">{med.title}</h3>
+                            <p className="text-white/80 text-sm">{med.duration}</p>
+                          </div>
+                        </div>
+                        <CardContent className="p-5">
+                          <p className="text-gray-600">{med.description}</p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  ))}
+              </div>
+          </div>
+        </section>
+
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t mt-auto">
         <p className="text-xs text-muted-foreground">&copy; 2024 Diástase ZERO. Todos os direitos reservados.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="#" className="text-xs hover:underline underline-offset-4 text-muted-foreground">
