@@ -194,7 +194,7 @@ export default function MeditacaoPage() {
               <Leaf className="h-4 w-4" />
               Inner Journey - Jornada Interior
             </Badge>
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>
               Transforme sua mente em 10-30 minutos
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl mx-auto">
@@ -281,7 +281,7 @@ export default function MeditacaoPage() {
 
         <section className="py-20 bg-white/50 rounded-lg mb-20">
           <div className="container px-4 md:px-6 text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold" style={{ color: '#5DADE2', fontFamily: 'var(--font-literata)' }}>
+            <h2 className="text-3xl md:text-5xl font-bold" style={{ color: '#2c7aae', fontFamily: 'var(--font-literata)' }}>
               Libere seu Potencial de Autoestima com Meditações Guiadas
             </h2>
             <p className="mt-4 text-lg text-gray-600">
