@@ -50,21 +50,21 @@ const testimonials = [
     quote: "Essas meditações mudaram completamente minha rotina. Sinto mais confiança e foco no dia a dia.",
     name: "Ana Silva",
     role: "Empresária",
-    avatarUrl: "https://picsum.photos/seed/testimonial1/100/100",
+    avatarUrl: "https://i.imgur.com/rPNwZcS.jpeg",
     dataAiHint: "woman smiling"
   },
   {
     quote: "Em apenas 2 semanas consegui criar consistência nos meus estudos. Incrível!",
     name: "Fernanda Cusco",
     role: "Estudante",
-    avatarUrl: "https://picsum.photos/seed/testimonial2/100/100",
+    avatarUrl: "https://i.imgur.com/wadHxyS.jpeg",
     dataAiHint: "man thinking"
   },
   {
     quote: "O equilíbrio emocional que encontrei foi transformador. Recomendo para todos.",
     name: "Marina Costa",
     role: "Psicóloga",
-    avatarUrl: "https://picsum.photos/seed/testimonial3/100/100",
+    avatarUrl: "https://i.imgur.com/NLUmRXe.jpeg",
     dataAiHint: "woman nature"
   }
 ];
