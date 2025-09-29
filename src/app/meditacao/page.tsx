@@ -250,7 +250,7 @@ export default function MeditacaoPage() {
                   <p className="text-gray-600 mb-8">
                     Dê o primeiro passo para uma vida mais leve, confiante e feliz. Toque aqui e descubra como destravar o acesso e comece a jornada para a sua melhor versão!
                   </p>
-                  <Button size="lg" className="w-full font-bold text-lg animate-pulse-scale" style={{ backgroundColor: '#5DADE2' }} asChild>
+                  <Button size="lg" className="w-full font-bold text-base md:text-lg animate-pulse-scale" style={{ backgroundColor: '#5DADE2' }} asChild>
                     <Link href="https://go.tribopay.com.br/prbluqfcdj" target="_blank" rel="noopener noreferrer">
                         LIBERAR MEU ACESSO ÀS +50 MEDITAÇÕES
                     </Link>
