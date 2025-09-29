@@ -87,19 +87,19 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
             
             {/* Content for mobile, hidden on lg screens */}
             <div className="lg:hidden mt-8 space-y-6">
-              <Card style={{ backgroundColor: '#1B4F72' }}>
+              <Card style={{ backgroundColor: '#f2effb' }}>
                   <CardHeader>
-                      <CardTitle className="text-2xl text-white" style={{ fontFamily: 'var(--font-literata)' }}>{meditation.title}</CardTitle>
+                      <CardTitle className="text-2xl text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>{meditation.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                       <div className="flex items-center gap-2">
-                          <span className="text-gray-300">{meditation.duration}</span>
+                          <span className="text-gray-600">{meditation.duration}</span>
                           <Badge style={{ backgroundColor: '#A9CCE3', color: '#1B4F72' }}>{meditation.type}</Badge>
                       </div>
-                      <h3 className="font-semibold text-lg mt-6 mb-3 text-white">Benefícios Esperados</h3>
+                      <h3 className="font-semibold text-lg mt-6 mb-3 text-gray-800">Benefícios Esperados</h3>
                       <div className="flex flex-wrap gap-2">
                           {meditation.benefits.map(benefit => (
-                              <Badge key={benefit} variant="outline" className="font-normal border-gray-400 text-gray-200">{benefit}</Badge>
+                              <Badge key={benefit} variant="outline" className="font-normal border-gray-400 text-gray-700">{benefit}</Badge>
                           ))}
                       </div>
                   </CardContent>
@@ -127,14 +127,78 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
                       </div>
                   </CardContent>
               </Card>
+              <div className="mt-8">
+                <h2 className="text-3xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>Sobre Esta Meditação</h2>
+                <p className="mt-2 text-gray-600 text-lg">{meditation.longDescription}</p>
+              </div>
+
+              <div className="mt-8">
+                <h2 className="text-3xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>O Que Você Vai Experimentar</h2>
+                <ul className="mt-4 space-y-2">
+                  {meditation.whatYouWillExperience.map((item, index) => (
+                    <li key={index} className="flex items-center gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="mt-12">
+                <h2 className="text-3xl font-bold text-gray-800 text-center" style={{ fontFamily: 'var(--font-literata)' }}>Dicas para a Prática</h2>
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                  {tips.map(tip => (
+                    <Card key={tip.title} className="p-6 bg-white/70 shadow-sm">
+                      <div className="flex justify-center mb-3">{tip.icon}</div>
+                      <h3 className="font-bold text-lg text-gray-800">{tip.title}</h3>
+                      <p className="text-sm text-gray-600 mt-1">{tip.description}</p>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              <section className="py-16 md:py-24 bg-white/50 mt-8 -mx-4">
+                <div className="container px-4 md:px-6">
+                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>Outras Meditações</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {otherMeditations.map((med) => (
+                          <Link key={med.slug} href={`/meditacao/${med.slug}`} className="block group">
+                            <Card className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 h-full">
+                              <div className="relative">
+                                <Image
+                                  src={med.imageUrl}
+                                  alt={med.title}
+                                  width={600}
+                                  height={400}
+                                  className="w-full h-48 object-cover"
+                                  data-ai-hint={med.dataAiHint}
+                                />
+                                <div className="absolute top-3 right-3 bg-black/30 backdrop-blur-sm p-2 rounded-full">
+                                  {med.icon}
+                                </div>
+                                <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/70 to-transparent w-full">
+                                  <h3 className="text-white text-xl font-bold">{med.title}</h3>
+                                  <p className="text-white/80 text-sm">{med.duration}</p>
+                                </div>
+                              </div>
+                              <CardContent className="p-5">
+                                <p className="text-gray-600">{med.description}</p>
+                              </CardContent>
+                            </Card>
+                          </Link>
+                        ))}
+                    </div>
+                </div>
+              </section>
+
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 hidden lg:block">
               <h2 className="text-3xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>Sobre Esta Meditação</h2>
               <p className="mt-2 text-gray-600 text-lg">{meditation.longDescription}</p>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 hidden lg:block">
               <h2 className="text-3xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>O Que Você Vai Experimentar</h2>
               <ul className="mt-4 space-y-2">
                 {meditation.whatYouWillExperience.map((item, index) => (
@@ -146,7 +210,7 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
               </ul>
             </div>
             
-            <div className="mt-12">
+            <div className="mt-12 hidden lg:block">
               <h2 className="text-3xl font-bold text-gray-800 text-center" style={{ fontFamily: 'var(--font-literata)' }}>Dicas para a Prática</h2>
                <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                 {tips.map(tip => (
@@ -163,19 +227,19 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
           {/* Sidebar Area - hidden on mobile, visible on lg screens */}
           <aside className="hidden lg:block lg:w-1/3">
             <div className="sticky top-24 space-y-6">
-              <Card style={{ backgroundColor: '#1B4F72' }}>
+               <Card style={{ backgroundColor: '#f2effb' }}>
                   <CardHeader>
-                      <CardTitle className="text-2xl text-white" style={{ fontFamily: 'var(--font-literata)' }}>{meditation.title}</CardTitle>
+                      <CardTitle className="text-2xl text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>{meditation.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                       <div className="flex items-center gap-2">
-                          <span className="text-gray-300">{meditation.duration}</span>
+                          <span className="text-gray-600">{meditation.duration}</span>
                           <Badge style={{ backgroundColor: '#A9CCE3', color: '#1B4F72' }}>{meditation.type}</Badge>
                       </div>
-                      <h3 className="font-semibold text-lg mt-6 mb-3 text-white">Benefícios Esperados</h3>
+                      <h3 className="font-semibold text-lg mt-6 mb-3 text-gray-800">Benefícios Esperados</h3>
                       <div className="flex flex-wrap gap-2">
                           {meditation.benefits.map(benefit => (
-                              <Badge key={benefit} variant="outline" className="font-normal border-gray-400 text-gray-200">{benefit}</Badge>
+                              <Badge key={benefit} variant="outline" className="font-normal border-gray-400 text-gray-700">{benefit}</Badge>
                           ))}
                       </div>
                   </CardContent>
@@ -206,9 +270,8 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
             </div>
           </aside>
         </div>
-      </main>
-
-       <section className="py-16 md:py-24 bg-white/50 mt-8">
+        
+        <section className="py-16 md:py-24 bg-white/50 mt-8 -mx-4 hidden lg:block">
           <div className="container px-4 md:px-6">
               <h2 className="text-3xl font-bold text-center mb-12 text-gray-800" style={{ fontFamily: 'var(--font-literata)' }}>Outras Meditações</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -241,6 +304,7 @@ export default function MeditationDetailPage({ params }: { params: { slug: strin
               </div>
           </div>
         </section>
+      </main>
 
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-200 mt-auto">
         <p className="text-xs text-gray-500">&copy; 2024 Diástase ZERO. Todos os direitos reservados.</p>
