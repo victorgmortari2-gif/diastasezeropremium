@@ -55,7 +55,7 @@ const testimonials = [
   },
   {
     quote: "Em apenas 2 semanas consegui criar consistência nos meus estudos. Incrível!",
-    name: "Carlos Santos",
+    name: "Fernanda Cusco",
     role: "Estudante",
     avatarUrl: "https://picsum.photos/seed/testimonial2/100/100",
     dataAiHint: "man thinking"
