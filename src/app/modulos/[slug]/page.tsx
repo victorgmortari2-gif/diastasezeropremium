@@ -1,4 +1,4 @@
-import { modules } from '@/lib/modules';
+import { modules, getModuleDetails } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,14 +7,23 @@ import { ArrowLeft, CheckCircle, Video, BookText, Activity, GraduationCap } from
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 
-export default function ModulePage({ params }: { params: { slug: string } }) {
-  const module = modules.find((m) => m.slug === params.slug);
+const iconMap = {
+    'diagnostico-respiracao': modules[0].icon,
+    'treino-intensivo': modules[1].icon,
+    'remodelagem-corporal': modules[2].icon,
+    'estetica-postura': modules[3].icon,
+    'vida-real-corpo-forte': modules[4].icon,
+};
 
-  if (!module) {
+export default async function ModulePage({ params }: { params: { slug: string } }) {
+  const moduleDetails = await getModuleDetails(params.slug);
+  const moduleSummary = modules.find((m) => m.slug === params.slug);
+
+  if (!moduleDetails || !moduleSummary) {
     notFound();
   }
 
-  const Icon = module.icon;
+  const Icon = iconMap[params.slug as keyof typeof iconMap] || HeartPulse;
 
   const contentTypeIcon = (type: string) => {
     switch (type) {
@@ -57,8 +66,8 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
               <Icon className="h-12 w-12 text-primary" />
             </div>
           </div>
-          <h1 className="font-headline text-3xl md:text-4xl font-bold">{module.title}</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">{module.longDescription}</p>
+          <h1 className="font-headline text-3xl md:text-4xl font-bold">{moduleDetails.title}</h1>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">{moduleDetails.longDescription}</p>
         </section>
 
         <div className="grid lg:grid-cols-3 gap-12">
@@ -66,8 +75,8 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
           <div className="lg:col-span-2">
             <h2 className="font-headline text-2xl font-bold mb-6">Conteúdo Programático da Semana</h2>
             <div className="space-y-4">
-                {module.schedule.map(item => (
-                  <Link key={item.day} href={`/modulos/${module.slug}/${item.slug}`} className="block group">
+                {moduleDetails.schedule.map(item => (
+                  <Link key={item.day} href={`/modulos/${moduleDetails.slug}/${item.slug}`} className="block group">
                     <Card className="transition-shadow duration-300 hover:shadow-lg bg-white">
                         <CardContent className="p-4 md:p-6 flex items-start gap-4 md:gap-6">
                            <div className="flex flex-col items-center">
@@ -102,7 +111,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                     </CardHeader>
                     <CardContent>
                         <ul className="space-y-3">
-                            {module.objectives.map((objective, index) => (
+                            {moduleDetails.objectives.map((objective, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                                     <span className="text-muted-foreground">{objective}</span>

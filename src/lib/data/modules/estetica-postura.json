@@ -1,0 +1,17 @@
+{
+    "slug": "estetica-postura",
+    "title": "Módulo Extra 4 – Estética e Postura",
+    "longDescription": "Um módulo bônus focado em realçar sua beleza natural. Aprenda exercícios específicos para a cintura, técnicas de massagem e rituais que melhoram não só a aparência, mas também a sua relação com seu corpo.",
+    "objectives": [
+        "Aprender exercícios que ajudam a afinar a cintura.",
+        "Praticar técnicas de automassagem para esculpir o abdômen.",
+        "Incorporar rituais de autocuidado na sua rotina.",
+        "Melhorar a postura e a elegância dos movimentos."
+    ],
+    "schedule": [
+        { "day": 1, "slug": "exercicios-cintura", "title": "Exercícios para Afinar Cintura", "type": "Exercício", "duration": "11 min", "description": "Movimentos que tonificam os oblíquos e modelam a cintura.", "videoUrl": "https://www.youtube.com/embed/LylrJB4yCKc" },
+        { "day": 2, "slug": "escultura-abdominal", "title": "Técnicas de Escultura Abdominal Leve", "type": "Vídeo Aula", "duration": "8 min", "description": "Automassagem para melhorar o contorno corporal.", "videoUrl": "https://www.youtube.com/embed/mCwFo3fxzr4" },
+        { "day": 3, "slug": "rituais-autocuidado", "title": "Rituais de Autocuidado com Foco Estético", "type": "Material", "duration": "17 min", "description": "Dicas de cremes, óleos e práticas para a pele." },
+        { "day": 4, "slug": "postura-elegancia", "title": "Postura e Elegância no Dia a Dia", "type": "Workshop", "duration": "20 min", "description": "Como manter uma postura que valoriza seu corpo." }
+    ]
+}

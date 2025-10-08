@@ -1,4 +1,4 @@
-import { modules } from '@/lib/modules';
+import { getModuleDetails } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -32,8 +32,8 @@ const lessonComponentMap: Record<string, React.ComponentType> = {
     'aula-20-minutos': dynamic(() => import('@/app/modulos/content/twenty-min-day-content').then(mod => mod.TwentyMinDayContent), { loading: () => <LoadingComponent /> }),
 };
 
-export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
-  const module = modules.find((m) => m.slug === params.slug);
+export default async function LessonPage({ params }: { params: { slug: string; aula: string } }) {
+  const module = await getModuleDetails(params.slug);
   const lesson = module?.schedule.find((l) => l.slug === params.aula);
 
   if (!module || !lesson) {

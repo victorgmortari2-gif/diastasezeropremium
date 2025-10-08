@@ -1,0 +1,19 @@
+{
+    "slug": "relaxamento-noturno",
+    "longDescription": "Desconecte-se das preocupações do dia e prepare-se para uma noite de sono reparadora. Esta meditação utiliza técnicas de relaxamento progressivo e respiração suave para acalmar a mente, liberar tensões do corpo e convidá-lo a um estado de descanso profundo.",
+    "videoUrl": "https://www.youtube.com/embed/dkg1N8-cFV8",
+    "type": "Meditação Guiada",
+    "benefits": ["Melhora a qualidade do sono", "Reduz a insônia", "Relaxamento profundo", "Mente calma"],
+    "whatYouWillExperience": [
+        "Relaxamento muscular progressivo.",
+        "Técnicas de respiração que induzem o sono.",
+        "Liberação de pensamentos e preocupações do dia.",
+        "Uma transição suave para o estado de sono."
+    ],
+    "info": {
+        "duration": "23 minutos",
+        "type": "Sono",
+        "level": "Iniciante",
+        "frequency": "Diária (antes de dormir)"
+    }
+}

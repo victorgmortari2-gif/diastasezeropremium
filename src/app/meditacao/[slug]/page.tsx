@@ -1,10 +1,8 @@
-
-
-import { meditations } from '@/lib/meditations.tsx';
+import { getMeditationDetails, meditations } from '@/lib/meditations.tsx';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Clock, Heart as HeartIcon, BarChart, Repeat, CheckCircle, Headphones, Wind, Smile, PlayCircle } from 'lucide-react';
+import { ArrowLeft, Clock, Heart as HeartIcon, BarChart, Repeat, CheckCircle, Headphones, Wind, Smile } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -16,8 +14,8 @@ const literata = Literata({
   variable: '--font-literata',
 });
 
-export default function MeditationDetailPage({ params }: { params: { slug: string } }) {
-  const meditation = meditations.find((m) => m.slug === params.slug);
+export default async function MeditationDetailPage({ params }: { params: { slug: string } }) {
+  const meditation = await getMeditationDetails(params.slug);
 
   if (!meditation) {
     notFound();
