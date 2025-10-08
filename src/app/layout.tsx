@@ -7,7 +7,7 @@ import Script from 'next/script'; // Mantenha o import
 
 export const metadata: Metadata = {
   title: 'Diástase ZERO',
-  description: 'Programa de 21 dias para recuperação da diástase abdominal.',
+  description: 'Programa de 21 dias para recuperação da sua diástase abdominal.',
 };
 
 const poppins = Poppins({
