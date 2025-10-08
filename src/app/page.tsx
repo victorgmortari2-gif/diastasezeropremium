@@ -127,7 +127,7 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <Link href="#" className="group">
+              <Link href="https://diastasezerobasic.netlify.app/" target="_blank" rel="noopener noreferrer" className="group">
                 <Card className="flex flex-col items-center text-center p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full bg-card">
                   <Star className="h-10 w-10 text-gold mb-4" />
                   <h3 className="font-headline text-xl font-bold">Todo conteúdo do Desafio Básico</h3>
